@@ -1,4 +1,5 @@
-import {Link} from "react-router-dom";
+import ArticleHeader from "../ArticleHeader.jsx";
+import InSectionLink from "../InSectionLink.jsx";
 
 const WhatSection = () => {
     const articles = [
@@ -35,23 +36,17 @@ const WhatSection = () => {
     ]
 
     return (
-        <section className="flex flex-col py-16 w-[93%] mx-auto gap-5 items-center">
-            <div className="flex items-center gap-10 text-gray-400 text-sm w-2/3">
-                <div className="h-px flex-grow bg-gray-400"></div>
-                <p className="text-3xl">What We Do</p>
-                <div className="h-px flex-grow bg-gray-400"></div>
-            </div>
-
-            <div className="flex flex-row gap-32 w-full text-white">
+        <section className="flex flex-col py-16 w-[93%] mx-auto gap-12 items-center">
+            <ArticleHeader title="what we do" />
+            <div className="flex flex-col md:flex-row gap-12 w-full text-white">
                 {articles.map(({title, description}, i) => (
-                    <article key={i} className="flex gap-2 flex-col">
+                    <article key={i} className="flex gap-2 flex-col w-full md:w-1/3">
                         <h3 className="text-center text-gray-400 text-xl font-bold">{title}</h3>
                         <p className="">{description}</p>
                     </article>
                 ))}
             </div>
-
-            <Link to='/' className="text-center border-2 border-white text-white px-14 py-2 rounded-md">read more</Link>
+            <InSectionLink name="read more" path="/about" />
         </section>
     )
 }
