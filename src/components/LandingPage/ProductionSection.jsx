@@ -4,7 +4,7 @@ import { FaGreaterThan, FaLessThan} from "react-icons/fa";
 
 const ProductionSection = () => {
     return (
-        <section className="flex flex-col py-16 gap-12 items-center relative">
+        <section className="flex flex-col py-8 md:py-16 gap-12 items-center relative">
             <div className="w-full flex items-center flex-col gap-5">
                 <ArticleHeader title="behind the scenes" />
                 <p className="w-[95%] md:w-2/3 text-center">First-class footage in the best quality is our priority, which is why  our team has the latest professional video equipment. We are as well

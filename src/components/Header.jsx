@@ -3,6 +3,7 @@ import Logo from "../assets/boxonia-logo.svg";
 import {MenuIcon} from "lucide-react";
 import {useState} from "react";
 import {FaX} from "react-icons/fa6";
+import { FaCaretDown } from "react-icons/fa";
 
 const Header = () => {
     const navLinks = [
@@ -12,7 +13,16 @@ const Header = () => {
         },
         {
             name: "About Us",
-            path: '/about'
+            children: [
+                {
+                    name: "Boxonia Story",
+                    path: '/boxonia-story',
+                },
+                {
+                    name: "What We Do",
+                    path: '/about',
+                }
+            ]
         },
         {
             name: "Projects",
@@ -29,6 +39,11 @@ const Header = () => {
     ]
 
     const [isOpen, setIsOpen] = useState(false)
+    const [showOptions, setShowOptions] = useState(null)
+
+    const toggleDropdown = (name) => {
+        setShowOptions(prev => prev === name ? null : name);
+    };
 
     return (
         <header className="flex relative py-5 px-3 md:px-0 w-full md:w-[93%] mx-auto justify-between items-center">
@@ -36,11 +51,38 @@ const Header = () => {
                 <img src={Logo} alt="logo" className="w-20 md:w-auto" />
             </Link>
 
-            <nav className="hidden md:block w-2/6 text-white">
+            <nav className="hidden md:block w-2/6 text-white relative">
                 <ul className="flex justify-between">
                     {navLinks.map((link, idx) => (
-                        <li key={idx}>
-                            <Link to={link.path} className="hover:text-yellow-400">{link.name}</Link>
+                        <li key={idx} className="relative">
+                            {link.children ? (
+                                <button
+                                    onClick={() => toggleDropdown(link.name)}
+                                    className="hover:text-yellow-400 cursor-pointer flex items-center gap-2"
+                                >
+                                    {link.name} <FaCaretDown />
+                                </button>
+                            ) : (
+                                <Link to={link.path} className="hover:text-yellow-400">
+                                    {link.name}
+                                </Link>
+                            )}
+
+                            {/* Dropdown */}
+                            {link.children && showOptions === link.name && (
+                                <ul className="absolute top-full mt-2 bg-black text-white p-2 shadow-lg rounded-md space-y-2 z-50">
+                                    {link.children.map((child, i) => (
+                                        <li key={i}>
+                                            <Link
+                                                to={child.path}
+                                                className="hover:text-yellow-400 text-nowrap"
+                                            >
+                                                {child.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -59,13 +101,42 @@ const Header = () => {
                         <button className="text-black text-2xl" onClick={() => setIsOpen(!isOpen)}><FaX /></button>
                     </div>
                     <nav>
-                    <ul className="flex flex-col gap-3 text-base font-medium text-gray-700">
-                        {navLinks.map((link, idx) => (
-                            <li key={idx}><Link to={link.path} className="hover:text-indigo-600">{link.name}</Link></li>
-
-                        ))}
-                    </ul>
-                </nav>
+                        <ul className="flex flex-col gap-3 text-base font-medium text-gray-700">
+                                {navLinks.map((link, idx) => (
+                                    <li key={idx}>
+                                        {link.children ? (
+                                            <div>
+                                                <button
+                                                    onClick={() => toggleDropdown(link.name)}
+                                                    className="flex justify-between w-full items-center hover:text-indigo-600"
+                                                >
+                                                    {link.name}
+                                                    <FaCaretDown />
+                                                </button>
+                                                {showOptions === link.name && (
+                                                    <ul className="pl-4 mt-1 space-y-2">
+                                                        {link.children.map((child, i) => (
+                                                            <li key={i}>
+                                                                <Link
+                                                                    to={child.path}
+                                                                    className="hover:text-indigo-600"
+                                                                >
+                                                                    {child.name}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            <Link to={link.path} className="hover:text-indigo-600">
+                                                {link.name}
+                                            </Link>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                    </nav>
                     <Link to="/#" className="hidden md:inline-block py-2 px-12 text-white border-2 border-white hover:bg-white hover:text-black">Talents</Link>
                 </div>
             }
