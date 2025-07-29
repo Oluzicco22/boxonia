@@ -31,9 +31,9 @@ const ValuesComponent = () => {
         ]
 
         return (
-            <section className="flex flex-col py-5 px-3 md:px-0 w-full md:w-[90%] mx-auto items-center gap-16">
+            <section className="flex flex-col py-5 px-3 md:px-0 w-full mx-auto items-center gap-16">
                     <ArticleHeader title="values" />
-                    <div className="flex flex-col gap-12 w-full md:w-3/5 mx-auto text-white">
+                    <div className="flex flex-col gap-12 w-full md:w-13/15 px-3 mx-auto text-white">
                             {values.map(({title, desc}, i) => (
                                     <article key={i} className="flex flex-col gap-2">
                                             <h3 className="text-gray-100 text-xl font-bold">{title}</h3>

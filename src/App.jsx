@@ -1,6 +1,10 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import LandingPage from "./pages/LandingPage.jsx";
 import BoxoniaStoryPage from "./pages/BoxoniaStoryPage.jsx";
+import AboutBoxoniaPage from "./pages/AboutBoxoniaPage.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import NewPage from "./pages/NewPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -10,6 +14,22 @@ const routes = createBrowserRouter([
     {
         path: "/boxonia-story",
         element: <BoxoniaStoryPage />
+    },
+    {
+        path: "/about",
+        element: <AboutBoxoniaPage />
+    },
+    {
+        path: "/projects",
+        element: <ProjectPage />
+    },
+    {
+        path: "/news",
+        element: <NewPage />
+    },
+    {
+        path: "/contact",
+        element: <ContactPage />
     }
 ])
 

@@ -1,11 +1,13 @@
-const ArticleHeader = ({title}) => {
+const ArticleHeader = ({ title }) => {
     return (
-        <div className="flex items-center gap-12 md:gap-40 text-gray-400 text-sm w-[90%] md:w-2/3">
+        <div className="flex items-center w-full max-w-5xl px-4 text-gray-400 text-sm mx-auto">
             <div className="h-[2px] flex-grow bg-gray-600"></div>
-            <p className="text-xl md:text-3xl capitalize">{title}</p>
+            <p className="px-12 text-xl md:text-3xl font-medium text-center capitalize text-white whitespace-nowrap">
+                {title}
+            </p>
             <div className="h-[2px] flex-grow bg-gray-600"></div>
         </div>
-    )
-}
+    );
+};
 
-export default ArticleHeader
+export default ArticleHeader;

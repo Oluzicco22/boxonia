@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Ideation",
+    "description": "At Boxonia, we create, develop and brainstorm on unique story ideas/concepts deeply rooted in the African culture with enthralling themes and write scripts with well layered dialogue and groundbreaking plots. We have a story bank where most of these ideas are developed and stored for future purposes. These ideas, our IP, are properly protected.",
+    "bgImage": ""
+  },
+  {
+    "title": "End to End Production",
+    "description": "We run end to end production and everything in-between. Our end to end production cut across the following:",
+    "bgImage": "",
+    "children" : [
+      {
+        "title": "Pre-production",
+        "description": "Our pre-production process starts from crafting compelling high stakes stories to ensure they appeal to target audiences. After the story development and scripting stage is done, we ensure to provide a detailed budget according to the script, as well as hiring crew (including a post production team) and cast members that further enhance the production value. The Boxonia team also begins marketing conversations during this time."
+      },
+      {
+        "title": "Principal Photography",
+        "description": "As soon as the pre-production phase is completed. We begin principal photography on set dates. Boxonia oversees every aspect of the production management, including but not limited to scheduling, adequate financial management ensuring budgets are adhered to, as well as ensuring quality control for premium production value."
+      },
+      {
+        "title": "Post Production",
+        "description": "At Boxonia, we ensure to include the post production team from the start of the production. Our post production processes include editing, sound\ndesign, colour grading, visual effects, music licensing and more, depending on the needs of the project’s post production. Additionally, we work in sync with top film scorers and music supervisors to enhance the musicality of our projects."
+      }
+    ]
+  },
+  {
+    "title": "Marketing",
+    "description": "At Boxonia, marketing is more than a skill—it’s our superpower. Our team excels at crafting strategies that are carefully tailored to each platform, ensuring maximum impact and success. From traditional approaches to cutting-edge digital campaigns, and even bold experimental strategies, we leverage every tool in the marketing arsenal. This versatility allows us to adapt, innovate, and consistently deliver results that resonate with diverse audiences. With Boxonia, every story finds its perfect audience.",
+    "bgImage": ""
+  }
+]
