@@ -1,8 +1,22 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import BTSImage0 from "../../assets/BTS 0.png"
 import { FaGreaterThan, FaLessThan} from "react-icons/fa";
+import {useState} from "react";
 
 const ProductionSection = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const goToNext = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images);
+    };
+
+    const goToPrev = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images) % images);
+    };
+
+    const images = [
+        BTSImage0,
+    ];
     return (
         <section className="flex flex-col py-8 md:py-16 gap-12 items-center relative">
             <div className="w-full flex items-center flex-col gap-5">
@@ -12,13 +26,16 @@ const ProductionSection = () => {
                 </p>
             </div>
 
-            <div className="w-full relative h-full">
+            <div className="w-full relative h-full transition-shadow duration-300">
                 <img
-                    src={BTSImage0}
-                    alt="Behind-the-scenes production setup"
-                    className="w-full h-auto"
-                />                <button
+                    src={images[currentImageIndex]}
+                    alt={`Behind-the-scenes-${currentImageIndex + 1}`}
+                    className="w-full h-auto transition-opacity duration-300"
+                    loading="lazy"
+                />
+                <button
                     type="button"
+                    onClick={goToPrev}
                     aria-label="Previous image"
                     className="absolute left-5 top-1/2 -translate-y-1/2 bg-gray-600 text-white cursor-pointer h-10 px-2 rounded"
                 >
@@ -26,6 +43,7 @@ const ProductionSection = () => {
                 </button>
                 <button
                     type="button"
+                    onClick={goToNext}
                     aria-label="Next image"
                     className="absolute right-5 top-1/2 -translate-y-1/2 bg-gray-600 text-white cursor-pointer h-10 px-2 rounded"
                 >
