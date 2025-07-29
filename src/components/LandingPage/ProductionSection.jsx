@@ -1,5 +1,5 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import ProductionImage from "../../assets/production-img.svg"
+import BTSImage0 from "../../assets/BTS 0.png"
 import { FaGreaterThan, FaLessThan} from "react-icons/fa";
 
 const ProductionSection = () => {
@@ -14,7 +14,7 @@ const ProductionSection = () => {
 
             <div className="w-full relative h-full">
                 <img
-                    src={ProductionImage}
+                    src={BTSImage0}
                     alt="Behind-the-scenes production setup"
                     className="w-full h-auto"
                 />                <button

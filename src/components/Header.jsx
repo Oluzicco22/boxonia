@@ -58,12 +58,12 @@ const Header = () => {
                             {link.children ? (
                                 <button
                                     onClick={() => toggleDropdown(link.name)}
-                                    className="hover:text-yellow-400 cursor-pointer flex items-center gap-2"
+                                    className="hover:text-[#FFD700] cursor-pointer flex items-center gap-2"
                                 >
                                     {link.name} <FaCaretDown />
                                 </button>
                             ) : (
-                                <Link to={link.path} className="hover:text-yellow-400">
+                                <Link to={link.path} className="hover:text-[#FFD700]">
                                     {link.name}
                                 </Link>
                             )}
@@ -75,7 +75,7 @@ const Header = () => {
                                         <li key={i}>
                                             <Link
                                                 to={child.path}
-                                                className="hover:text-yellow-400 text-nowrap"
+                                                className="hover:text-[#FFD700] text-nowrap"
                                             >
                                                 {child.name}
                                             </Link>
@@ -88,7 +88,7 @@ const Header = () => {
                 </ul>
             </nav>
 
-            <Link to="/#" className="hidden md:inline-block py-2 px-12 text-white border-2 border-white hover:bg-white hover:text-black">Talents</Link>
+            <Link to="/#" className="hidden md:inline-block py-2 px-12 text-white border-1 rounded-md border-white hover:bg-white hover:text-black">Talents</Link>
             <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                 <MenuIcon />
             </button>
