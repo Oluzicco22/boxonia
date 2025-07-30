@@ -1,6 +1,6 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import InSectionLink from "../InSectionLink.jsx";
-import ProjectImage from "../../assets/Nolly babes.png"
+import ProjectImage from "../../../assets/Nolly babes.png"
 
 const ProjectsSection = () => {
     return (

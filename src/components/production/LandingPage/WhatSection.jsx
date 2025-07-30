@@ -1,6 +1,6 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import InSectionLink from "../InSectionLink.jsx";
-import boxoniaPillars from "../../data/our-work.json";
+import boxoniaPillars from "../../../data/our-work.json";
 
 const WhatSection = () => {
 

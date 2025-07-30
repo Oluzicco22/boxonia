@@ -1,8 +1,8 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import Wingonia from "../../assets/alumni/wingonia.svg";
-import Victoria from "../../assets/alumni/victoria.svg";
-import Opeyemi from "../../assets/alumni/opeyemi.svg";
-import Oluwafunke from "../../assets/alumni/oluwafunke.svg";
+import Wingonia from "../../../assets/alumni/wingonia.svg";
+import Victoria from "../../../assets/alumni/victoria.svg";
+import Opeyemi from "../../../assets/alumni/opeyemi.svg";
+import Oluwafunke from "../../../assets/alumni/oluwafunke.svg";
 import AlumniCard from "./AlumniCard.jsx";
 
 const BoxoniaAlumniComponent = () => {

@@ -1,4 +1,4 @@
-import boxoniaPillars from "../../data/our-work.json";
+import boxoniaPillars from "../../../data/our-work.json";
 import IdeationImage from "../../assets/ideation.svg";
 import End2EndImage from "../../assets/end2end-prod.svg";
 import MarketingImage from "../../assets/marketing.svg";
