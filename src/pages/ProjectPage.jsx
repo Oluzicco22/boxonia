@@ -16,14 +16,14 @@ const ProjectPage = () => {
             <div className="w-full flex justify-center my-10">
                 <ArticleHeader title="Projects" />
             </div>
-            {[...Array(2).keys()].map((_, i) => (
+            {images.map((_, i) => (
                 <article key={i}
                     className="my-10 flex justify-center items-end h-[40vh] w-full relative  bg-black/10 bg-blend-darken bg-cover bg-center"
                     style={{
                         backgroundImage: `url(${images[i]})`,
                     }}>
                     <div className="w-4/5 flex gap-3 text-white flex-col mb-16">
-                        <Link to="#" className="text-right font-medium text-lg">{`see more --->`}</Link>
+                        <Link to={`/projects/${i + 1}`} className="text-right font-medium text-lg">{`see more --->`}</Link>
                     </div>
                 </article>
             ))}
