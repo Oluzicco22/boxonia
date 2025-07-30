@@ -6,7 +6,7 @@ const AlumniCard = ({ name, role, info, img }) => {
                 <h3 className="text-yellow-400 text-base font-bold capitalize text-nowrap">{name}</h3>
                 <p className="text-gray-200 text-sm capitalize">{role}</p>
             </div>
-            <p className="text-gray-400 text-justify md:text-left text-lg leading-6">{info}</p>
+            <p className="text-[#B7B7B7] text-justify md:text-left text-lg leading-6">{info}</p>
         </article>
     )
 }

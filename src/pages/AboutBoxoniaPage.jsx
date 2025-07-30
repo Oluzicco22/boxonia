@@ -8,7 +8,7 @@ const AboutBoxoniaPage = () => {
     return (
         <main className="text-white">
             <Header />
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center mt-24">
                 <ArticleHeader title="what we do" />
             </div>
             <BoxoniPillarComponent />

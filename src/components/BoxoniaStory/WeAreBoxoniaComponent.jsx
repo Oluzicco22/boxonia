@@ -2,7 +2,7 @@ import ArticleHeader from "../ArticleHeader.jsx";
 
 const WeAreBoxoniaComponent = () => {
     return (
-        <section className="flex flex-col py-8 px-3 md:px-0 w-full md:w-[93%] mx-auto items-center gap-16">
+        <section className="flex flex-col py-8 px-3 md:px-0 w-full md:w-[93%] mx-auto items-center gap-16 mb-32">
             <ArticleHeader title="we are boxonia" />
             <p className="text-white leading-8 text-lg md:w-14/15">
                     In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to tell original stories that authentically represent Nigerianand African realities. This industry-wide need laid the foundation for what would become a transformative force in African cinema: Boxonia Blueprint. <br /><br />

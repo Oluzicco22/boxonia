@@ -89,7 +89,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <Link to="/#" className="hidden md:inline-block py-2 px-12 text-white border-2 border-white hover:bg-white hover:text-black">Talents</Link>
+                <Link to="/#" className="hidden md:inline-block py-2 px-12 text-white border-2 rounded-md border-white hover:bg-white hover:text-black">Talents</Link>
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon />
                 </button>

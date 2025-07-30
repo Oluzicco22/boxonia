@@ -3,6 +3,26 @@
 @import "tailwindcss";
 
 
+@font-face {
+    font-family: 'Changeling-Neo';
+    src: url('./assets/fonts/Changeling Neo Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Risk-Atoms';
+    src: url('./assets/fonts/Risk Atoms.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero-font {
+    font-family: 'Changeling-Neo', sans-serif;
+}
+.header-font {
+    font-family: 'Risk-Atoms', sans-serif;
+}
+
 a {
     font-family: 'Inter', sans-serif;
 }

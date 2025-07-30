@@ -1,5 +1,15 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import BTSImage0 from "../../assets/BTS 0.png"
+import BTSImage1 from "../../assets/BTS 1.png"
+import BTSImage2 from "../../assets/BTS 2.png"
+import BTSImage3 from "../../assets/BTS 3.png"
+import BTSImage4 from "../../assets/BTS 4.png"
+import BTSImage5 from "../../assets/BTS 5.png"
+import BTSImage6 from "../../assets/BTS 6.png"
+import BTSImage7 from "../../assets/BTS 7.png"
+import BTSImage8 from "../../assets/BTS 8.png"
+import BTSImage9 from "../../assets/BTS 9.png"
+
 import { FaGreaterThan, FaLessThan} from "react-icons/fa";
 import {useState} from "react";
 
@@ -7,15 +17,24 @@ const ProductionSection = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const goToNext = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
     const goToPrev = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images) % images);
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
     const images = [
         BTSImage0,
+        BTSImage1,
+        BTSImage2,
+        BTSImage3,
+        BTSImage4,
+        BTSImage5,
+        BTSImage6,
+        BTSImage7,
+        BTSImage8,
+        BTSImage9,
     ];
     return (
         <section className="flex flex-col py-8 md:py-16 gap-12 items-center relative">
@@ -37,7 +56,7 @@ const ProductionSection = () => {
                     type="button"
                     onClick={goToPrev}
                     aria-label="Previous image"
-                    className="absolute left-5 top-1/2 -translate-y-1/2 bg-gray-600 text-white cursor-pointer h-10 px-2 rounded"
+                    className="absolute left-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-15 px-2 rounded-xs opacity-65"
                 >
                     <FaLessThan />
                 </button>
@@ -45,7 +64,7 @@ const ProductionSection = () => {
                     type="button"
                     onClick={goToNext}
                     aria-label="Next image"
-                    className="absolute right-5 top-1/2 -translate-y-1/2 bg-gray-600 text-white cursor-pointer h-10 px-2 rounded"
+                    className="absolute right-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-15 px-2 rounded-xs opacity-65"
                 >
                     <FaGreaterThan />
                 </button>

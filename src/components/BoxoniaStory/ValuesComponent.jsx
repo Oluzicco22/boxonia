@@ -31,13 +31,13 @@ const ValuesComponent = () => {
         ]
 
         return (
-            <section className="flex flex-col py-5 px-3 md:px-0 w-full mx-auto items-center gap-16">
+            <section className="flex flex-col py-5 px-3 md:px-0 w-full mx-auto items-center gap-16 mb-32">
                     <ArticleHeader title="values" />
                     <div className="flex flex-col gap-12 w-full md:w-13/15 px-3 mx-auto text-white">
                             {values.map(({title, desc}, i) => (
                                     <article key={i} className="flex flex-col gap-2">
-                                            <h3 className="text-gray-100 text-xl font-bold">{title}</h3>
-                                            <p className="text-gray-400 text-sm leading-6">{desc}</p>
+                                            <h3 className="text-white text-xl font-bold">{title}</h3>
+                                            <p className="text-[#B7B7B7] text-sm leading-6">{desc}</p>
                                     </article>
                             ))}
                     </div>
