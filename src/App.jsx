@@ -5,6 +5,7 @@ import AboutBoxoniaPage from "./pages/AboutBoxoniaPage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import NewPage from "./pages/NewPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import ProjectViewPage from "./pages/ProjectViewPage.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
     {
         path: "/projects",
         element: <ProjectPage />
+    },
+    {
+        path: "/projects/:id",
+        element: <ProjectViewPage />
     },
     {
         path: "/news",

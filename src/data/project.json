@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "nollybabes",
+    "desc": "after another failed audition, a rising nollywood star and her two best friends try to con a sleazy director to fund their own film.",
+    "casts": [
+      "uzoramaka aniunoh", "tomi ojo", "linda ejiofor", "taye arimoro", "osereme inegbenebor", "ejiro onojaife"
+    ],
+    "director": "anu bamidele",
+    "producer": "wingonia ikpi",
+    "publisher": "boxonia bleuprint & gap tooth smile productions.",
+    "thumbnail": "https://via.placeholder.com/150x220?text=nollybabes",
+    "coverImage": "https://via.placeholder.com/600x300?text=nollybabes+cover",
+    "releaseDate": null
+  },
+  {
+    "id": 2,
+    "title": "city shadows",
+    "desc": "a journalist uncovers dark secrets in lagos after stumbling upon a high-profile scandal involving politicians and cult groups.",
+    "casts": [
+      "ifeanyi okafor", "zainab balogun", "emeka ike", "kemi lala akindoju"
+    ],
+    "director": "segun adisa",
+    "producer": "funmi adewuyi",
+    "publisher": "urban eye studios",
+    "thumbnail": "https://via.placeholder.com/150x220?text=city+shadows",
+    "coverImage": "https://via.placeholder.com/600x300?text=city+shadows+cover",
+    "releaseDate": "2024-11-02T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "echoes of silence",
+    "desc": "in a post-conflict village, a mute girl discovers a mysterious power that could either save or destroy her community.",
+    "casts": [
+      "amara ogbonna", "uche jumbo", "kunle remi"
+    ],
+    "director": "tunde owolabi",
+    "producer": "blessing nkem",
+    "publisher": "silent wave productions",
+    "thumbnail": "https://via.placeholder.com/150x220?text=echoes+of+silence",
+    "coverImage": "https://via.placeholder.com/600x300?text=echoes+of+silence+cover",
+    "releaseDate": null
+  },
+  {
+    "id": 4,
+    "title": "broken mirror",
+    "desc": "a successful therapist is forced to confront her own traumatic past when an old patient resurfaces with a chilling story.",
+    "casts": [
+      "tina mbah", "stan nze", "rita edochie"
+    ],
+    "director": "ife olawale",
+    "producer": "tope ogunrinde",
+    "publisher": "soul fix films",
+    "thumbnail": "https://via.placeholder.com/150x220?text=broken+mirror",
+    "coverImage": "https://via.placeholder.com/600x300?text=broken+mirror+cover",
+    "releaseDate": "2025-03-15T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "title": "redemption code",
+    "desc": "an ex-convict is drawn back into the underworld to protect his family from a cyber crime ring hunting a stolen flash drive.",
+    "casts": [
+      "timini egbuson", "bisola ayeola", "falz", "chidi mokeme"
+    ],
+    "director": "ayo bankole",
+    "producer": "nkechi nwosu",
+    "publisher": "code noir pictures",
+    "thumbnail": "https://via.placeholder.com/150x220?text=redemption+code",
+    "coverImage": "https://via.placeholder.com/600x300?text=redemption+code+cover",
+    "releaseDate": "2025-07-01T00:00:00Z"
+  }
+]
