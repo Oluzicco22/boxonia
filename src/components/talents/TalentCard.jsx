@@ -1,33 +1,39 @@
-import { Link } from "react-router-dom";
-import Oluwafunke from "../../assets/alumni/oluwafunke.svg";
+import FeaturedTalentCard from "./FeaturedTalentCard.jsx";
+import {FaImdb, FaInstagram } from "react-icons/fa";
+import {FaXTwitter} from "react-icons/fa6";
 
-const TalentCard = ({ props: { firstName, lastName, info } }) => {
+const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks } }) => {
     return (
-        <article className="flex flex-col gap-6 bg-black text-white rounded-xl overflow-hidden shadow-md">
-            <div className="relative">
-                <img
-                    src={Oluwafunke}
-                    alt={`${firstName || "Talent"} ${lastName || ""}`}
-                    className="w-full h-[500px] object-center object-cover rounded-xl"
-                />
-                <div className="bg-black/70 absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex py-4 text-sm transition-all">
-                    <button className="w-2/4 mx-auto border border-white font-semibold text-white rounded-md p-2 cursor-pointer lowercase">
-                        Book {firstName}
-                    </button>
-                </div>
-            </div>
-            <p className="line-clamp-10">
+        <section className="w-15/16 mx-auto my-10 flex flex-col gap-12 items-center">
+            <p className="text-white">
                 <span className="capitalize font-semibold text-lg">
                     {firstName} {lastName}
                 </span>{" "}
                 {info}
             </p>
-            <div className="w-full flex justify-end px-4 pb-4">
-                <Link to="#" className="italic font-light underline">
-                    See more...
-                </Link>
+            <button className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-white rounded-md p-2 cursor-pointer lowercase">
+                Book {firstName}
+            </button>
+            <FeaturedTalentCard images={relatedProjects} />
+            <div className="flex gap-10 text-5xl">
+                <a href="#"><FaImdb /></a>
+                <a href="#"><FaInstagram /></a>
+                <a href="#"><FaXTwitter /></a>
             </div>
-        </article>
+            <div className="bg-neutral-700 rounded-xl py-4 px-20">
+                <h3 className="text-gray-400 text-3xl font-bold">
+                    Perks of <span className="text-yellow-500">{`Working with ${firstName}`}</span>
+                </h3>
+                <ul className="my-3 px-1">
+                    {perks.map((perk, idx) => (
+                        <li key={idx} className="flex items-center gap-3">
+                            <FaImdb className="text-yellow-500" />
+                            <p className="text-white capitalize font-black text-base leading-loose">{perk}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
     );
 };
 

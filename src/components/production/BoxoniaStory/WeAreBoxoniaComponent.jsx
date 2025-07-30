@@ -1,5 +1,5 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import WeAreBoxoniaImage from "../../assets/we-are-boxonia img.png"
+import WeAreBoxoniaImage from "../../../assets/we-are-boxonia img.png"
 
 const WeAreBoxoniaComponent = () => {
     return (
