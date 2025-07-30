@@ -19,7 +19,6 @@ const TalentViewPage = () => {
                     talent.firstName === firstName && talent.lastName === lastName
                 )
             });
-            console.log(talent.relatedProjects)
             setTalent(talent);
         }catch (e){
             console.log(e.message);

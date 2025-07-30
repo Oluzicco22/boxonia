@@ -52,7 +52,7 @@ const Header = () => {
                     <img src={Logo} alt="logo" className="w-20 md:w-auto" />
                 </Link>
 
-                <nav className="hidden md:block w-2/6 text-white relative">
+                <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
                     <ul className="flex justify-between">
                         {navLinks.map((link, idx) => (
                             <li key={idx} className="relative hover:text-yellow-400">
