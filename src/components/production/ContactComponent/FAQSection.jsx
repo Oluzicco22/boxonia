@@ -1,5 +1,5 @@
 import FAQArticle from "./FAQArticle.jsx";
-import Faqs from "../../data/faq.json";
+import Faqs from "../../../data/faq.json";
 import ArticleHeader from "../ArticleHeader.jsx";
 
 

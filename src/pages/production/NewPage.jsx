@@ -1,13 +1,13 @@
-import Header from "../components/Header.jsx";
-import ArticleHeader from "../components/ArticleHeader.jsx";
-import Footer from "../components/Footer.jsx";
-import ChuksPoliceImage from "../assets/news-img1.svg"
-import FreedomImage from "../assets/freedom-way.svg"
+import Header from "../../components/Header.jsx";
+import ArticleHeader from "../../components/production/ArticleHeader.jsx";
+import Footer from "../../components/Footer.jsx";
+import ChuksPoliceImage from "../../assets/news-img1.svg"
+import FreedomImage from "../../assets/freedom-way.svg"
 import {Link} from "react-router-dom";
 
 const NewPage = () => {
     return (
-        <main className="text-white">
+        <>
             <Header />
             <div className="w-full flex justify-center my-10">
                 <ArticleHeader title="news" />
@@ -29,7 +29,7 @@ const NewPage = () => {
                 ))}
             </section>
             <Footer />
-        </main>
+        </>
     )
 }
 

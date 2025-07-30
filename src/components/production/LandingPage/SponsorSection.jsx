@@ -1,7 +1,7 @@
-import InniCross from "../../assets/sponsors/innicross.svg";
-import TeethSmile from "../../assets/sponsors/teeth-smile.svg";
-import USaid from "../../assets/sponsors/usaid.svg";
-import AX from "../../assets/sponsors/ax.svg";
+import InniCross from "../../../assets/sponsors/innicross.svg";
+import TeethSmile from "../../../assets/sponsors/teeth-smile.svg";
+import USaid from "../../../assets/sponsors/usaid.svg";
+import AX from "../../../assets/sponsors/ax.svg";
 
 const SponsorSection = () => {
     return (
