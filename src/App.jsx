@@ -9,6 +9,7 @@ import ProjectViewPage from "./pages/production/ProjectViewPage.jsx";
 import HomePage from "./pages/production/HomePage.jsx";
 import ParentPage from "./pages/ParentPage.jsx";
 import TalentPage from "./pages/talents/TalentPage.jsx";
+import TalentViewPage from "./pages/talents/TalentViewPage.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -58,8 +59,8 @@ const routes = createBrowserRouter([
                 element: <TalentPage />,
             },
             {
-                path: "boxonia-story",
-                element: <BoxoniaStoryPage />,
+                path: ":castName",
+                element: <TalentViewPage />,
             },
             {
                 path: "about",

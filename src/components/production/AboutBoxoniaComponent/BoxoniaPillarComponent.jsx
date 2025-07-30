@@ -1,8 +1,8 @@
 import boxoniaPillars from "../../../data/our-work.json";
-import IdeationImage from "../../assets/ideation.svg";
-import End2EndImage from "../../assets/end2end-prod.svg";
-import MarketingImage from "../../assets/marketing.svg";
-import IpProtectionImage from "../../assets/ip-protection.svg";
+import IdeationImage from "../../../assets/ideation.svg";
+import End2EndImage from "../../../assets/end2end-prod.svg";
+import MarketingImage from "../../../assets/marketing.svg";
+import IpProtectionImage from "../../../assets/ip-protection.svg";
 
 const BoxoniaPillarComponent = () => {
     const images = [

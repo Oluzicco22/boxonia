@@ -2,7 +2,7 @@ import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
 import TalentData from "../../data/talents.json";
-import TalentCard from "../../components/talents/TalentCard.jsx";
+import TalentCatalogue from "../../components/talents/TalentCatalogue.jsx";
 
 const TalentPage = () => {
     return (
@@ -14,7 +14,7 @@ const TalentPage = () => {
 
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[93%] mx-auto gap-16 items-start">
                 {TalentData.map((talent, i) => (
-                    <TalentCard key={i} props={talent} />
+                    <TalentCatalogue key={i} props={talent} />
                 ))}
             </section>
             <Footer />
