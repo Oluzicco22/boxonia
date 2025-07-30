@@ -1,12 +1,12 @@
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import ArticleHeader from "../components/ArticleHeader.jsx";
-import BoxoniPillarComponent from "../components/AboutBoxoniaComponent/BoxoniPillarComponent.jsx";
-import HeroImage from "../assets/hero.png"
+import Header from "../../components/Header.jsx";
+import Footer from "../../components/Footer.jsx";
+import ArticleHeader from "../../components/production/ArticleHeader.jsx";
+import BoxoniPillarComponent from "../../components/production/AboutBoxoniaComponent/BoxoniPillarComponent.jsx";
+import HeroImage from "../../assets/hero.png"
 
 const AboutBoxoniaPage = () => {
     return (
-        <main className="text-white">
+        <>
             <Header />
             <div className="w-full flex justify-center mt-24">
                 <ArticleHeader title="what we do" />
@@ -35,7 +35,7 @@ const AboutBoxoniaPage = () => {
                 </div>
             </section>
             <Footer />
-        </main>
+        </>
     )
 }
 

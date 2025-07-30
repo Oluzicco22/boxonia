@@ -1,14 +1,14 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import BTSImage0 from "../../assets/BTS 0.png"
-import BTSImage1 from "../../assets/BTS 1.png"
-import BTSImage2 from "../../assets/BTS 2.png"
-import BTSImage3 from "../../assets/BTS 3.png"
-import BTSImage4 from "../../assets/BTS 4.png"
-import BTSImage5 from "../../assets/BTS 5.png"
-import BTSImage6 from "../../assets/BTS 6.png"
-import BTSImage7 from "../../assets/BTS 7.png"
-import BTSImage8 from "../../assets/BTS 8.png"
-import BTSImage9 from "../../assets/BTS 9.png"
+import BTSImage0 from "../../../assets/BTS 0.png"
+import BTSImage1 from "../../../assets/BTS 1.png"
+import BTSImage2 from "../../../assets/BTS 2.png"
+import BTSImage3 from "../../../assets/BTS 3.png"
+import BTSImage4 from "../../../assets/BTS 4.png"
+import BTSImage5 from "../../../assets/BTS 5.png"
+import BTSImage6 from "../../../assets/BTS 6.png"
+import BTSImage7 from "../../../assets/BTS 7.png"
+import BTSImage8 from "../../../assets/BTS 8.png"
+import BTSImage9 from "../../../assets/BTS 9.png"
 
 import { FaGreaterThan, FaLessThan} from "react-icons/fa";
 import {useState} from "react";

@@ -1,5 +1,5 @@
-import boxoniaPillars from "../../data/our-work.json";
-import HeroImage from "../../assets/hero.png";
+import boxoniaPillars from "../../../data/our-work.json";
+import HeroImage from "../../../assets/hero.png";
 
 
 const BoxoniaPillarComponent = () => {
