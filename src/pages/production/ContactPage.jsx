@@ -1,11 +1,11 @@
-import Header from "../components/Header.jsx";
-import ArticleHeader from "../components/ArticleHeader.jsx";
-import Footer from "../components/Footer.jsx";
+import Header from "../../components/Header.jsx";
+import ArticleHeader from "../../components/production/ArticleHeader.jsx";
+import Footer from "../../components/Footer.jsx";
 import {Link} from "react-router-dom";
 import {FaInstagram, FaLinkedin} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import {useState} from "react";
-import FAQSection from "../components/ContactComponent/FAQSection.jsx";
+import FAQSection from "../../components/production/ContactComponent/FAQSection.jsx";
 
 const ContactPage = () => {
 
@@ -16,7 +16,7 @@ const ContactPage = () => {
         message: ""
     })
     return (
-        <main className="text-white">
+        <>
             <Header />
             <div className="w-full flex justify-center my-10">
                 <ArticleHeader title="contact us" />
@@ -96,7 +96,7 @@ const ContactPage = () => {
             <FAQSection />
 
             <Footer />
-        </main>
+        </>
     )
 }
 

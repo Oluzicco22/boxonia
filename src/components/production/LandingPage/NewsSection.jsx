@@ -1,6 +1,6 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import ChuksPoliceImage from "../../assets/news-img1.svg"
-import FreedomImage from "../../assets/freedom-way.svg"
+import ChuksPoliceImage from "../../../assets/news-img1.svg"
+import FreedomImage from "../../../assets/freedom-way.svg"
 
 const NewsSection = () => {
     return (
