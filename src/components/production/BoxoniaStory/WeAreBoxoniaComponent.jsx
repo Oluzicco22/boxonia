@@ -5,9 +5,9 @@ const WeAreBoxoniaComponent = () => {
         <section className="flex flex-col py-8 px-3 md:px-0 w-full md:w-[93%] mx-auto items-center gap-16 mb-32">
             <ArticleHeader title="we are boxonia" />
             <p className="text-white leading-8 text-lg md:w-14/15">
-                    In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to tell original stories that authentically represent Nigerianand African realities. This industry-wide need laid the foundation for what would become a transformative force in African cinema: Boxonia Blueprint. <br /><br />
+                    In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to tell original stories that authentically represent Nigerian and African realities. This industry-wide need laid the foundation for what would become a transformative force in African cinema: Boxonia Blueprint. <br /><br />
 
-                    After a brief hiatus to recalibrate strategies, Boxonia reemerged in March2024, fully operational and poised to deliver groundbreaking media. In the months since, Boxonia Blueprint has produced and co-produced across extensive niches, spanning international collaborations like Son of the Soil and NollyBabes, to dynamic reenactments of classics such as The Godfather and Inglourious Basterds. The portfolio also includes a radio
+                    After a brief hiatus to recalibrate strategies, Boxonia reemerged in March2024, fully operational and poised to deliver groundbreaking media. In the months since, Boxonia Blueprint has produced and co-produced across extensive niches, spanning international collaborations like Son of the Soil and NollyBabes, to dynamic reenactments of classics such as The Godfather and Inglorious Bastards. The portfolio also includes a radio
                     drama on nutrition for INNICROSS/USAID and visually compelling video art for global brands like Unilever and British American Tobacco.<br /><br />
 
                     As a film and video production powerhouse, Boxonia Blueprint is

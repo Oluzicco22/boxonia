@@ -1,7 +1,8 @@
 import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
-import HeroImage from "../../assets/hero.png";
+import ChuksPoliceImage from "../../assets/news-img1.svg"
+import FreedomImage from "../../assets/freedom-way.svg"
 import {Link} from "react-router-dom";
 
 const NewPage = () => {
@@ -13,11 +14,11 @@ const NewPage = () => {
             </div>
 
             <section className="grid grid-cols-1 md:grid-cols-2 w-[88%] mx-auto gap-16 items-center">
-                {[...Array(2).keys()].map((_, i) => (
+                {[ChuksPoliceImage, FreedomImage].map((img, i) => (
                     <article key={i} className="flex flex-col gap-5 items-start">
                         <div
-                            className="relative h-[40vh] w-full bg-black/70 bg-blend-darken bg-cover bg-center"
-                            style={{ backgroundImage: `url(${HeroImage})` }}>
+                            className="relative h-[40vh] w-full bg-black/10 bg-blend-darken bg-cover bg-center"
+                            style={{ backgroundImage: `url(${img})` }}>
                             <div className="absolute inset-0 bg-black/30 mix-blend-darken"></div>
 
                         </div>

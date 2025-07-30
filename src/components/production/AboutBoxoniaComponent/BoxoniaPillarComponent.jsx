@@ -4,7 +4,6 @@ import End2EndImage from "../../assets/end2end-prod.svg";
 import MarketingImage from "../../assets/marketing.svg";
 import IpProtectionImage from "../../assets/ip-protection.svg";
 
-
 const BoxoniaPillarComponent = () => {
     const images = [
         IdeationImage,
