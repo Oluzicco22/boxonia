@@ -2,13 +2,11 @@ import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
 import {Link} from "react-router-dom";
-import Project1Image from "../../assets/Nolly babes.png";
-import Project2Image from "../../assets/son of d soil.png";
 
 const ProjectPage = () => {
     const images = [
-        Project1Image,
-        Project2Image
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986407/Nolly_babes_lnzopy.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986408/son_of_d_soil_vevinh.png"
         ]
     return (
         <>

@@ -1,12 +1,11 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import WeAreBoxoniaImage from "../../../assets/we-are-boxonia img.png"
 
 const WeAreBoxoniaComponent = () => {
     return (
         <section className="flex flex-col py-8 px-3 md:px-0 w-full text-center mx-auto items-center gap-16 mb-32">
             <ArticleHeader title="we are boxonia" />
                 <div className="w-full flex justify-center text-left py-12" style={{
-                        backgroundImage: `url(${WeAreBoxoniaImage})`,
+                        backgroundImage: "https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png",
                 }}>
                         <p className="text-white leading-8 text-lg md:w-13/15">
                                 In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to

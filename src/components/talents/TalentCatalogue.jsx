@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-import Oluwafunke from "../../assets/alumni/oluwafunke.svg";
 
-const TalentCatalogue = ({ props: { firstName, lastName, info } }) => {
+const TalentCatalogue = ({ props: { firstName, lastName, info, image } }) => {
 
     return (
         <article className="flex flex-col gap-6 bg-black text-white rounded-xl overflow-hidden shadow-md">
             <div className="relative">
                 <img
-                    src={Oluwafunke}
+                    src={image}
                     alt={`${firstName || "Talent"} ${lastName || ""}`}
                     className="w-full h-[500px] object-center object-cover rounded-xl"
                 />

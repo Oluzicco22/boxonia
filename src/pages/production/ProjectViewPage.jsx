@@ -3,7 +3,6 @@ import {Link, useParams} from "react-router-dom";
 import projects from "../../data/project.json";
 import Header from "../../components/Header.jsx";
 import Footer from "../../components/Footer.jsx";
-import HeroImage from "../../assets/Nolly babes.png";
 import NollyTrailer from "../../assets/trailer-nollybabes.svg"
 import ProjectCard from "../../components/production/ProjectComponent/ProjectCard.jsx";
 
@@ -38,7 +37,7 @@ const ProjectViewPage = () => {
     return (
         <>
             <div className="bg-black/90 mix-blend-plus-lighter pb-1 bg-auto md:bg-cover bg-top md:bg-center bg-no-repeat min-h-100 md:min-h-130" style={{
-                backgroundImage: `url(${HeroImage})`
+                backgroundImage: `url(${project?.thumbnail})`
             }}>
                 <Header />
                 <div className="h-14 md:h-72 w-1/6 md:w-2/12 flex justify-center items-center">

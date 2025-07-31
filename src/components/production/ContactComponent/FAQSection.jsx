@@ -2,7 +2,6 @@ import FAQArticle from "./FAQArticle.jsx";
 import Faqs from "../../../data/faq.json";
 import ArticleHeader from "../ArticleHeader.jsx";
 
-
 const FAQSection = () => {
     return (
         <section id="faq" className="flex flex-col items-center my-12 justify-between gap-16">

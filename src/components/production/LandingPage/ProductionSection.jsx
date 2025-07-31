@@ -1,14 +1,4 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import BTSImage0 from "../../../assets/BTS 0.png"
-import BTSImage1 from "../../../assets/BTS 1.png"
-import BTSImage2 from "../../../assets/BTS 2.png"
-import BTSImage3 from "../../../assets/BTS 3.png"
-import BTSImage4 from "../../../assets/BTS 4.png"
-import BTSImage5 from "../../../assets/BTS 5.png"
-import BTSImage6 from "../../../assets/BTS 6.png"
-import BTSImage7 from "../../../assets/BTS 7.png"
-import BTSImage8 from "../../../assets/BTS 8.png"
-import BTSImage9 from "../../../assets/BTS 9.png"
 
 import { FaGreaterThan, FaLessThan} from "react-icons/fa";
 import {useState} from "react";
@@ -25,16 +15,16 @@ const ProductionSection = () => {
     };
 
     const images = [
-        BTSImage0,
-        BTSImage1,
-        BTSImage2,
-        BTSImage3,
-        BTSImage4,
-        BTSImage5,
-        BTSImage6,
-        BTSImage7,
-        BTSImage8,
-        BTSImage9,
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_0_oopczf.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986124/BTS_1_kgvjot.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_2_ostr8h.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_3_yinydv.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986207/BTS_4_ahhodz.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986192/BTS_5_s4pkjc.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_6_wxci8r.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986126/BTS_7_oquwkh.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986127/BTS_8_zzluki.png",
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986131/BTS_9_thszod.png",
     ];
     return (
         <section className="flex flex-col py-8 md:py-16 gap-12 items-center relative">
