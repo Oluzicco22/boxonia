@@ -7,7 +7,7 @@ const WeAreBoxoniaComponent = () => {
                 <div className="w-full flex justify-center text-left py-12" style={{
                         backgroundImage: "https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png",
                 }}>
-                        <p className="text-white leading-8 text-lg md:w-13/15">
+                        <p className="text-[#B7B7B7] leading-8 text-lg md:w-9/15">
                                 In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to
                                 tell original stories that authentically represent Nigerian and African realities. This
                                 industry-wide need laid the foundation for what would become a transformative force in

@@ -19,9 +19,9 @@ const BoxoniaPillarComponent = () => {
                              backgroundImage: `url(${images[idx]})`,
                          }}
                          >
-                        <div className="w-[92%] flex gap-3 text-white flex-col">
-                            <h3 className="text-xl font-semibold text-center">{pillar.title}</h3>
-                            <p className="text-lg text-justify">{pillar.description}</p>
+                        <div className="w-11/15 flex gap-3 text-white flex-col">
+                            <h3 className="text-3xl font-bold text-center">{pillar.title}</h3>
+                            <p className="text-lg font-normal text-justify">{pillar.description}</p>
                             {pillar.children && pillar.children.map((child, i) => (
                                 <div key={i}>
                                     <h4 className="italic font-medium text-lg">{child.title}</h4>

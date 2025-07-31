@@ -11,19 +11,19 @@ const Footer = () => {
                 <div className="h-[2px] flex-grow bg-gray-600"></div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
-                <h3>contact us</h3>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center text-gray-400 w-full md:w-3/4">
+                <p className="text-[#525252] header-font text-5xl">Contact Us</p>
                 <p>Lagos, Nigeria</p>
                 <div>
-                    <p>boxonialblueprint@gmail.com</p>
+                    <a className="hover:text-yellow-400" href="#">boxonialblueprint@gmail.com</a>
                     <p>+2348092222071</p>
                 </div>
 
                 <nav className="flex gap-3 text-3xl">
-                    <a href="#"><FaInstagram /></a>
-                    <a href="#"><FaXTwitter /></a>
-                    <a href="#"><FaLinkedin /></a>
-                    <a href="#" className="text-white "><FaYoutube /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaInstagram /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaXTwitter /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaLinkedin /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaYoutube /></a>
                 </nav>
             </div>
         </footer>

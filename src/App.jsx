@@ -3,7 +3,7 @@ import LandingPage from "./pages/production/LandingPage.jsx";
 import BoxoniaStoryPage from "./pages/production/BoxoniaStoryPage.jsx";
 import AboutBoxoniaPage from "./pages/production/AboutBoxoniaPage.jsx";
 import ProjectPage from "./pages/production/ProjectPage.jsx";
-import NewPage from "./pages/production/NewPage.jsx";
+import NewsPage from "./pages/production/NewsPage.jsx";
 import ContactPage from "./pages/production/ContactPage.jsx";
 import ProjectViewPage from "./pages/production/ProjectViewPage.jsx";
 import HomePage from "./pages/production/HomePage.jsx";
@@ -42,7 +42,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "news",
-                element: <NewPage />,
+                element: <NewsPage />,
             },
             {
                 path: "contact",
@@ -76,7 +76,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "news",
-                element: <NewPage />,
+                element: <NewsPage />,
             },
             {
                 path: "contact",

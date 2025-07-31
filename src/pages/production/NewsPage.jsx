@@ -4,7 +4,7 @@ import Footer from "../../components/Footer.jsx";
 import FreedomImage from "../../assets/freedom-way.svg"
 import {Link} from "react-router-dom";
 
-const NewPage = () => {
+const NewsPage = () => {
     return (
         <>
             <Header />
@@ -21,7 +21,7 @@ const NewPage = () => {
                             <div className="absolute inset-0 bg-black/30 mix-blend-darken"></div>
 
                         </div>
-                        <p className="text-xl font-normal w-3/6">Chuks Joseph stars in Kizz Daniel’s Police Video</p>
+                        <p className="flex text-xl font-normal w-3/6">Chuks Joseph stars in Kizz Daniel’s Police Video</p>
                         <Link to="/#" className="inline-block font-medium text-base py-2 px-24 text-white border border-white hover:bg-white hover:text-black rounded-md">watch</Link>
 
                     </article>
@@ -32,4 +32,4 @@ const NewPage = () => {
     )
 }
 
-export default NewPage;
+export default NewsPage;
