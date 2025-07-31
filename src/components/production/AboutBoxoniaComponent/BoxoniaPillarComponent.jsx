@@ -1,15 +1,13 @@
 import boxoniaPillars from "../../../data/our-work.json";
 import IdeationImage from "../../../assets/ideation.svg";
-import End2EndImage from "../../../assets/end2end-prod.svg";
 import MarketingImage from "../../../assets/marketing.svg";
-import IpProtectionImage from "../../../assets/ip-protection.svg";
 
 const BoxoniaPillarComponent = () => {
     const images = [
         IdeationImage,
-        End2EndImage,
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986782/end2end-prod_is6fmt.svg",
         MarketingImage,
-        IpProtectionImage
+        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986783/ip-protection_v9hifb.svg"
     ]
     return (
         <section className="flex flex-col py-5 px-0 w-full mx-auto items-center">

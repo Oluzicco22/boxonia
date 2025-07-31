@@ -12,10 +12,14 @@
       "project to gain marketing support from boxonia blueprint"
     ],
     "relatedProjects": [
-      "https://via.placeholder.com/300x180?text=movie+1",
-      "https://via.placeholder.com/300x180?text=movie+2"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992012/Taye_movie1_zxn1jg.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992014/Taye_movie2_gcgjxc.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992015/Taye_movie3_zbcnbq.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992018/Taye_movie4_j6vh7s.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992020/Taye_movie5_vnqmkd.png"
     ],
-    "image": "https://via.placeholder.com/300x300?text=taye+arimoro"
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/taye_personal_lsfnpe.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989175/Taye_big_photo_uskty2.png"
   },
   {
     "id": 2,
@@ -31,10 +35,14 @@
       "strong emotional range"
     ],
     "relatedProjects": [
-      "https://via.placeholder.com/300x180?text=movie+3",
-      "https://via.placeholder.com/300x180?text=movie+4"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/criminal_ngjx93.svg",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986622/ahemefuma_zi030j.svg",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986624/dna_py2a3r.svg",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/love-strikes_mhtizw.svg",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/masquerade_prruqe.svg"
     ],
-    "image": "https://via.placeholder.com/300x300?text=zainab+balogun"
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/chuks_personal_snojgg.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989166/Chuks_big_photo_dwqq2d.png"
   },
   {
     "id": 3,
@@ -47,9 +55,14 @@
       "lead role versatility"
     ],
     "relatedProjects": [
-      "https://via.placeholder.com/300x180?text=movie+5"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991912/Duro_image1_gxy3dg.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991913/Duro_image2_ctwfhu.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991914/Duro_image3_v3yftj.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991917/Duro_image4_jmtaxc.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991917/Duro_image5_v3k8cb.png"
     ],
-    "image": "https://via.placeholder.com/300x300?text=emeka+ike"
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989174/Duro_big_photo_oca3k4.png",
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/duro_personal_fmwexp.png"
   },
   {
     "id": 4,
@@ -62,10 +75,11 @@
       "passionate delivery"
     ],
     "relatedProjects": [
-      "https://via.placeholder.com/300x180?text=movie+6",
-      "https://via.placeholder.com/300x180?text=movie+7"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992145/Vicky_movie1_vuwyo4.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992148/Vicky_movie2_ovwjsb.png"
     ],
-    "image": "https://via.placeholder.com/300x300?text=linda+ejiofor"
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989113/vicky_personal_exil1r.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989169/Vicky_big_photo_pomqoy.png"
   },
   {
     "id": 5,
@@ -78,9 +92,12 @@
       "adaptive performer"
     ],
     "relatedProjects": [
-      "https://via.placeholder.com/300x180?text=movie+8"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991976/Ezeani_image1_quqzxs.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991977/Ezeani_image2_r16qea.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753991978/Ezeani_image3_r2anvk.png"
     ],
-    "image": "https://via.placeholder.com/300x300?text=stan+nze"
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/ezeani_personal_ovblgw.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989171/Ezeani_big_photo_lcfh97.png"
   },
   {
     "id": 6,

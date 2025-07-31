@@ -1,9 +1,8 @@
 import ProductionImage from "../../assets/production-img.svg";
-import TalentsImage from "../../assets/talents img.png";
 import {Link} from "react-router-dom";
 
 const HomePage = () => {
-    const images = [ProductionImage, TalentsImage]
+    const images = [ProductionImage, 'https://res.cloudinary.com/dybmufexj/image/upload/v1753987446/talents_img_z27jjx.png']
     return (
         <main className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-transparent">
             {['production', 'talents'].map((str, i) => (

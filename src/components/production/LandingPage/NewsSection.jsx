@@ -1,5 +1,4 @@
 import ArticleHeader from "../ArticleHeader.jsx";
-import ChuksPoliceImage from "../../../assets/news-img1.svg"
 import FreedomImage from "../../../assets/freedom-way.svg"
 
 const NewsSection = () => {
@@ -7,7 +6,7 @@ const NewsSection = () => {
         <section className="flex flex-col py-4 md:py-8 gap-5 items-center relative">
             <ArticleHeader title="news & updates" />
             <div className="grid grid-cols-1 md:grid-cols-[4fr_2fr] gap-12 items-center">
-                <img src={ChuksPoliceImage} alt="chuks police img" />
+                <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1753986253/news-img1_ax1owj.svg" alt="chuks police img" />
                 <img src={FreedomImage} className="hidden md:inline-block" alt="hero" />
             </div>
 
