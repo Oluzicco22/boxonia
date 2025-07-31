@@ -1,6 +1,7 @@
 import FeaturedTalentCard from "./FeaturedTalentCard.jsx";
 import {FaImdb, FaInstagram } from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
+import SymbolImage from "../../assets/symbol.svg"
 
 const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks }, onBook }) => {
     return (
@@ -22,14 +23,14 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
                 <a href="#"><FaInstagram /></a>
                 <a href="#"><FaXTwitter /></a>
             </div>
-            <div className="bg-neutral-700 rounded-xl py-4 px-20">
-                <h3 className="text-gray-400 text-3xl font-bold">
-                    Perks of <span className="text-yellow-500">{`Working with ${firstName}`}</span>
+            <div className="bg-[#181717] rounded-xl py-10 px-20">
+                <h3 className="text-[#919191] text-3xl font-bold mb-6">
+                    Perks of <span className="text-[#F6B62B]">{`Working with ${firstName}`}</span>
                 </h3>
                 <ul className="my-3 px-1">
                     {perks.map((perk, idx) => (
-                        <li key={idx} className="flex items-center gap-3">
-                            <FaImdb className="text-yellow-500" />
+                        <li key={idx} className="flex items-center gap-6 my-4">
+                            <img src={SymbolImage} alt="symbol" className="flex" />
                             <p className="text-white capitalize font-black text-base leading-loose">{perk}</p>
                         </li>
                     ))}
