@@ -2,7 +2,7 @@ import FeaturedTalentCard from "./FeaturedTalentCard.jsx";
 import {FaImdb, FaInstagram } from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 
-const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks } }) => {
+const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks }, onBook }) => {
     return (
         <section className="w-15/16 mx-auto my-10 flex flex-col gap-12 items-center">
             <p className="text-white">
@@ -11,7 +11,9 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
                 </span>{" "}
                 {info}
             </p>
-            <button className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-white rounded-md p-2 cursor-pointer lowercase">
+            <button
+                onClick={onBook}
+                className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-white rounded-md p-2 cursor-pointer lowercase">
                 Book {firstName}
             </button>
             <FeaturedTalentCard images={relatedProjects} />
