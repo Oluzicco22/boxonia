@@ -1,6 +1,6 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState } from "react";
 
 const ProductionSection = () => {
     const images = [
@@ -16,30 +16,46 @@ const ProductionSection = () => {
         "https://res.cloudinary.com/dybmufexj/image/upload/v1753986131/BTS_9_thszod.png",
     ];
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isTransitioning, setIsTransitioning] = useState(true);
-    const intervalRef = useRef(null);
+    const [currentIndex, setCurrentIndex] = useState(1);
+    const [transition, setTransition] = useState(true);
 
-    const goToNext = useCallback(() => {
-        if (currentImageIndex === images.length - 1) {
-            setIsTransitioning(false);
-            setCurrentImageIndex(0);
-            setTimeout(() => setIsTransitioning(true), 50);
-        } else {
-            setCurrentImageIndex((prevIndex) => prevIndex + 1);
-        }
-    }, [currentImageIndex, images.length]);
+    const totalImages = images.length;
+    const extendedImages = [images[totalImages - 1], ...images, images[0]];
+
+    const goToNext = () => {
+        setCurrentIndex(prev => prev + 1);
+    };
 
     const goToPrev = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
+        setCurrentIndex(prev => prev - 1);
+    };
+
+    const handleTransitionEnd = () => {
+        if (currentIndex === extendedImages.length - 1) {
+            setTransition(false);
+            setCurrentIndex(1);
+        }
+
+        if (currentIndex === 0) {
+            setTransition(false);
+            setCurrentIndex(extendedImages.length - 2);
+        }
     };
 
     useEffect(() => {
-        intervalRef.current = setInterval(goToNext, 3000);
-        return () => clearInterval(intervalRef.current);
-    }, [currentImageIndex, goToNext]);
+        if (!transition) {
+            requestAnimationFrame(() => setTransition(true));
+        }
+    }, [transition]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex(prev => prev + 1);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
 
     return (
         <section className="flex flex-col py-8 md:py-16 gap-20 items-center relative">
@@ -50,38 +66,27 @@ const ProductionSection = () => {
                 </p>
             </div>
 
-            <div className="w-full overflow-hidden relative">
+            <div className="w-full overflow-hidden relative h-[450px]">
                 <div
-                    className={`flex ${
-                        isTransitioning ? "transition-transform duration-700 ease-in-out" : ""
-                    }`}
-                    style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                    className={`flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    onTransitionEnd={handleTransitionEnd}
                 >
-                    {images.map((src, index) => (
+                    {extendedImages.map((img, i) => (
                         <img
-                            key={index}
-                            src={src}
-                            alt={`Behind-the-scenes-${index + 1}`}
+                            key={i}
+                            src={img}
+                            alt={`carousel-${i}`}
                             className="w-full flex-shrink-0 object-cover h-full"
                             loading="lazy"
                         />
                     ))}
                 </div>
 
-                <button
-                    type="button"
-                    onClick={goToPrev}
-                    aria-label="Previous image"
-                    className="absolute left-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100"
-                >
+                <button onClick={goToPrev} className="absolute left-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
                     <FaLessThan />
                 </button>
-                <button
-                    type="button"
-                    onClick={goToNext}
-                    aria-label="Next image"
-                    className="absolute right-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100"
-                >
+                <button onClick={goToNext} className="absolute right-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
                     <FaGreaterThan />
                 </button>
             </div>
