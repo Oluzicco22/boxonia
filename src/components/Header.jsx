@@ -9,6 +9,7 @@ const Header = () => {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [showOptions, setShowOptions] = useState(null);
+    const [activePath, setActivePath] = useState(null);
 
     const navLinks = [
         {
@@ -48,54 +49,60 @@ const Header = () => {
 
     const isActive = (path) => location.pathname === path;
 
+    useState(() => {
+        const path = window.location.pathname.includes('production') ? 'talents' : 'production';
+        setActivePath(path);
+    }, [])
+
     return (
-        <header className="w-full bg-black/20 bg-blend-darken relative">
+        <header className="w-full bg-black/40 bg-blend-darken relative">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="w-20 md:w-auto" />
                 </Link>
 
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
-                    <ul className="flex justify-between">
-                        {navLinks.map((link, idx) => (
+                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "justify-end"}`}>
+                        {navLinks.filter(lnk => {
+                            return activePath !== "production" ? lnk : lnk.name === 'Contact Us'
+                        }).map((link, idx) => (
                             <li key={idx} className="relative">
-                                {link.children ? (
-                                    <button
-                                        onClick={() => toggleDropdown(link.name)}
-                                        className={`cursor-pointer flex items-center gap-2 hover:text-yellow-400 ${link.children.some(child => isActive(child.path)) ? 'text-yellow-400' : ''}`}
-                                    >
-                                        {link.name} <FaCaretDown />
-                                    </button>
-                                ) : (
-                                    <Link
-                                        to={link.path}
-                                        className={`hover:text-yellow-400 ${isActive(link.path) ? 'text-yellow-400' : ''}`}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                )}
+                                    {link.children ? (
+                                        <button
+                                            onClick={() => toggleDropdown(link.name)}
+                                            className={`cursor-pointer flex items-center gap-2 hover:text-yellow-400 ${link.children.some(child => isActive(child.path)) ? 'text-yellow-400' : ''}`}
+                                        >
+                                            {link.name} <FaCaretDown />
+                                        </button>
+                                    ) : (
+                                        <Link
+                                            to={link.path}
+                                            className={`hover:text-yellow-400 ${isActive(link.path) ? 'text-yellow-400' : ''}`}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    )}
 
-                                {/* Dropdown */}
-                                {link.children && showOptions === link.name && (
-                                    <ul className="absolute top-full mt-2 bg-black text-white pt-2 pb-16 px-5 -left-1/4 shadow-lg rounded-md space-y-2 z-50">
-                                        {link.children.map((child, i) => (
-                                            <li key={i}>
-                                                <Link
-                                                    to={child.path}
-                                                    className={`hover:text-yellow-400 text-nowrap ${isActive(child.path) ? 'text-yellow-400' : ''}`}
-                                                >
-                                                    {child.name}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </li>
-                        ))}
+                                    {/* Dropdown */}
+                                    {link.children && showOptions === link.name && (
+                                        <ul className="absolute top-full mt-2 bg-black text-white pt-2 pb-16 px-5 -left-1/4 shadow-lg rounded-md space-y-2 z-50">
+                                            {link.children.map((child, i) => (
+                                                <li key={i}>
+                                                    <Link
+                                                        to={child.path}
+                                                        className={`hover:text-yellow-400 text-nowrap ${isActive(child.path) ? 'text-yellow-400' : ''}`}
+                                                    >
+                                                        {child.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>))}
                     </ul>
                 </nav>
 
-                <Link to="/talents" className="hidden md:inline-block py-2 px-12 text-white border-2 rounded-md border-white hover:bg-white hover:text-black">Talents</Link>
+                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 text-white border-2 rounded-md border-white hover:bg-white hover:text-black capitalize">{activePath}</Link>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon />
@@ -109,7 +116,9 @@ const Header = () => {
                         </div>
                         <nav>
                             <ul className="flex flex-col gap-3 text-base font-medium text-gray-700">
-                                {navLinks.map((link, idx) => (
+                                {navLinks.filter(lnk => {
+                                    return activePath !== "production" ? lnk : lnk.name === 'Contact Us'
+                                }).map((link, idx) => (
                                     <li key={idx}>
                                         {link.children ? (
                                             <div>
@@ -147,7 +156,8 @@ const Header = () => {
                                 ))}
                             </ul>
                         </nav>
-                        <Link to="/talents" className="block md:hidden py-2 px-12 w-fit text-black border-2 border-black hover:bg-black hover:text-white text-center mt-4">Talents</Link>
+
+                        <Link to={`/${activePath}`} className="block md:hidden py-2 px-12 w-fit text-black border-2 border-black hover:bg-black capitalize hover:text-white text-center mt-4">{activePath}</Link>
                     </div>
                 )}
             </div>

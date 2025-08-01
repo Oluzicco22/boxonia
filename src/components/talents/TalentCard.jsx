@@ -5,16 +5,16 @@ import SymbolImage from "../../assets/symbol.svg"
 
 const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks }, onBook }) => {
     return (
-        <section className="w-15/16 mx-auto my-10 flex flex-col gap-12 items-center">
+        <section className="w-12/16 mx-auto my-10 flex flex-col gap-12 items-center">
             <p className="text-white">
-                <span className="capitalize font-semibold text-lg">
+                <span className="capitalize font-normal text-lg">
                     {firstName} {lastName}
                 </span>{" "}
                 {info}
             </p>
             <button
                 onClick={onBook}
-                className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-white rounded-md p-2 cursor-pointer lowercase">
+                className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-whit hover:bg-white hover:text-black rounded-md p-2 cursor-pointer capitalize">
                 Book {firstName}
             </button>
             <FeaturedTalentCard images={relatedProjects} />

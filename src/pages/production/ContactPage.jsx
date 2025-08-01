@@ -91,6 +91,7 @@ const ContactPage = () => {
                             rows="3" id="name" className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 resize-none focus:outline-0" />
                     </div>
                 </form>
+                <button className="hidden md:inline-block py-2 px-12 my-4 text-white border-2 rounded-md border-white hover:bg-white hover:text-black">send message</button>
             </section>
 
             <FAQSection />

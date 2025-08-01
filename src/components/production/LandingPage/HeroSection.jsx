@@ -1,12 +1,37 @@
+import Header from "../../Header.jsx";
+
 const HeroSection = () => {
     return (
-        <section className="h-[500px] flex w-[85%] mx-auto items-end">
-            <div className="flex flex-col h-50 text-white transition-all delay-100 hover:text-white/60 cursor-pointer">
+        <section className="w-full relative h-screen overflow-hidden">
+            {/* Header on top */}
+            <div className="absolute top-0 w-full z-20">
+                <Header />
+            </div>
+
+            {/* Video background */}
+            <div className="absolute inset-0 z-10">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-[750px] object-cover"
+                >
+                    <source
+                        src="https://res.cloudinary.com/dybmufexj/video/upload/v1754054813/home_video_1_pcrddi.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            {/* Hero Text */}
+            <div className="h-84 absolute bottom-44 left-10 md:left-36 flex flex-col text-white z-30">
                 <h1 className="hero-font text-5xl md:text-9xl">action</h1>
                 <h1 className="hero-font text-5xl md:text-9xl">everywhere</h1>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default HeroSection
+export default HeroSection;
