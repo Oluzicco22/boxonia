@@ -26,7 +26,7 @@ const HeroSection = () => {
             </div>
 
             {/* Hero Text */}
-            <div className="h-84 absolute bottom-44 left-10 md:left-36 flex flex-col text-white z-30">
+            <div className="h-[350px] absolute bottom-44 left-10 md:left-36 flex flex-col text-white z-30">
                 <h1 className="hero-font text-5xl md:text-9xl">action</h1>
                 <h1 className="hero-font text-5xl md:text-9xl">everywhere</h1>
             </div>

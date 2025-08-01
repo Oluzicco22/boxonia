@@ -23,6 +23,6 @@
     font-family: 'Risk-Atoms', sans-serif;
 }
 
-a {
-    font-family: 'Inter', sans-serif;
+a, p {
+    font-family: 'Inter', sans-serif; !important;
 }
