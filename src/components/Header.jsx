@@ -50,7 +50,7 @@ const Header = () => {
 
     return (
         <header className="w-full bg-black/20 bg-blend-darken relative">
-            <div className="flex py-5 px-3 md:px-0 w-full md:w-[93%] mx-auto justify-between items-center">
+            <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="w-20 md:w-auto" />
                 </Link>

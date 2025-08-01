@@ -22,6 +22,7 @@ const NewsPage = () => {
 
                         </div>
                         <p className="flex text-xl font-normal w-3/6">Chuks Joseph stars in Kizz Daniel’s Police Video</p>
+                        <p className="flex text-xl font-normal w-3/6">Taye Arimoro’s Lead Role in New cinema movie.</p>
                         <Link to="/#" className="inline-block font-medium text-base py-2 px-24 text-white border border-white hover:bg-white hover:text-black rounded-md">watch</Link>
 
                     </article>

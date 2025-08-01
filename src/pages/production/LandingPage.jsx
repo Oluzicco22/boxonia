@@ -11,7 +11,7 @@ import Footer from "../../components/Footer.jsx";
 const LandingPage = () => {
     return (
         <>
-            <div className="bg-transparent pb-1 bg-cover bg-center bg-no-repeat h-150" style={{
+            <div className="bg-transparent pb-1 bg-cover bg-center bg-no-repeat h-180" style={{
                 backgroundImage: `url(${HeroImage})`}}>
                 <Header />
                 <HeroSection />
