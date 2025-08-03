@@ -7,10 +7,13 @@ import {Link} from "react-router-dom";
 const NewsPage = () => {
     const elements = [{
         image: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986253/news-img1_ax1owj.svg",
-        info: "Chuks Joseph stars in Kizz Daniel’s Police Video"
+        info: "Chuks Joseph stars in Kizz Daniel’s Police Video",
+        buttonTitle: "watch"
+
     },{
         image: FreedomImage,
-        info: "Taye Arimoro’s Lead Role in New cinema movie."
+        info: "Taye Arimoro’s Lead Role in New cinema movie.",
+        buttonTitle: "see trailer"
     }]
     return (
         <>
@@ -20,7 +23,7 @@ const NewsPage = () => {
             </div>
 
             <section className="grid grid-cols-1 my-16 md:grid-cols-2 w-[88%] mx-auto gap-16 items-center">
-                {elements.map(({image, info}, i) => (
+                {elements.map(({image, info, buttonTitle}, i) => (
                     <article key={i} className="flex flex-col gap-5 items-center">
                         <div
                             className="relative h-72 md:h-[40vh] w-full bg-black/10 bg-blend-darken bg-contain bg-no-repeat md:bg-cover bg-center"
@@ -29,7 +32,7 @@ const NewsPage = () => {
 
                         </div>
                         <p className="flex text-xl font-normal">{info}</p>
-                        <Link to="/#" className="inline-block font-medium text-base py-2 px-24 text-white border border-white hover:bg-white hover:text-black rounded-md">watch</Link>
+                        <Link to="/#" className="inline-block font-medium text-base py-2 px-24 text-white border border-white hover:bg-white hover:text-black rounded-md">{buttonTitle}</Link>
 
                     </article>
                 ))}

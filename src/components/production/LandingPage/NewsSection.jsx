@@ -31,7 +31,7 @@ const NewsSection = () => {
                 ))}
             </div>
 
-            <p className="text-gray-600 text-base md:text-4xl leading-16 font-regular border-y-2 border-gray-600 w-[95%] md:w-3/5 text-center mb-4">Audacious, Authentic & Exportable Art forms</p>
+            <p className="text-[#4D4D4D] text-base md:text-4xl leading-16 font-regular border-y-2 border-[#4D4D4D]w-[95%] md:w-3/5 text-center mb-4">Audacious, Authentic & Exportable Art forms</p>
         </section>
     )
 }
