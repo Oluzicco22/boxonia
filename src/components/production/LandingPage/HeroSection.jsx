@@ -2,14 +2,14 @@ import Header from "../../Header.jsx";
 
 const HeroSection = () => {
     return (
-        <section className="w-full relative h-screen overflow-hidden">
+        <section className="w-full relative overflow-hidden">
             {/* Header on top */}
             <div className="absolute top-0 w-full z-20">
                 <Header />
             </div>
 
             {/* Video background */}
-            <div className="absolute inset-0 z-10">
+            <div className="relative inset-0 z-10">
                 <video
                     autoPlay
                     loop
@@ -23,13 +23,15 @@ const HeroSection = () => {
                     />
                     Your browser does not support the video tag.
                 </video>
+
+                {/* Hero Text */}
+                <div className="absolute bottom-32 md:bottom-16 left-10 md:left-32 flex flex-col text-white z-30">
+                    <h1 className="hero-font text-5xl md:text-9xl">action</h1>
+                    <h1 className="hero-font text-5xl md:text-9xl">everywhere</h1>
+                </div>
             </div>
 
-            {/* Hero Text */}
-            <div className="absolute bottom-64 left-10 md:left-32 flex flex-col text-white z-30">
-                <h1 className="hero-font text-5xl md:text-9xl">action</h1>
-                <h1 className="hero-font text-5xl md:text-9xl">everywhere</h1>
-            </div>
+
         </section>
     );
 };
