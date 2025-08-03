@@ -1,10 +1,13 @@
 import ProductionImage from "../../assets/production-img.svg";
 import {Link} from "react-router-dom";
+import Logo from "../../assets/boxonia-logo.svg";
+
 
 const HomePage = () => {
     const images = [ProductionImage, 'https://res.cloudinary.com/dybmufexj/image/upload/v1753987446/talents_img_z27jjx.png']
     return (
-        <main className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-transparent">
+        <main className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-transparent relative">
+            <img className="absolute left-1/2 -translate-1/2 top-1/2" src={Logo} alt="logo" />
             {['production', 'talents'].map((str, i) => (
                 <article key={i} className="flex justify-center items-center capitalize bg-black/65 bg-blend-darken bg-no-repeat bg-cover bg-center" style={{
                     backgroundImage: `url(${images[i]})`,

@@ -5,7 +5,7 @@ import SymbolImage from "../../assets/symbol.svg"
 
 const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks }, onBook }) => {
     return (
-        <section className="w-11/12 md:w-12/16 mx-auto my-10 flex flex-col gap-12 items-center">
+        <section className="w-11/12 md:w-12/16 mx-auto my-2 md:my-10 flex flex-col gap-12 items-center">
             <p className="text-white">
                 <span className="capitalize font-normal text-lg">
                     {firstName} {lastName}

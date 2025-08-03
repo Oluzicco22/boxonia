@@ -25,11 +25,11 @@ const AppearedPage = ({ talent }) => {
 
     return (
         <div className="relative">
-            <div className="bg-transparent md:pb-1 md:bg-cover bg-center bg-no-repeat min-h-120 md:h-150 relative" style={{
+            <div className="bg-transparent md:pb-1 bg-contain md:bg-cover bg-center bg-no-repeat min-h-120 md:h-150 relative" style={{
                 backgroundImage: `url(${talent.thumbnail})`
             }}>
                 <Header />
-                <h1 className="capitalize font-bold text-7xl md:text-9xl absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                <h1 className="capitalize font-bold text-6xl md:text-9xl absolute bottom-13 md:-bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                     {`${talent.firstName} ${talent.lastName}`}
                 </h1>
             </div>
