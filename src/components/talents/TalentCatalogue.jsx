@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const TalentCatalogue = ({ props: { firstName, lastName, info, image } }) => {
     return (
-        <article className="ml-8 flex flex-col gap-6 bg-black text-white overflow-hidden shadow-md">
+        <article className="flex flex-col gap-6 bg-black text-white overflow-hidden shadow-md">
             <div className="relative">
                 <img
                     src={image}
                     alt={`${firstName || "Talent"} ${lastName || ""}`}
-                    className="w-fit h-[650px] rounded-[44px] object-cover"
+                    className="w-full md:w-fit h-[650px] rounded-[44px] object-cover"
                 />
                 <div className="bg-black/90 absolute -bottom-1 h-1/7 rounded-b-[44px] w-full flex items-center text-sm">
                     <Link to={`/talents/${firstName} ${lastName}?modal=${true}`}
