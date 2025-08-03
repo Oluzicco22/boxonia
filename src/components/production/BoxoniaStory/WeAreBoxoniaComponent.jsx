@@ -2,9 +2,9 @@ import ArticleHeader from "../ArticleHeader.jsx";
 
 const WeAreBoxoniaComponent = () => {
     return (
-        <section className="flex flex-col py-8 px-3 md:px-0 w-full text-center mx-auto items-center gap-16 mb-32">
+        <section className="flex flex-col py-4 md:py-8 px-3 md:px-0 w-full text-center mx-auto items-center gap-16 md:mb-32">
             <ArticleHeader title="we are boxonia" />
-                <div className="w-full flex justify-center text-left py-12" style={{
+                <div className="w-full flex justify-center text-left md:py-12" style={{
                         backgroundImage: "https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png",
                 }}>
                         <p className="text-[#B7B7B7] leading-8 text-lg md:w-9/15">

@@ -1,7 +1,7 @@
-import Header from "../../Header.jsx";
-import TalentCard from "../TalentCard.jsx";
-import Footer from "../../Footer.jsx";
-import TalentBookingModal from "../TalentBookingModal.jsx";
+import Header from "../Header.jsx";
+import TalentCard from "./TalentCard.jsx";
+import Footer from "../Footer.jsx";
+import TalentBookingModal from "./TalentBookingModal.jsx";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -36,8 +36,8 @@ const AppearedPage = ({ talent }) => {
 
             {/* Modal */}
             {openModal && (
-                <section className="w-full fixed top-0 h-screen bg-black/80 bg-blend-darken flex justify-center items-center z-50">
-                    <TalentBookingModal onClose={closeModalHandler} />
+                <section className="w-full absolute h-full top-0 bg-black/80 bg-blend-darken flex justify-center items-center z-50">
+                    <TalentBookingModal onClose={closeModalHandler} name={talent.firstName} />
                 </section>
             )}
 

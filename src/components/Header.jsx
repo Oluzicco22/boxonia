@@ -85,7 +85,7 @@ const Header = () => {
 
                                     {/* Dropdown */}
                                     {link.children && showOptions === link.name && (
-                                        <ul className="absolute top-full mt-2 bg-black text-white pt-2 pb-16 px-5 -left-1/4 shadow-lg rounded-md space-y-2 z-50">
+                                        <ul className="absolute top-full mt-2 bg-black text-white pt-2 pb-8 px-5 -left-1/4 shadow-lg rounded-md space-y-2 z-50">
                                             {link.children.map((child, i) => (
                                                 <li key={i}>
                                                     <Link

@@ -1,7 +1,7 @@
 import {XCircle} from "lucide-react";
 import {useState} from "react";
 
-const TalentBookingModal = ({onClose}) => {
+const TalentBookingModal = ({onClose, name}) => {
     const [type, setType] = useState(null);
     const [platform, setPlatform] = useState(null);
 
@@ -81,7 +81,7 @@ const TalentBookingModal = ({onClose}) => {
                         <label className="text-lg font-medium whitespace-nowrap">Payment Offer:</label>
                         <input type="text" className="w-full rounded-md focus-visible:outline-none" />
                     </div>
-                    <button className="text-white my-6 hover:text-black hover:bg-white rounded-md py-2 px-20 bg-transparent border border-white w-fit">book taye</button>
+                    <button className="text-white my-6 hover:text-black hover:bg-white rounded-md py-2 px-20 bg-transparent border border-white w-fit">{`book ${name}`}</button>
                 </div>
             </div>
         </div>

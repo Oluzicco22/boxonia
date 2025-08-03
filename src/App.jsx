@@ -63,22 +63,6 @@ const routes = createBrowserRouter([
                 element: <TalentViewPage />,
             },
             {
-                path: "about",
-                element: <AboutBoxoniaPage />,
-            },
-            {
-                path: "projects",
-                element: <ProjectPage />,
-            },
-            {
-                path: "projects/:id",
-                element: <ProjectViewPage />,
-            },
-            {
-                path: "news",
-                element: <NewsPage />,
-            },
-            {
                 path: "contact",
                 element: <ContactPage />,
             },

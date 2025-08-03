@@ -1,8 +1,7 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import TalentData from "../../data/talents.json";
-import AppearedPage from "../../components/talents/Appearance/AppearedPage.jsx";
-import NoAppearancePage from "../../components/talents/Appearance/NoAppearancePage.jsx";
+import AppearedPage from "../../components/talents/AppearedPage.jsx";
 
 const TalentViewPage = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -37,10 +36,7 @@ const TalentViewPage = () => {
     if(!talent) return <p>Talent not found</p>;
 
     return (
-        <>
-            {talent.relatedProjects.length > 0 ? <AppearedPage talent={talent} /> : <NoAppearancePage />}
-        </>
-
+       <AppearedPage talent={talent} />
     )
 }
 
