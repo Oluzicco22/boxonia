@@ -23,8 +23,8 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
                 <a href="#"><FaInstagram /></a>
                 <a href="#"><FaXTwitter /></a>
             </div>
-            <div className="bg-[#181717] rounded-xl py-10 px-20">
-                <h3 className="text-[#919191] text-3xl font-bold mb-6">
+            <div className="bg-[#181717] rounded-xl py-10 px-3 md:px-20">
+                <h3 className="text-[#919191] text-3xl font-bold text-center mb-6">
                     Perks of <span className="text-[#F6B62B]">{`Working with ${firstName}`}</span>
                 </h3>
                 <ul className="my-3 px-1">
