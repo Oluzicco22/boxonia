@@ -18,7 +18,7 @@ const HeroSection = () => {
                     className="w-full h-[750px] object-cover"
                 >
                     <source
-                        src="https://res.cloudinary.com/dybmufexj/video/upload/v1754054813/home_video_1_pcrddi.mp4"
+                        src="https://res.cloudinary.com/dybmufexj/video/upload/v1754281184/home_video_1_pcrddi.mp4"
                         type="video/mp4"
                     />
                     Your browser does not support the video tag.

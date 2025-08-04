@@ -11,7 +11,7 @@ const HomePage = () => {
                 }}>
                     <Link
                         to={`/${str}`}
-                        className={`text-center border-1 bg-blend-darken font-medium hover:bg-white hover:text-black ${!(i % 2) ? 'border-white bg-white/30' : 'border-black bg-black/65'} text-white px-14 py-2 rounded-md`}>
+                        className={`text-center border-1 bg-blend-darken font-medium hover:bg-white hover:text-black ${!(i % 2) ? 'border-white bg-white/50' : 'border-black bg-black/65'} text-white px-14 py-2 rounded-md`}>
                         {str}
                     </Link>
 
