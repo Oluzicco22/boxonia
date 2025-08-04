@@ -13,7 +13,7 @@ const TalentBookingModal = ({onClose, name}) => {
 
 
     return (
-        <div className="w-4/5 bg-neutral-700 rounded-2xl px-10 py-9 flex flex-col gap-14">
+        <div className="w-[95%] md:w-4/5 bg-neutral-700 rounded-2xl px-10 py-9 flex flex-col gap-14">
             <div className="w-full flex justify-end">
                 <button
                     onClick={onClose}
@@ -25,11 +25,11 @@ const TalentBookingModal = ({onClose, name}) => {
 
             </div>
             <div className="flex flex-col gap-10">
-                <div className="w-full h-30 flex justify-center items-center border border-white relative">
-                        <p className="text-white text-xl font-bold absolute bg-black px-3 -top-7 left-1/2 -translate-x-1/2 w-52 flex justify-center py-3">
+                <div className="w-full h-72 sm:h-44 lg:h-30 flex justify-center items-center border border-white relative">
+                    <p className="text-white text-xl font-bold absolute bg-black px-3 -top-7 left-1/2 -translate-x-1/2 w-52 flex justify-center py-3">
                             Project type:
                         </p>
-                    <div className="flex justify-evenly w-full items-center gap-3">
+                    <div className="flex justify-evenly flex-wrap lg:flex-nowrap w-full items-center gap-3">
                         {['feature film', 'short film', 'ad commercial', 'music video', 'brand influencing', 'others'].map((item, i) =>
                             <p
                                 onClick={() => {type === item ? setType(null) : setType(item)}}
@@ -38,7 +38,7 @@ const TalentBookingModal = ({onClose, name}) => {
                                 className={`
                                 ${type === item ? 'bg-black rounded-xl ' : ' '}
                                 text-white whitespace-nowrap capitalize font-medium cursor-pointer text-lg 
-                                ${type !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-1`}
+                                ${type !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
                                 key={i}>
                                 {item}
                             </p>
@@ -46,10 +46,10 @@ const TalentBookingModal = ({onClose, name}) => {
                     </div>
                 </div>
 
-                <div className="w-8/12 mx-auto h-30 flex justify-center items-center border border-white relative">
+                <div className="w-11/12 md:w-8/12 mx-auto h-40 sm:h-44 lg:h-30 flex justify-center items-center border border-white relative">
                     <p className="text-white text-xl font-bold absolute bg-black px-3 -top-7 left-1/2 -translate-x-1/2 w-52 flex justify-center py-3">
                         Platform</p>
-                    <div className="flex justify-between w-10/11">
+                    <div className="flex flex-wrap md:flex-nowrap justify-evenly md:justify-between w-full md:w-10/11">
                         {['cinema', 'netflix', 'amazon', 'youtube'].map((item, i) =>
                             <p
                                 onClick={() => {platform === item ? setPlatform(null) : setPlatform(item)}}
@@ -57,8 +57,8 @@ const TalentBookingModal = ({onClose, name}) => {
                                 tabIndex={0}
                                 className={`
                                 ${platform === item ? 'bg-black rounded-xl ' : ' '}
-                                text-white whitespace-nowrap capitalize font-medium cursor-pointer text-lg 
-                                ${platform !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-1`}
+                                text-white whitespace-nowrap capitalize font-medium cursor-pointer text-base md:text-lg 
+                                ${platform !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
                                 key={i}>
                                 {item}
                             </p>
