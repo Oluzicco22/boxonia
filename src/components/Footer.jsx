@@ -7,7 +7,7 @@ const Footer = () => {
             backgroundImage: "url(https://res.cloudinary.com/dybmufexj/image/upload/v1755730598/view-3d-film-reel_1_vhfwry.png)"
         }}>
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
-                <p className="text-[#F6B62B] font-bold text-[20px]">Contact Us</p>
+                <p className="text-[#F6B62B] font-bold text-3xl md:text-xl">Contact Us</p>
                 <div>
                     <a className="hover:text-yellow-400" href="#">boxonialblueprint@gmail.com</a>
                     <p>+234 903 307 1442</p>
@@ -25,9 +25,9 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <div className="flex flex-col items-center gap-8 text-gray-400 text-sm w-4/6">
+            <div className="flex flex-col md:items-center gap-8 text-gray-400 text-sm w-full md:w-4/6">
                 <div className="h-[2px] w-full flex-grow bg-gray-600"></div>
-                <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png" alt="footer-boxonia" className="w-32 md:w-auto text-center" />
+                <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png" alt="footer-boxonia" className="w-72 md:w-auto" />
             </div>
         </footer>
     )

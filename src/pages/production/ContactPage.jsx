@@ -18,7 +18,7 @@ const ContactPage = () => {
     return (
         <>
             <Header />
-            <div className="w-full flex justify-center mb-10 md:mt-40">
+            <div className="w-full flex justify-center mb-10 mt-40">
                 <ArticleHeader title="contact us" />
             </div>
             <section className="flex flex-col items-center text-center gap-5">

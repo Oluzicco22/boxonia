@@ -19,7 +19,7 @@ const ProductionSection = () => {
         <section className="flex flex-col py-0 gap-15 items-center relative">
             <div className="w-full flex items-center flex-col gap-10">
                 <ArticleHeader title="behind the scenes" />
-                <p className="w-[95%] md:w-2/3 text-center">
+                <p className="w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center">
                     First-class footage in the best quality is our priority, which is why our team has the latest professional video equipment. We are as well able to provide aerial footage from drones. In case you need footage in the highest quality we will arrange filming with a RED film camera.
                 </p>
             </div>

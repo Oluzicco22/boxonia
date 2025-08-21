@@ -11,11 +11,11 @@ const TalentPage = () => {
     return (
         <>
             <Header />
-            <div className="w-full flex justify-center mb-10 md:mt-40">
+            <div className="w-full flex justify-center mb-10 mt-40">
                 <ArticleHeader title="boxonia talents" />
             </div>
 
-            <p className="w-3/5 mx-auto my-3">
+            <p className="w-[90%] md:w-3/5 mx-auto my-3">
                 At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the careers of industry professionals.
                 Our approach begins with identifying top-tier talent whose skills and potential align with our values.<br /><br />
                 Through collaboration, strategy, and tailored career growth, we cultivate long-term relationships that drive both personal and industry-wide innovation.

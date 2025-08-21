@@ -8,12 +8,12 @@ const ProjectPage = () => {
     return (
         <>
             <Header />
-            <div className="w-full flex justify-center mb-10 md:mt-40">
+            <div className="w-full flex justify-center mb-10 mt-40">
                 <ArticleHeader title="our projects" />
             </div>
             {projects.map((project, i) => (
                 <article key={i}
-                    className="my-10 flex justify-center items-end h-[40vh] w-full relative bg-black/10 bg-blend-darken bg-cover bg-center"
+                    className="my-10 flex justify-center items-end h-[25vh] md:h-[40vh] w-full relative bg-black/10 bg-blend-darken bg-cover bg-center"
                     style={{
                         backgroundImage: `url(${project.image})`,
                     }}>

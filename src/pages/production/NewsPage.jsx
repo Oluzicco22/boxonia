@@ -7,7 +7,7 @@ const NewsPage = () => {
     return (
         <>
             <Header />
-            <div className="md:mt-32">
+            <div className="mt-40">
                 <SpotlightSection len="7" />
             </div>
             <Footer />
