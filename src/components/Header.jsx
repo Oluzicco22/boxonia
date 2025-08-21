@@ -47,7 +47,7 @@ const Header = () => {
         setShowOptions(prev => prev === name ? null : name);
     };
 
-    const isActive = (path) => location.pathname === path;
+    const isActive = (path) => location.pathname === path
 
     useState(() => {
         const path = window.location.pathname.includes('production') ? 'talents' : 'production';
@@ -55,7 +55,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className="w-full bg-black/40 bg-blend-darken relative">
+        <header className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-10">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="w-20 md:w-auto" />
@@ -102,7 +102,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 text-white border-2 rounded-md border-white hover:bg-white hover:text-black capitalize">{activePath}</Link>
+                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black border-2 rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</Link>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon />
@@ -157,7 +157,7 @@ const Header = () => {
                             </ul>
                         </nav>
 
-                        <Link to={`/${activePath}`} className="block md:hidden py-2 px-12 w-fit text-black border-2 border-black hover:bg-black capitalize hover:text-white text-center mt-4">{activePath}</Link>
+                        <Link to={`/${activePath}`} className="block md:hidden py-2 px-12 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-black capitalize hover:text-white text-center mt-4">{activePath}</Link>
                     </div>
                 )}
             </div>

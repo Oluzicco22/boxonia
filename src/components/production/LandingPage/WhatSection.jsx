@@ -17,13 +17,13 @@ const WhatSection = () => {
                 >
                     {boxoniaPillars.slice(0, 3).map((pillar, i) => (
                         <article key={i} className="flex gap-2 flex-col w-full md:w-1/3">
-                            <h3 className="text-center text-[#B7B7B7] text-3xl font-bold">{pillar.title}</h3>
-                            <p className="text-white text-lg font-extralight overflow-hidden text-ellipsis line-clamp-8">
+                            <h3 className="text-[#f6b62b] text-xl font-semibold uppercase">{pillar.title}</h3>
+                            <p className="text-white text-lg font-extralight overflow-hidden text-ellipsis line-clamp-8 whitespace-pre-line">
                                 {pillar.description}
                                 {pillar.children && pillar.children.map((child, j) => (
-                                    <span key={j}><br /> <br />
+                                    <span key={j} className="whitespace-pre-line">
                                         {" "}
-                                        <span className="font-normal italic">{child.title}:</span>{" "}<br />
+                                        <span className="font-normal">{child.title}:</span>{" "}<br />
                                         {child.description}
                                 </span>
                                 ))}

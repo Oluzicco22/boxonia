@@ -10,7 +10,7 @@ const ProjectsSection = () => {
 
     return (
         <section className="flex flex-col py-16 gap-12 items-center relative">
-            <ArticleHeader title="projects" />
+            <ArticleHeader title="our projects" />
             <CarouselComponent images={images} navButon={false} />
 
             <InSectionLink name="more of our work" path="/production/projects" />

@@ -5,7 +5,7 @@ import ArticleHeader from "../ArticleHeader.jsx";
 const FAQSection = () => {
     return (
         <section id="faq" className="flex flex-col items-center my-12 justify-between gap-16">
-                <ArticleHeader title="FAQ" />
+                <ArticleHeader title="F A Q" />
                 <div className="flex flex-col gap-2 w-5/6 md:w-2/3">
                     <FAQArticle articles={Faqs} />
                 </div>

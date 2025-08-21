@@ -1,30 +1,33 @@
-import FooterImage from "../assets/footer-boxonia.svg"
-import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col py-12 md:py-20 w-[95%] md:w-[93%] mx-auto gap-6 md:gap-12 items-center">
-            <div className="flex items-center gap-16 text-gray-400 text-sm w-5/6">
-                <div className="h-[2px] flex-grow bg-gray-600"></div>
-                <img src={FooterImage} alt="footer-boxonia" className="w-32 md:w-auto text-center" />
-                <div className="h-[2px] flex-grow bg-gray-600"></div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center text-gray-400 w-full md:w-3/4">
-                <p className="text-[#525252] header-font text-5xl">Contact Us</p>
-                <p>Lagos, Nigeria</p>
+        <footer className="flex flex-col py-12 md:py-12 w-[95%] md:w-[93%] mx-auto gap-6 md:gap-12 items-center bg-black/30 bg-blend-darken" style={{
+            backgroundImage: "url(https://res.cloudinary.com/dybmufexj/image/upload/v1755730598/view-3d-film-reel_1_vhfwry.png)"
+        }}>
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
+                <p className="text-[#F6B62B] font-bold text-[20px]">Contact Us</p>
                 <div>
                     <a className="hover:text-yellow-400" href="#">boxonialblueprint@gmail.com</a>
-                    <p>+2348092222071</p>
+                    <p>+2349033071442</p>
+                    <p>+234 903 207 1442</p>
                 </div>
+
+                <p>Lagos, Nigeria</p>
 
                 <nav className="flex gap-3 text-3xl">
                     <a href="#" className="hover:text-yellow-400"><FaInstagram /></a>
                     <a href="#" className="hover:text-yellow-400"><FaXTwitter /></a>
-                    <a href="#" className="hover:text-yellow-400"><FaLinkedin /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaLinkedinIn /></a>
+                    <a href="#" className="hover:text-yellow-400"><FaFacebookF /></a>
                     <a href="#" className="hover:text-yellow-400"><FaYoutube /></a>
                 </nav>
+            </div>
+
+            <div className="flex flex-col items-center gap-8 text-gray-400 text-sm w-4/6">
+                <div className="h-[2px] w-full flex-grow bg-gray-600"></div>
+                <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png" alt="footer-boxonia" className="w-32 md:w-auto text-center" />
             </div>
         </footer>
     )

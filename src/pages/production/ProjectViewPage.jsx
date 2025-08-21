@@ -47,7 +47,7 @@ const ProjectViewPage = () => {
                 className="relative grid grid-cols-1 md:grid-cols-[2fr_5fr] my-10 gap-5 md:gap-10 w-[93%] mx-auto">
                 <div className="md:absolute md:-top-3/5 flex flex-col gap-5 items-center w-1/3">
                         <div className="hidden md:block w-4/6 h-full relative">
-                            <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1754226377/real_nolly_babes_poster_kxixpo.png" className="w-full" alt="hero" />
+                            <img src={project?.cover_image} className="w-full" alt="hero" />
                         </div>
                         <button
                             className="w-full md:w-3/6 cursor-pointer py-2 border border-white rounded-sm text-white hover:text-black hover:bg-white capitalize font-bold text-xl">

@@ -3,7 +3,7 @@ import ArticleHeader from "../ArticleHeader.jsx";
 const WeAreBoxoniaComponent = () => {
     return (
         <section className="flex flex-col py-4 md:py-8 px-3 md:px-0 w-full text-center mx-auto items-center gap-16 md:mb-32">
-            <ArticleHeader title="we are boxonia" />
+            <ArticleHeader title="the boxonia story" />
                 <div className="w-full flex justify-center text-left md:py-12" style={{
                         backgroundImage: "https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png",
                 }}>

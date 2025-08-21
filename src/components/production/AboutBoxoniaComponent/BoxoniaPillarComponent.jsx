@@ -11,23 +11,25 @@ const BoxoniaPillarComponent = () => {
     ]
     return (
         <section className="flex flex-col py-5 px-0 w-full mx-auto items-center">
-            <div className="flex flex-col w-full md:gap-10">
+            <div className="flex flex-col w-full md:gap-12">
                 {boxoniaPillars.map((pillar, idx) => (
                     <div key={idx}
-                         className="flex justify-center items-center py-32 w-full relative bg-black/30 bg-blend-darken bg-cover bg-center bg-no-repeat"
+                         className="flex justify-center items-center py-16 w-full relative bg-cover bg-center bg-no-repeat"
                          style={{
                              backgroundImage: `url(${images[idx]})`,
                          }}
                          >
                         <div className="w-11/15 flex gap-3 text-white flex-col">
-                            <h3 className="text-3xl font-bold text-center">{pillar.title}</h3>
-                            <p className="text-lg font-normal text-justify">{pillar.description}</p>
-                            {pillar.children && pillar.children.map((child, i) => (
-                                <div key={i}>
-                                    <h4 className="italic font-medium text-lg">{child.title}</h4>
-                                    <p className="text-justify">{child.description}</p>
-                                </div>
-                            ))}
+                            <h3 className="text-3xl font-bold text-center text-[#f6b62b] uppercase">{pillar.title}</h3>
+                            <p className="text-lg font-normal text-justify leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{__html: pillar.description}}></p>
+                            <div className="flex flex-col gap-8">
+                                {pillar.children && pillar.children.map((child, i) => (
+                                    <div key={i} className="flex flex-col gap-2">
+                                        <h4 className="font-medium text-lg text-[#f6b62b]">{child.title}</h4>
+                                        <p className="text-justify">{child.description}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 ))}
