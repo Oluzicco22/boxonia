@@ -62,9 +62,9 @@ const Header = () => {
                 </Link>
 
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
-                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "justify-end"}`}>
+                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "gap-4 justify-end"}`}>
                         {navLinks.filter(lnk => {
-                            return activePath !== "production" ? lnk : lnk.name === 'Contact Us'
+                            return activePath !== "production" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                         }).map((link, idx) => (
                             <li key={idx} className="relative">
                                     {link.children ? (
