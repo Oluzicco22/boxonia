@@ -10,10 +10,12 @@ const BoxoniaStoryPage = () => {
             backgroundImage: `url(https://res.cloudinary.com/dybmufexj/image/upload/v1754222299/reels-img_l7djxx.png)`
         }}>
             <Header />
-            <WeAreBoxoniaComponent />
-            <ValuesComponent />
-            <BoxoniaAlumniComponent />
-            <Footer />
+           <div className="mt-24 md:mt-40">
+               <WeAreBoxoniaComponent />
+               <ValuesComponent />
+               <BoxoniaAlumniComponent />
+               <Footer />
+           </div>
         </div>
     )
 }
