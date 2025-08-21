@@ -10,7 +10,7 @@ const ProjectsSection = () => {
     ]
 
     return (
-        <section className="flex flex-col gap-8 items-center relative">
+        <section className="flex flex-col gap-10 items-center relative">
             <ArticleHeader title="our projects" />
             <CarouselComponent images={images} navButon={false} />
 

@@ -42,7 +42,7 @@ const CarouselComponent = ({images, navButon}) => {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden relative h-auto">
+        <div className="w-full overflow-hidden relative h-[500px]">
             <div
                 className={`flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
