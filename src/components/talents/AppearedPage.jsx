@@ -2,26 +2,11 @@ import Header from "../Header.jsx";
 import TalentCard from "./TalentCard.jsx";
 import Footer from "../Footer.jsx";
 import TalentBookingModal from "./TalentBookingModal.jsx";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 const AppearedPage = ({ talent }) => {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const modalParam = searchParams.get('modal') === 'true';
-    const [openModal, setOpenModal] = useState(modalParam);
+    const [openModal, setOpenModal] = useState(false);
 
-    // Keep URL and state in sync
-    useEffect(() => {
-        setOpenModal(modalParam);
-    }, [modalParam]);
-
-    const openModalHandler = () => {
-        setSearchParams({ modal: 'true' });
-    };
-
-    const closeModalHandler = () => {
-        setSearchParams({}); // removes all query params
-    };
 
     return (
         <div className="relative">
@@ -37,12 +22,12 @@ const AppearedPage = ({ talent }) => {
             {/* Modal */}
             {openModal && (
                 <section className="w-full absolute h-full top-0 bg-black/80 bg-blend-darken flex justify-center items-center z-50">
-                    <TalentBookingModal onClose={closeModalHandler} name={talent.firstName} />
+                    <TalentBookingModal onClose={() => setOpenModal(false)} name={talent.firstName} />
                 </section>
             )}
 
             {/* Content */}
-            <TalentCard props={talent} onBook={openModalHandler} />
+            <TalentCard props={talent} onBook={() => setOpenModal(true)} />
             <Footer />
         </div>
     );
