@@ -14,7 +14,7 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
             </p>
             <button
                 onClick={onBook}
-                className="w-1/2 md:w-1/5 mx-auto border border-white font-semibold text-whit hover:bg-white hover:text-black rounded-md p-2 cursor-pointer capitalize">
+                className="w-1/2 md:w-1/5 mx-auto bg-[#F6B62B] font-semibold text-black hover:bg-white hover:text-black rounded-md p-2 cursor-pointer capitalize">
                 Book {firstName}
             </button>
             <FeaturedTalentCard images={relatedProjects} />
