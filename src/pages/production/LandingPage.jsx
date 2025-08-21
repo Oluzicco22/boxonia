@@ -9,7 +9,7 @@ import InSectionLink from "../../components/production/InSectionLink.jsx";
 
 const LandingPage = () => {
     return (
-        <>
+        <div className="flex flex-col gap-25">
             <HeroSection />
 
             <WhatSection />
@@ -19,13 +19,13 @@ const LandingPage = () => {
             <div className="flex flex-col items-center justify-center">
                 <SpotlightSection />
                 <InSectionLink name="see more" path="/production/news" />
-                <p className="text-[#F6B62B] text-base md:text-4xl leading-16 font-normal border-y-2 border-[#4D4D4D] w-[95%] md:w-3/5 text-center mt-12">
+                <p className="lemon-font text-[#F6B62B] text-4xl md:text-4xl leading-22 font-normal border-y-2 border-[#4D4D4D] w-[95%] md:w-3/5 text-center mt-25">
                     Audacious, Authentic & Exportable Art forms
                 </p>
             </div>
             <ProductionSection />
             <Footer />
-        </>
+        </div>
 
     )
 }

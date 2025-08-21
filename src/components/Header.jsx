@@ -70,14 +70,14 @@ const Header = () => {
                                     {link.children ? (
                                         <button
                                             onClick={() => toggleDropdown(link.name)}
-                                            className={`cursor-pointer flex items-center gap-2 hover:text-yellow-400 ${link.children.some(child => isActive(child.path)) ? 'text-yellow-400' : ''}`}
+                                            className={`cursor-pointer flex items-center gap-2 hover:text-[#f6b62b] ${link.children.some(child => isActive(child.path)) ? 'text-[#f6b62b]' : ''}`}
                                         >
                                             {link.name} <FaCaretDown />
                                         </button>
                                     ) : (
                                         <Link
                                             to={link.path}
-                                            className={`hover:text-yellow-400 ${isActive(link.path) ? 'text-yellow-400' : ''}`}
+                                            className={`hover:text-[#f6b62b] ${isActive(link.path) ? 'text-[#f6b62b]' : ''}`}
                                         >
                                             {link.name}
                                         </Link>
@@ -90,7 +90,7 @@ const Header = () => {
                                                 <li key={i}>
                                                     <Link
                                                         to={child.path}
-                                                        className={`hover:text-yellow-400 text-nowrap ${isActive(child.path) ? 'text-yellow-400' : ''}`}
+                                                        className={`hover:text-[#f6b62b] text-nowrap ${isActive(child.path) ? 'text-[#f6b62b]' : ''}`}
                                                     >
                                                         {child.name}
                                                     </Link>
@@ -102,7 +102,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black border-2 rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</Link>
+                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</Link>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon />
@@ -124,7 +124,7 @@ const Header = () => {
                                             <div>
                                                 <button
                                                     onClick={() => toggleDropdown(link.name)}
-                                                    className={`flex justify-between w-full items-center hover:text-yellow-400 ${link.children.some(child => isActive(child.path)) ? 'text-yellow-400' : ''}`}
+                                                    className={`flex justify-between w-full items-center hover:text-[#f6b62b] ${link.children.some(child => isActive(child.path)) ? 'text-yellow-400' : ''}`}
                                                 >
                                                     {link.name}
                                                     <FaCaretDown />
@@ -135,7 +135,7 @@ const Header = () => {
                                                             <li key={i}>
                                                                 <Link
                                                                     to={child.path}
-                                                                    className={`hover:text-yellow-400 ${isActive(child.path) ? 'text-yellow-400' : ''}`}
+                                                                    className={`hover:text-[#f6b62b] ${isActive(child.path) ? 'text-[#f6b62b]' : ''}`}
                                                                 >
                                                                     {child.name}
                                                                 </Link>
@@ -147,7 +147,7 @@ const Header = () => {
                                         ) : (
                                             <Link
                                                 to={link.path}
-                                                className={`hover:text-yellow-400 ${isActive(link.path) ? 'text-yellow-400' : ''}`}
+                                                className={`hover:text-[#f6b62b] ${isActive(link.path) ? 'text-[#f6b62b]' : ''}`}
                                             >
                                                 {link.name}
                                             </Link>

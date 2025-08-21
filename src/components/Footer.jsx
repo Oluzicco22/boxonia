@@ -10,8 +10,8 @@ const Footer = () => {
                 <p className="text-[#F6B62B] font-bold text-[20px]">Contact Us</p>
                 <div>
                     <a className="hover:text-yellow-400" href="#">boxonialblueprint@gmail.com</a>
-                    <p>+2349033071442</p>
-                    <p>+234 903 207 1442</p>
+                    <p>+234 903 307 1442</p>
+                    <p>+234 818 446 8748</p>
                 </div>
 
                 <p>Lagos, Nigeria</p>
