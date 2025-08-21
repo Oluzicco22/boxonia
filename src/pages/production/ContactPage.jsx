@@ -18,7 +18,7 @@ const ContactPage = () => {
     return (
         <>
             <Header />
-            <div className="w-full flex justify-center my-10">
+            <div className="w-full flex justify-center mb-10 md:mt-40">
                 <ArticleHeader title="contact us" />
             </div>
             <section className="flex flex-col items-center text-center gap-5">
@@ -54,7 +54,7 @@ const ContactPage = () => {
             </section>
 
             <section className="flex flex-col items-center text-center my-12 gap-4 text-black">
-                <h2 className="capitalize text-3xl font-medium text-gray-400">get in touch</h2>
+                <ArticleHeader title="get in touch" />
                 <form onSubmit={() => {}} className="w-4/6 md:w-2/5 flex flex-col gap-4">
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="name" className="text-gray-400 text-base font-medium">Name:</label>

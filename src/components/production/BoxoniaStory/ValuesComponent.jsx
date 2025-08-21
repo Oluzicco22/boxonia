@@ -19,9 +19,7 @@ const ValuesComponent = () => {
                 },
                 {
                         title: "Exceptional",
-                        desc: "Boxonia is built on the foundation of excellence, this means that we are " +
-                            "committed to quality. We carry out projects by ensuring that we attain " +
-                            "perfection or near perfection. It is a case of either going hard or going home. We prefer the former, always."
+                        desc: "We don't just protect a project we nurture and guide it to its best form."
                 },
                 {
                         title: "Transparent",
@@ -31,14 +29,17 @@ const ValuesComponent = () => {
         ]
 
         return (
-            <section className="flex flex-col py-5 px-3 md:px-0 w-full mx-auto items-center gap-16 mb-16 md:mb-36">
-                    <ArticleHeader title="values" />
-                    <div className="flex flex-col gap-12 w-full md:w-9/15 px-3 mx-auto text-white">
-                            {values.map(({title, desc}, i) => (
-                                    <article key={i} className="flex flex-col gap-2">
-                                            <h3 className="text-white text-xl font-bold">{title}</h3>
-                                            <p className="text-[#B7B7B7] text-lg leading-9 font-light">{desc}</p>
-                                    </article>
+            <section className="flex flex-col py-5 px-3 md:px-0 w-full mx-auto items-center gap-8 mb-16">
+                    <ArticleHeader title="our values" />
+                    <div className="grid w-full md:w-3/5 px-3 mx-auto gap-7 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+                            {values.map(({ title, desc }, i) => (
+                                <article
+                                    key={i}
+                                    className="flex flex-col gap-2 bg-[#131313] rounded-xl p-4 text-lg"
+                                >
+                                        <h3 className="text-[#F6B62B] font-bold">{title}</h3>
+                                        <p className="text-[#B7B7B7] leading-snug font-normal">{desc}</p>
+                                </article>
                             ))}
                     </div>
             </section>
