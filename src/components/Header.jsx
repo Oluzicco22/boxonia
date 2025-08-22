@@ -110,7 +110,7 @@ const Header = () => {
 
                 {/* Mobile Nav */}
                 {isOpen && (
-                    <div className="absolute md:hidden w-full z-20 bg-white shadow-md pt-4 pb-6 top-0 px-5 space-y-4 rounded-md transition-all duration-300 ease-in-out">
+                    <div className="absolute md:hidden w-full z-50 bg-white shadow-md pt-4 pb-6 top-0 px-5 space-y-4 rounded-md transition-all duration-300 ease-in-out">
                         <div className="flex justify-end">
                             <button className="text-black text-2xl" onClick={() => setIsOpen(!isOpen)}><FaX /></button>
                         </div>
