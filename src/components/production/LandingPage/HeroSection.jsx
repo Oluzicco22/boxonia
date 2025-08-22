@@ -40,8 +40,8 @@ const HeroSection = () => {
                         showVideoText ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                    <h1 className="hero-font text-5xl md:text-7xl lg:text-9xl">action</h1>
-                    <h1 className="hero-font text-5xl md:text-7xl lg:text-9xl">everywhere</h1>
+                    <h1 className="hero-font text-2xl sm:text-5xl md:text-7xl lg:text-9xl">action</h1>
+                    <h1 className="hero-font text-2xl sm:text-5xl md:text-7xl lg:text-9xl">everywhere</h1>
                 </div>
             </div>
         </section>
