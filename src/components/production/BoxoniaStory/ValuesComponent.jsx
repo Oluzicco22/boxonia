@@ -26,9 +26,9 @@ const ValuesComponent = () => {
         ]
 
         return (
-            <section className="flex flex-col px-3 md:px-0 w-full mx-auto items-center gap-8">
+            <section className="flex flex-col px-3 md:px-0 w-full mx-auto items-center gap-16">
                     <ArticleHeader title="our values" />
-                    <div className="grid w-full md:w-3/5 px-3 mx-auto gap-7 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+                    <div className="grid w-full md:w-3/5 px-3 mx-auto gap-8 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
                             {values.map(({ title, desc }, i) => (
                                 <article
                                     key={i}

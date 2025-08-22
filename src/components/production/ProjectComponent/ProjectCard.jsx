@@ -33,7 +33,7 @@ const ProjectCard = ({ props }) => {
         <article className="flex flex-col justify-end gap-4">
             <h2 className="capitalize font-bold text-5xl">{props?.title}</h2>
             {keys.map((key, i) => (
-                <div key={i} className="flex gap-2">
+                <div key={i} className="flex gap-2 itim-font">
                     <h3 className="text-yellow-500 font-semibold text-xl capitalize">
                         {`${key.split("_").join(" ")}:`}
                     </h3>

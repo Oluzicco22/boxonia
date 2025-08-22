@@ -2,7 +2,7 @@ import InSectionLink from "../InSectionLink.jsx";
 
 const AlumniCard = ({ name, role, info, img }) => {
     return (
-        <article className="grid grid-cols-[200px_1fr] gap-4">
+        <article className="grid grid-cols-[200px_1fr] gap-7">
             <div className="flex flex-col justify-between text-center text-lg">
                 <img src={img} alt={`Portrait of ${name}`} className="w-fit h-auto rounded-[20px]" />
                 <div>
