@@ -1,9 +1,8 @@
-import ProductionImage from "../../assets/production-img.svg";
 import {Link} from "react-router-dom";
 import CArrowIcon from "../../assets/arrow-icon.svg";
 
 const HomePage = () => {
-    const images = [ProductionImage, 'https://res.cloudinary.com/dybmufexj/image/upload/v1753987446/talents_img_z27jjx.png']
+    const images = ["https://res.cloudinary.com/dybmufexj/image/upload/v1755903110/real_prod_img_ln9vja.png", 'https://res.cloudinary.com/dybmufexj/image/upload/v1755902990/talents_img_z27jjx.png']
     return (
         <main className="grid grid-cols-1 md:grid-cols-2 min-h-screen bg-transparent relative">
             <img className="absolute left-1/2 -translate-1/2 top-1/2 md:w-[20%]" src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png" alt="logo" />
