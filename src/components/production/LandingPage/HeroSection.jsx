@@ -15,7 +15,7 @@ const HeroSection = () => {
     return (
         <section className="w-full relative overflow-hidden">
             {/* Header on top */}
-            <div className="absolute top-0 w-full z-20">
+            <div className="absolute top-0 w-full">
                 <Header />
             </div>
 
