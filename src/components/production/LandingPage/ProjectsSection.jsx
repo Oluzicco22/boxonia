@@ -14,7 +14,7 @@ const ProjectsSection = () => {
             <ArticleHeader title="our projects" />
             <CarouselComponent images={images} navButon={false} />
 
-            <InSectionLink name="more of our work" path="/production/projects" />
+            <InSectionLink name="more of our works" path="/production/projects" />
         </section>
     )
 }

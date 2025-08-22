@@ -117,7 +117,7 @@ const Header = () => {
                         <nav>
                             <ul className="flex flex-col gap-3 text-base font-medium text-gray-700">
                                 {navLinks.filter(lnk => {
-                                    return activePath !== "production" ? lnk : lnk.name === 'Contact Us'
+                                    return activePath !== "production" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                                 }).map((link, idx) => (
                                     <li key={idx}>
                                         {link.children ? (

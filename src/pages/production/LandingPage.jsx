@@ -19,7 +19,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center justify-center">
                 <SpotlightSection />
                 <InSectionLink name="see more" path="/production/news" />
-                <p className="lemon-font text-[#F6B62B] text-4xl md:text-4xl leading-22 font-normal border-y-2 border-[#4D4D4D] w-[95%] md:w-3/5 text-center mt-25">
+                <p className="lemon-font text-black md:text-[#F6B62B] bg-[#F6B62BB0] md:bg-transparent text-2xl md:text-4xl rounded-md md:rounded-none py-3 md:py-0 leading-10 md:leading-22 font-normal md:border-y-2 border-[#4D4D4D] w-3/5 text-center mt-25">
                     Audacious, Authentic & Exportable Art forms
                 </p>
             </div>
