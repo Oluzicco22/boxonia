@@ -9,16 +9,23 @@ const SponsorSection = () => {
     ]
 
     return (
-        <section className="bg-white flex justify-center items-center gap-4 md:gap-16 py-6 md:py-4">
-            <span className="text-black font-bold text-xl">Trusted By:</span>
-            {imagesLink.map((src, i) =>
-                <img
-                    src={src}
-                    alt={`img-${i}`}
-                    key={i}
-                    className="w-24 md:w-auto cursor-pointer grayscale hover:grayscale-0 transition duration-300"
-                />
-            )}
+        <section className="bg-white py-6 md:py-4">
+            <div className="flex items-center gap-4">
+                <span className="text-black font-bold text-lg md:text-xl shrink-0 px-6 md:px-12">Trusted By:</span>
+
+                <div className="overflow-hidden w-full flex-1">
+                    <div className="flex gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite]">
+                        {[...imagesLink, ...imagesLink].map((src, i) => (
+                            <img
+                                src={src}
+                                alt={`img-${i}`}
+                                key={i}
+                                className="w-24 md:w-auto cursor-pointer grayscale hover:grayscale-0 transition duration-300"
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }

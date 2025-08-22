@@ -31,9 +31,10 @@ const ContactPage = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Phone:</h2>
-                    <p className="not-italic text-white text-lg font-medium leading-relaxed">
-                        +234 809 222 2071
-                    </p>
+                    <div className="not-italic text-white text-lg font-medium leading-relaxed">
+                        <a href='tel:+2349033071442' className="hover:underline">+2349033071442</a><br />
+                        <a href='tel:+2348184468748' className="hover:underline">+2348184468748</a>
+                    </div>
                 </div>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Email:</h2>

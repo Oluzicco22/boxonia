@@ -6,7 +6,7 @@ const SpotlightSection = ({len = 2}) => {
     return (
         <section className="flex flex-col py-4 md:py-0 w-[85%] mx-auto gap-8 items-center relative">
             <ArticleHeader title="in the spotlight" />
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 items-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-24 items-center w-full">
                 {spotlights.filter((spotlight, idx) => idx < len).map(({image, info}, i) => (
                     <div key={i} className="flex flex-col gap-2">
                         <div className="px-2 py-3 md:p-0 rounded-2xl md:rounded-none bg-[#69696980] md:bg-none ">

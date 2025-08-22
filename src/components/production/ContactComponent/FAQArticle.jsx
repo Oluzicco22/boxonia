@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PiCaretDownThin } from "react-icons/pi";
+import { PiCaretDownBold } from "react-icons/pi";
 
 const FAQArticle = ({ articles }) => {
     const [seeAnswer, setSeeAnswer] = useState(null);
@@ -19,10 +19,10 @@ const FAQArticle = ({ articles }) => {
             >
                 <p className="flex items-center justify-between text-black font-semibold text-lg">
                     {article.question}
-                    <PiCaretDownThin
+                    <PiCaretDownBold
                         className={`
                             transition-transform duration-500 ease-in-out
-                            w-6 h-6 border border-gray-900 rounded-full
+                            w-7 h-7 border-2 border-gray-900 rounded-full
                             ${isOpen ? '-rotate-180' : 'rotate-0'}
                         `}
                     />

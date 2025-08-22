@@ -53,7 +53,7 @@ const CarouselComponent = ({images, navButon}) => {
                         key={i}
                         src={img}
                         alt={`carousel-${i}`}
-                        className="w-full flex-shrink-0 object-cover h-[500px]"
+                        className="w-full flex-shrink-0 object-cover md:h-[500px]"
                         loading="lazy"
                     />
                 ))}
