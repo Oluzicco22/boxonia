@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 
 const TalentPage = () => {
     return (
-        <div className="grid gap-24 mt-20 md:mt-40">
+        <div className="grid gap-16 mt-20 md:mt-40">
             <Header />
             <div className="w-full flex justify-center">
                 <ArticleHeader title="boxonia talents" />
@@ -21,13 +21,13 @@ const TalentPage = () => {
                 Through collaboration, strategy, and tailored career growth, we cultivate long-term relationships that drive both personal and industry-wide innovation.
             </p>
 
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] mx-auto gap-16 items-start">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-16 items-start">
                 {TalentData.map((talent, i) => (
                     <TalentCatalogue key={i} props={talent} />
                 ))}
             </section>
 
-            <section className="flex flex-col items-center gap-16">
+            <section className="flex flex-col items-center gap-16 mt-6">
                 <ArticleHeader title="selected works" />
                 <div className="relative w-full overflow-x-scroll" style={{ scrollbarWidth: "none"}}>
                     <div className="flex gap-2 animate-[marquee_8s_linear_infinite]">
@@ -47,7 +47,7 @@ const TalentPage = () => {
                 <InSectionLink name="see more" path="/production/news" />
             </div>
 
-            <div className="flex justify-center items-center mt-8">
+            <div className="flex justify-center items-center mt-10">
                 <Link to="#" className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia Talents</Link>
             </div>
             <Footer />

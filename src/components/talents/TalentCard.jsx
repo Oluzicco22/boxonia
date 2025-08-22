@@ -8,14 +8,14 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
         <section className="w-11/12 md:w-12/16 mx-auto my-2 md:my-10 flex flex-col gap-12 items-center">
             <p className="text-white text-center md:text-left">
 
-                <span className="capitalize font-semibold text-lg">
+                <span className="capitalize font-semibold text-lg text-[#B7B7B7]">
                     {firstName} {lastName}
                 </span>{" "}
-                <span className="font-normal text-justify leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{__html: info}}></span>
+                <span className="font-normal text-justify leading-relaxed whitespace-pre-line text-[#B7B7B7]" dangerouslySetInnerHTML={{__html: info}}></span>
             </p>
             <button
                 onClick={onBook}
-                className="w-1/2 md:w-1/5 mx-auto bg-[#F6B62B] font-semibold text-black hover:bg-white hover:text-black rounded-md p-2 cursor-pointer capitalize">
+                className="w-1/2 md:w-fit mx-auto bg-[#F6B62B] font-medium text-black hover:bg-white hover:text-black rounded-lg px-16 py-3 cursor-pointer capitalize">
                 Book {firstName}
             </button>
             <FeaturedTalentCard images={relatedProjects} />
