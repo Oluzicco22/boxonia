@@ -4,7 +4,7 @@ import CArrowIcon from "../../../assets/arrow-icon.svg";
 
 const SpotlightSection = ({len = 2}) => {
     return (
-        <section className="flex flex-col py-4 md:py-0 w-[85%] mx-auto gap-8 items-center relative">
+        <section className="flex flex-col py-4 md:py-0 w-[85%] mx-auto gap-16 items-center relative">
             <ArticleHeader title="in the spotlight" />
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-24 items-center w-full">
                 {spotlights.filter((spotlight, idx) => idx < len).map(({image, info}, i) => (

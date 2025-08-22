@@ -7,10 +7,11 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
     return (
         <section className="w-11/12 md:w-12/16 mx-auto my-2 md:my-10 flex flex-col gap-12 items-center">
             <p className="text-white text-center md:text-left">
-                <span className="capitalize font-normal text-lg">
+
+                <span className="capitalize font-semibold text-lg">
                     {firstName} {lastName}
                 </span>{" "}
-                {info}
+                <span className="font-normal text-justify leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{__html: info}}></span>
             </p>
             <button
                 onClick={onBook}

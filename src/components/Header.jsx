@@ -1,15 +1,17 @@
-import { Link, useLocation } from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import Logo from "../assets/boxonia-logo.svg";
+import BackIcon from "../../src/assets/arrow-icon.svg";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import { FaX } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 
 const Header = () => {
-    const location = useLocation();
+    const { pathname } = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [showOptions, setShowOptions] = useState(null);
     const [activePath, setActivePath] = useState(null);
+    const { castName } = useParams()
 
     const navLinks = [
         {
@@ -47,22 +49,28 @@ const Header = () => {
         setShowOptions(prev => prev === name ? null : name);
     };
 
-    const isActive = (path) => location.pathname === path
+    const isActive = (path) => pathname === path
 
     useState(() => {
-        const path = window.location.pathname.includes('production') ? 'talents' : 'production';
+        const path = pathname.includes('production') ? 'talents' : 'production';
         setActivePath(path);
-    }, [])
+    }, []);
 
     return (
         <header className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-50">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
-                <Link to="/">
-                    <img src={Logo} alt="logo" className="w-20 md:w-auto" />
-                </Link>
+                { pathname === `/talents/${encodeURIComponent(castName)}` ?
+                    <button type="button" onClick={() => history.back()} className="flex gap-4 font-semibold cursor-pointer">
+                        <img src={BackIcon} alt="logo" className="rotate-180" />
+                        Back
+                    </button> :
+                    <a href="/">
+                        <img src={Logo} alt="logo" className="w-20 md:w-auto" />
+                    </a>
+                }
 
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
-                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "gap-4 justify-end"}`}>
+                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "gap-10 justify-end"}`}>
                         {navLinks.filter(lnk => {
                             return activePath !== "production" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                         }).map((link, idx) => (
@@ -75,12 +83,12 @@ const Header = () => {
                                             {link.name} <FaCaretDown />
                                         </button>
                                     ) : (
-                                        <Link
-                                            to={link.path}
+                                        <a
+                                            href={link.path}
                                             className={`hover:text-[#f6b62b] ${isActive(link.path) ? 'text-[#f6b62b]' : ''}`}
                                         >
                                             {link.name}
-                                        </Link>
+                                        </a>
                                     )}
 
                                     {/* Dropdown */}
@@ -88,12 +96,12 @@ const Header = () => {
                                         <ul className="absolute top-full mt-2 bg-black text-white py-2 px-5 -left-1/4 shadow-lg rounded-md space-y-2 z-50">
                                             {link.children.map((child, i) => (
                                                 <li key={i}>
-                                                    <Link
-                                                        to={child.path}
+                                                    <a
+                                                        href={child.path}
                                                         className={`hover:text-[#f6b62b] text-nowrap ${isActive(child.path) ? 'text-[#f6b62b]' : ''}`}
                                                     >
                                                         {child.name}
-                                                    </Link>
+                                                    </a>
                                                 </li>
                                             ))}
                                         </ul>
@@ -102,7 +110,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <Link to={`/${activePath}`} className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</Link>
+                <a href={`/${activePath}`} className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</a>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon />
@@ -133,31 +141,31 @@ const Header = () => {
                                                     <ul className="pl-4 mt-1 space-y-2">
                                                         {link.children.map((child, i) => (
                                                             <li key={i}>
-                                                                <Link
-                                                                    to={child.path}
+                                                                <a
+                                                                    href={child.path}
                                                                     className={`hover:text-[#f6b62b] ${isActive(child.path) ? 'text-[#f6b62b]' : ''}`}
                                                                 >
                                                                     {child.name}
-                                                                </Link>
+                                                                </a>
                                                             </li>
                                                         ))}
                                                     </ul>
                                                 )}
                                             </div>
                                         ) : (
-                                            <Link
-                                                to={link.path}
+                                            <a
+                                                href={link.path}
                                                 className={`hover:text-[#f6b62b] ${isActive(link.path) ? 'text-[#f6b62b]' : ''}`}
                                             >
                                                 {link.name}
-                                            </Link>
+                                            </a>
                                         )}
                                     </li>
                                 ))}
                             </ul>
                         </nav>
 
-                        <Link to={`/${activePath}`} className="block md:hidden py-2 px-12 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-black capitalize hover:text-white text-center mt-4">{activePath}</Link>
+                        <a href={`/${activePath}`} className="block md:hidden py-2 px-12 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-black capitalize hover:text-white text-center mt-4">{activePath}</a>
                     </div>
                 )}
             </div>

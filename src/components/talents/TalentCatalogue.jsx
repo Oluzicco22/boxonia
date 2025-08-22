@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const TalentCatalogue = ({ props: { firstName, lastName, image } }) => {
     return (
         <article className="flex flex-col gap-6 bg-black text-white overflow-hidden shadow-md">
@@ -7,12 +5,12 @@ const TalentCatalogue = ({ props: { firstName, lastName, image } }) => {
                 <img
                     src={image}
                     alt={`${firstName || "Talent"} ${lastName || ""}`}
-                    className="w-full md:w-fit rounded-[44px] object-cover"
+                    className="w-full md:w-fit rounded-[44px] max-h-96 object-cover"
                 />
-                <Link to={`/talents/${firstName} ${lastName}`}
-                      className="w-fit px-8 mx-auto text-center border border-white font-semibold text-white hover:text-black hover:bg-white rounded-md p-2 cursor-pointer">
+                <a href={`/talents/${firstName} ${lastName}`}
+                      className="w-fit px-8 mx-auto text-center border border-white font-semibold text-white hover:text-black hover:bg-white rounded-lg p-2 cursor-pointer">
                     Book {firstName}
-                </Link>
+                </a>
             </div>
         </article>
     );
