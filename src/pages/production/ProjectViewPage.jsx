@@ -34,8 +34,8 @@ const ProjectViewPage = () => {
     if(loading) return <p>Loading...</p>;
 
     return (
-        <>
-            <div className="bg-black/90 mix-blend-plus-lighter pb-1 bg-auto md:bg-cover bg-top md:bg-center bg-no-repeat min-h-100 md:min-h-130" style={{
+        <div>
+            <div className="bg-black/90 pb-1 bg-auto md:bg-cover bg-top md:bg-center bg-no-repeat min-h-100 md:min-h-130" style={{
                 backgroundImage: `url(${project?.thumbnail})`
             }}>
                 <Header />
@@ -59,7 +59,7 @@ const ProjectViewPage = () => {
 
             </section>
             <Footer />
-        </>
+        </div>
     )
 }
 

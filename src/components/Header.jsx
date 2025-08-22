@@ -57,7 +57,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-50">
+        <header className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-[1000]">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 { pathname === `/talents/${encodeURIComponent(castName)}` ?
                     <button type="button" onClick={() => history.back()} className="flex gap-4 font-semibold cursor-pointer">
