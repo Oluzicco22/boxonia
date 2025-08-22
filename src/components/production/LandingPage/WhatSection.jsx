@@ -4,7 +4,7 @@ import boxoniaPillars from "../../../data/our-work.json";
 
 const WhatSection = () => {
     return (
-        <section className="bg-black/90 bg-blend-darken bg-no-repeat bg-[center_right]" style={{
+        <section className="bg-black/90 bg-blend-darken bg-no-repeat bg-[center_right] -z-50" style={{
             backgroundImage: `url("https://res.cloudinary.com/dybmufexj/image/upload/v1754222029/WWD_bg-img_wxyu9m.png")`,
             backgroundSize: "550px",
             backgroundRepeat: "no-repeat",
