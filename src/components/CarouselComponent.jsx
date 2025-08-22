@@ -42,7 +42,7 @@ const CarouselComponent = ({images, navButon}) => {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden relative h-auto">
+        <div className="w-full overflow-hidden relative h-full">
             <div
                 className={`flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -53,7 +53,7 @@ const CarouselComponent = ({images, navButon}) => {
                         key={i}
                         src={img}
                         alt={`carousel-${i}`}
-                        className="w-full flex-shrink-0 object-cover h-full"
+                        className="w-full flex-shrink-0 object-cover h-[500px]"
                         loading="lazy"
                     />
                 ))}

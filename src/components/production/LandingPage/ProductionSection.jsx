@@ -16,7 +16,7 @@ const ProductionSection = () => {
     ];
 
     return (
-        <section className="flex flex-col py-0 gap-15 items-center relative">
+        <section className="flex flex-col py-0 gap-10 items-center relative">
             <div className="w-full flex items-center flex-col gap-10">
                 <ArticleHeader title="behind the scenes" />
                 <p className="w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center">

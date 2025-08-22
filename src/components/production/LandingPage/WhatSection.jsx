@@ -9,7 +9,7 @@ const WhatSection = () => {
             backgroundSize: "550px",
             backgroundRepeat: "no-repeat",
         }}>
-            <div className="flex flex-col py-8 md:py-0 w-[85%] mx-auto gap-12 items-center">
+            <div className="flex flex-col py-8 md:py-0 w-[85%] mx-auto gap-10 items-center">
                 <ArticleHeader title="what we do" id="what-we-do" />
                 <div
                     aria-labelledby="what-we-do"
