@@ -5,7 +5,7 @@
     "bgImage": ""
   },
   {
-    "title": "End to End Production",
+    "title": "End to End Productions",
     "bgImage": "",
     "children" : [
       {
@@ -24,7 +24,7 @@
   },
   {
     "title": "Marketing & distribution",
-    "description": "Marketing is more than a skill. It is our superpower. We draw from traditional methods, innovative digital campaigns and bold experimental strategies to give every project the reach it deserves.\nWe work to connect each production with the right audience and platform, creating distribution strategies that ensure our projects are seen, appreciated and remembered.\n",
+    "description": "Marketing is more than a skill. It is our superpower. We draw from traditional methods, innovative digital campaigns and bold experimental strategies to give every project the reach it deserves.\n\nWe work to connect each production with the right audience and platform, creating distribution strategies that ensure our projects are seen, appreciated and remembered.\n",
     "bgImage": ""
   },
   {
@@ -32,5 +32,19 @@
     "description": "Our commitment extends beyond production. We prioritize the legal security of every project, protecting intellectual property, ensuring that contracts, rights, and licenses are properly structured and managed. At Boxonia, safeguarding your vision is as important as bringing it to life.",
     "bgImage": ""
 
+  },
+  {
+    "title": "Management",
+    "bgImage": "",
+    "children" : [
+      {
+        "title": "Talent Management",
+        "description": "We offer a tailored, comprehensive approach that develops and enhances the skills of talents, helping them thrive both on and off screen while ensuring they enjoy long-lasting careers in the industry. "
+      },
+      {
+        "title": "Business Management",
+        "description": "We bring people with diverse needs together to build strong, lasting partnerships. By connecting stakeholders and companies both locally and internationally, we create relationships that are mutually rewarding and built for long-term success.\nOur focus on Partnerships and Collaborations has led to multiple successful alliances at home and abroad, driving growth and expanding visibility across the entertainment industry."
+      }
+    ]
   }
 ]

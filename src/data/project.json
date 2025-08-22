@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "nollybabes",
+    "title": "NollyBabes",
     "longline": "after another failed audition, a rising nollywood star and her two best friends try to con a sleazy director to fund their own film.",
     "genre":"Drama/Thriller",
     "type": "short film",
@@ -14,55 +14,53 @@
     "producer_companies": "boxonia bleuprint & gap tooth smile productions.",
     "image" : "https://res.cloudinary.com/dybmufexj/image/upload/v1753986407/Nolly_babes_lnzopy.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753987110/nollybabes-big-poster_u7ycfr.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1754226377/real_nolly_babes_poster_kxixpo.png",
-    "release_date": "2024-11-02T00:00:00Z"
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1754226377/real_nolly_babes_poster_kxixpo.png"
   },
   {
     "id": 2,
-    "title": "city shadows",
-    "longline": "a journalist uncovers dark secrets in lagos after stumbling upon a high-profile scandal involving politicians and cult groups.",
-    "genre": "Drama/Thriller",
-    "type":  "short film",
-    "writer":  "anu bamidele",
+    "title": "Son of the Soil",
+    "longline": "Follow the story of a former Nigerian soldier Zion Ladejo, tortured by his past and is forced to return to Nigeria as a result of his beloved sister’s untimely death. Determined to find those responsible, he embarks on a quest for vengeance and in the process seeks redemption for his past actions.\n",
+    "genre": "Action Thriller",
+    "type":  "Feature Length",
     "starring": [
-      "ifeanyi okafor", "zainab balogun", "emeka ike", "kemi lala akindoju"
+      "Raz Adoti, Patience Ozokwor, Iretiola Doyle, Sunshine Rosman, Taye Arimoro, \nPhilip Asaya, Damilola Ogunsi, Durotimi Okutagidi, Emeka Golden, James ‘BlacQ’ Damilare, and Sharon Rotimi."
     ],
-    "director": "segun adisa",
-    "producer": "funmi adewuyi",
-    "producer_companies": "urban eye studios",
+    "writer":  "Raz Adoti",
+    "director": "Chee Keong Cheung.",
+    "producer": "Andreas Roald, Ioanna Karavela, Chee Keong Cheung, Raz Adoti, and Wingonia Ikpi.",
+    "production_companies": "Sovereign Films, Action Xtreme, Boxonia Blueprint (In Association with)",
     "image" : "https://res.cloudinary.com/dybmufexj/image/upload/v1753986408/son_of_d_soil_vevinh.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734486/SOTS_big_cover_iy6cao.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734486/SOTS_trailer_cover_iqgjxn.png",
-    "release_date": "2024-11-02T00:00:00Z"
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734486/SOTS_trailer_cover_iqgjxn.png"
   },
   {
     "id": 3,
-    "title": "echoes of silence",
-    "desc": "in a post-conflict village, a mute girl discovers a mysterious power that could either save or destroy her community.",
-    "casts": [
-      "amara ogbonna", "uche jumbo", "kunle remi"
+    "title": "otana",
+    "longline": "Otana centres around Peace, a young lady facing sexual trauma. In a moment of luck, Peace meets a demon escaping hell and they bond over a common ground of pain and vengeance.\n",
+    "genre": "Horror",
+    "type":  "Short Film",
+    "starring": [
+      "Evelyn John, Uche Chika E.,Tolu Odebunmi, Olawande Adetula, Victory Eyong Osuwake, Chinyere Ogbonnaya."
     ],
-    "director": "tunde owolabi",
-    "producer": "blessing nkem",
-    "publisher": "silent wave productions",
-    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
+    "Writer/Director/Producer":  "Wingonia Ikpi",
+    "co-producer": "Juliet Ezeigwe",
+    "production_companies": "Boxonia Blueprint",
+    "image" : "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734511/Otana_big_cover_cyws65.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734510/OTANA_trailer_cover_gpryod.png",
-    "release_date": "2024-11-02T00:00:00Z"
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734510/OTANA_trailer_cover_gpryod.png"
   },
   {
     "id": 4,
-    "title": "broken mirror",
-    "desc": "a successful therapist is forced to confront her own traumatic past when an old patient resurfaces with a chilling story.",
-    "casts": [
-      "tina mbah", "stan nze", "rita edochie"
+    "title": "Beta Food, Beta Life",
+    "desc": "A USAID ambassador, Chioma Akpotha, is invited by a women-leader from a northern community to sensitize the women of this community on nutrition.\n\n",
+    "By":  "USAID",
+    "type":  "Radio Drama",
+    "starring": [
+      "Chioma Akpotha, Daddy Showkey, Ummi Baba Ahmed, Miriam ‘Shytalker’ Peters, Habiba Shehu Zocksock."
     ],
-    "director": "ife olawale",
-    "producer": "tope ogunrinde",
-    "publisher": "soul fix films",
+    "producers": "INNICROSS, Boxonia Blueprint.",
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734019/Group_3914_xisxve.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734539/BFBL_big_cover_towzge.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734540/BFBL_Trailer_cover_ylfsze.png",
-    "release_date": "2025-03-15T00:00:00Z"
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734540/BFBL_Trailer_cover_ylfsze.png"
   }
 ]

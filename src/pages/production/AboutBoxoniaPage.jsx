@@ -21,9 +21,9 @@ const AboutBoxoniaPage = () => {
             </div>
             <BoxoniaPillarComponent />
 
-            <section className="flex flex-col gap-10 items-center my-8">
+            <section className="flex flex-col gap-10 items-center my-24">
                 <ArticleHeader title="project types we handle" />
-                <div className="flex flex-col items-center gap-2 w-full">
+                <div className="flex flex-col items-center gap-9 w-full">
                     <Marquee items={types} />
                     <Marquee reverse={true} items={types} />
                 </div>
