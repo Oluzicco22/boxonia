@@ -1,15 +1,15 @@
 const SponsorSection = () => {
     const imagesLink = [
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1754223473/ax_zm9jhw.png',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1755722566/digital-music_w03pay.png',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1754223227/teeth-smile_zglx3w.png',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1753986561/innicross_qnmdfb.svg',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1755722567/tech-partners_tc4tn4.png',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1754223364/usaid_o5obry.png'
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/ax_2_ajqckf.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/Layer_1_2x-2_222_unmqfl.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/gap_tooth_2_e0pptr.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120824/Innicorss_2_vgy9jw.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/tech_2_222_d0imaq.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/usaid_22_tkzr61.png'
     ]
 
     return (
-        <section className="bg-white py-6 md:py-4">
+        <section className="bg-white py-6 md:py-6">
             <div className="flex items-center gap-4">
                 <span className="text-black font-bold text-lg md:text-xl shrink-0 px-6 md:px-12">Trusted By:</span>
 
