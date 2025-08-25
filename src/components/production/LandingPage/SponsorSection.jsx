@@ -14,7 +14,7 @@ const SponsorSection = () => {
                 <span className="text-black font-bold text-lg md:text-xl shrink-0 px-6 md:px-12">Trusted By:</span>
 
                 <div className="overflow-hidden w-full flex-1">
-                    <div className="flex gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite]">
+                    <div className="flex gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite] hover:[animation-play-state:paused]">
                         {[...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink,
                             ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink,
                             ...imagesLink, ...imagesLink].map((src, i) => (
