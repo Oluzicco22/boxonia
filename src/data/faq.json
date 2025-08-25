@@ -8,6 +8,12 @@
     "answer": "Boxonia Blueprint is a production and talent management company passionate about creating experiences and telling the African story through cinema and other forms of media. We value in-depth storytelling that can cross demographics to attain success. Boxonia engages in end to end production of films, advertisements, music videos, documentaries and other experimental forms of audio-visual media."
   },
   {
+    "question": "Who does Boxonia Blueprint manage?",
+    "answer": [
+      "taye arimoro", "chuks joseph", "durotimi okutagidi", "victory eyong", "miss ezeani", "cynthia clarke"
+    ]
+  },
+  {
     "question": "Does Boxonia Blueprint handle full production?",
     "answer": "Yes! Our 360° production covers every stage:\n-  Development (concept to script)\n-  Pre-production (planning to casting)\n-  Production (filming)\n-  Post production \n-  Marketing & Distribution"
   },

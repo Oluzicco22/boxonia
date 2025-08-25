@@ -1,4 +1,4 @@
-const TalentCatalogue = ({ props: { firstName, lastName, image } }) => {
+const TalentCatalogue = ({ props: { firstName, lastName, image, username } }) => {
     return (
         <article className="flex flex-col gap-6 items-center bg-black text-white overflow-hidden shadow-md">
                 <img
@@ -8,7 +8,7 @@ const TalentCatalogue = ({ props: { firstName, lastName, image } }) => {
                 />
                 <a href={`/talents/${firstName} ${lastName}`}
                       className="w-fit px-6 mx-auto text-center border border-white font-normal text-white hover:text-black hover:bg-white rounded-lg p-2">
-                    Book {firstName}
+                    Book {username ?? firstName}
                 </a>
         </article>
     );
