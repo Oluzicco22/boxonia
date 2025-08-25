@@ -2,40 +2,27 @@ import {useEffect, useState} from "react";
 import {FaGreaterThan, FaLessThan} from "react-icons/fa";
 
 const CarouselComponent = ({images, navButon}) => {
-    const [currentIndex, setCurrentIndex] = useState(1);
-    const [transition, setTransition] = useState(true);
-
-    const totalImages = images.length;
-    const extendedImages = [images[totalImages - 1], ...images, images[0]];
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
-        setCurrentIndex(prev => prev + 1);
+        setCurrentIndex(prev => {
+            if(prev % images.length < images.length -1) {
+                images.push(images[prev])
+                return prev + 1
+            }
+            return (
+                prev + 1 - images.length
+            )
+        });
     };
 
     const goToPrev = () => {
         setCurrentIndex(prev => prev - 1);
     };
-    const handleTransitionEnd = () => {
-        if (currentIndex === extendedImages.length - 1) {
-            setTransition(false);
-            setCurrentIndex(1);
-        }
-
-        if (currentIndex === 0) {
-            setTransition(false);
-            setCurrentIndex(extendedImages.length - 2);
-        }
-    };
-
-    useEffect(() => {
-        if (!transition) {
-            requestAnimationFrame(() => setTransition(true));
-        }
-    }, [transition]);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex(prev => prev + 1);
+            goToNext()
         }, 3000);
 
         return () => clearInterval(interval);
@@ -44,11 +31,10 @@ const CarouselComponent = ({images, navButon}) => {
     return (
         <div className="w-full overflow-hidden relative h-full">
             <div
-                className={`flex ${transition ? 'transition-transform duration-700 ease-in-out' : ''}`}
+                className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                onTransitionEnd={handleTransitionEnd}
             >
-                {extendedImages.map((img, i) => (
+                {images.map((img, i) => (
                     <img
                         key={i}
                         src={img}
