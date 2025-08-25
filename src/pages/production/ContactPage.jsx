@@ -2,8 +2,8 @@ import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
 import {Link} from "react-router-dom";
-import {FaInstagram, FaLinkedin} from "react-icons/fa";
-import {FaXTwitter} from "react-icons/fa6";
+import {FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
+import {FaXTwitter, FaYoutube} from "react-icons/fa6";
 import {useState} from "react";
 import FAQSection from "../../components/production/ContactComponent/FAQSection.jsx";
 
@@ -46,10 +46,12 @@ const ContactPage = () => {
                         boxoniablueprint@gmail.com
                     </Link>
                 </div>
-                <nav className="flex gap-3 text-gray-200 text-3xl">
-                    <a href="#"><FaInstagram /></a>
-                    <a href="#"><FaXTwitter /></a>
-                    <a href="#"><FaLinkedin /></a>
+                <nav className="flex gap-3 text-3xl">
+                    <a href="#" className="hover:text-yellow-300"><FaInstagram /></a>
+                    <a href="#" className="hover:text-yellow-300"><FaXTwitter /></a>
+                    <a href="#"><FaLinkedinIn className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaFacebookF className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaYoutube className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
                 </nav>
 
             </section>

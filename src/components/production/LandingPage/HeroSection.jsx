@@ -37,7 +37,7 @@ const HeroSection = () => {
                 {/* Hero Text with fade-out */}
                 <div
                     className={`absolute bottom-8 md:bottom-16 left-10 md:left-28 flex flex-col text-white z-30 transform transition-opacity duration-1000 ease-in ${
-                        showVideoText ? "opacity-100" : "opacity-100"
+                        showVideoText ? "opacity-100" : "opacity-0"
                     }`}
                 >
                     <h1 className="hero-font text-2xl sm:text-5xl md:text-7xl lg:text-9xl">action</h1>

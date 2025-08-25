@@ -1,5 +1,5 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
+import { FaXTwitter,FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
                 <p className="text-[#F6B62B] font-bold text-3xl md:text-xl">Contact Us</p>
                 <div>
-                    <a className="hover:text-yellow-400" href="#">boxonialblueprint@gmail.com</a>
+                    <a className="hover:text-yellow-400" href="mailto:boxonialblueprint@gmail.com" target="_blank">boxonialblueprint@gmail.com</a>
                     <p>+234 903 307 1442</p>
                     <p>+234 818 446 8748</p>
                 </div>
@@ -17,12 +17,13 @@ const Footer = () => {
                 <p>Lagos, Nigeria</p>
 
                 <nav className="flex gap-3 text-3xl">
-                    <a href="#" className="hover:text-yellow-400"><FaInstagram /></a>
-                    <a href="#" className="hover:text-yellow-400"><FaXTwitter /></a>
-                    <a href="#" className="hover:text-yellow-400"><FaLinkedinIn /></a>
-                    <a href="#" className="hover:text-yellow-400"><FaFacebookF /></a>
-                    <a href="#" className="hover:text-yellow-400"><FaYoutube /></a>
+                    <a href="#" className="hover:text-yellow-300"><FaInstagram /></a>
+                    <a href="#" className="hover:text-yellow-300"><FaXTwitter /></a>
+                    <a href="#"><FaLinkedinIn className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaFacebookF className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaYoutube className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
                 </nav>
+
             </div>
 
             <div className="flex flex-col md:items-center gap-8 text-gray-400 text-sm w-full md:w-4/6">

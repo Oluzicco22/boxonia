@@ -14,10 +14,10 @@ const FAQArticle = ({ articles }) => {
         return (
             <button
                 key={index}
-                className="w-full bg-white rounded-lg p-5 shadow text-left"
+                className="w-full bg-white rounded-2xl py-8 px-10 shadow text-left"
                 onClick={() => toggleOptions(index)}
             >
-                <p className="flex items-center justify-between text-black font-semibold text-lg">
+                <p className="flex items-center justify-between text-black font-semibold text-xl">
                     {article.question}
                     <PiCaretDownBold
                         className={`
@@ -27,9 +27,22 @@ const FAQArticle = ({ articles }) => {
                         `}
                     />
                 </p>
-                <span className={`${isOpen ? 'inline-block' : 'hidden'} mt-4 text-left font-medium text-black border-t pt-6 border-gray-400 w-full`}>
-                    {article.answer}
-                </span>
+                {Array.isArray(article.answer) ? (
+                    <ul className={`list-disc space-y-2 pl-5 text-black capitalize mt-4 text-left border-t pt-6 border-gray-400 w-full ${isOpen ? "block" : "hidden"}`}>
+                        {article.answer.map((answer, i) => (
+                            <li key={i}>{answer}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <span
+                        className={`${
+                            isOpen ? "inline-block" : "hidden"
+                        } mt-4 text-left text-black border-t pt-6 border-gray-400 w-full`}
+                    >
+    {article.answer}
+  </span>
+                )}
+
             </button>
         );
     });
