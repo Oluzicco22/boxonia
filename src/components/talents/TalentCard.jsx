@@ -3,7 +3,7 @@ import {FaImdb, FaInstagram } from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import SymbolImage from "../../assets/symbol.svg"
 
-const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks }, onBook }) => {
+const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks, username }, onBook }) => {
     return (
         <section className="w-11/12 md:w-12/16 mx-auto my-2 md:my-10 flex flex-col gap-12 items-center">
             <p className="text-white text-center md:text-left">
@@ -16,7 +16,7 @@ const TalentCard = ({ props: { firstName, lastName, info, relatedProjects, perks
             <button
                 onClick={onBook}
                 className="w-1/2 md:w-fit mx-auto bg-[#F6B62B] font-medium text-black hover:bg-white hover:text-black rounded-lg px-16 py-3 cursor-pointer capitalize">
-                Book {firstName}
+                Book {username ?? firstName}
             </button>
             <FeaturedTalentCard images={relatedProjects} />
             <div className="flex gap-10 text-5xl">
