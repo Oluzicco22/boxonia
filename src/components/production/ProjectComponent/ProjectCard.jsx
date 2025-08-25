@@ -33,12 +33,26 @@ const ProjectCard = ({ props }) => {
         <article className="flex flex-col justify-end gap-4">
             <h2 className="capitalize font-bold text-5xl">{props?.title}</h2>
             {keys.map((key, i) => (
-                <div key={i} className="flex gap-2 itim-font">
-                    <h3 className="text-yellow-500 font-semibold text-xl capitalize">
-                        {`${key.split("_").join(" ")}:`}
-                    </h3>
-                    <p className="font-normal text-lg capitalize">{checkKey(key)}</p>
-                </div>
+                key === 'logline' ?
+                    <div key={i} className="flex flex-col itim-font">
+                        <h3 className="text-yellow-500 font-semibold text-xl capitalize">{key}</h3>
+                        <p className="font-normal text-lg capitalize">{checkKey(key)}</p>
+                    </div>
+                    :
+                    key === 'starring' ?
+                        <div key={i} className="flex gap-2 itim-font">
+                            <p className="font-normal text-lg capitalize">
+                                <span className="text-yellow-500 font-semibold text-xl capitalize">
+                                {`${key.split("_").join(" ")}: `}
+                                </span>
+                                {checkKey(key)}</p>
+                        </div> :
+                        <div key={i} className="flex gap-2 itim-font">
+                            <h3 className="text-yellow-500 font-semibold text-xl capitalize">
+                                {`${key.split("_").join(" ")}:`}
+                            </h3>
+                            <p className="font-normal text-lg capitalize">{checkKey(key)}</p>
+                        </div>
             ))}
         </article>
     );

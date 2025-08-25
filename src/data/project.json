@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "NollyBabes",
-    "longline": "after another failed audition, a rising nollywood star and her two best friends try to con a sleazy director to fund their own film.",
+    "logline": "after another failed audition, a rising nollywood star and her two best friends try to con a sleazy director to fund their own film.",
     "genre":"Drama/Thriller",
     "type": "short film",
     "starring": [
@@ -19,11 +19,11 @@
   {
     "id": 2,
     "title": "Son of the Soil",
-    "longline": "Follow the story of a former Nigerian soldier Zion Ladejo, tortured by his past and is forced to return to Nigeria as a result of his beloved sister’s untimely death. Determined to find those responsible, he embarks on a quest for vengeance and in the process seeks redemption for his past actions.\n",
+    "logline": "Follow the story of a former Nigerian soldier Zion Ladejo, tortured by his past and is forced to return to Nigeria as a result of his beloved sister’s untimely death. Determined to find those responsible, he embarks on a quest for vengeance and in the process seeks redemption for his past actions.\n",
     "genre": "Action Thriller",
     "type":  "Feature Length",
     "starring": [
-      "Raz Adoti, Patience Ozokwor, Iretiola Doyle, Sunshine Rosman, Taye Arimoro, \nPhilip Asaya, Damilola Ogunsi, Durotimi Okutagidi, Emeka Golden, James ‘BlacQ’ Damilare, and Sharon Rotimi."
+      "Raz Adoti, Patience Ozokwor, Iretiola Doyle, Sunshine Rosman, Taye Arimoro, \nPhilip Asaya, Damilola Ogunsi, Durotimi Okutagidi, Emeka Golden, James ‘BlacQ’ Damilare, and Sharon Rotimi"
     ],
     "writer":  "Raz Adoti",
     "director": "Chee Keong Cheung.",
@@ -36,11 +36,11 @@
   {
     "id": 3,
     "title": "otana",
-    "longline": "Otana centres around Peace, a young lady facing sexual trauma. In a moment of luck, Peace meets a demon escaping hell and they bond over a common ground of pain and vengeance.\n",
+    "logline": "Otana centres around Peace, a young lady facing sexual trauma. In a moment of luck, Peace meets a demon escaping hell and they bond over a common ground of pain and vengeance.\n",
     "genre": "Horror",
     "type":  "Short Film",
     "starring": [
-      "Evelyn John, Uche Chika E.,Tolu Odebunmi, Olawande Adetula, Victory Eyong Osuwake, Chinyere Ogbonnaya."
+      "Evelyn John, Uche Chika E.,Tolu Odebunmi, Olawande Adetula, Victory Eyong Osuwake, Chinyere Ogbonnaya"
     ],
     "Writer/Director/Producer":  "Wingonia Ikpi",
     "co-producer": "Juliet Ezeigwe",
@@ -52,11 +52,11 @@
   {
     "id": 4,
     "title": "Beta Food, Beta Life",
-    "desc": "A USAID ambassador, Chioma Akpotha, is invited by a women-leader from a northern community to sensitize the women of this community on nutrition.\n\n",
-    "By":  "USAID",
+    "logline": "A USAID ambassador, Chioma Akpotha, is invited by a women-leader from a northern community to sensitize the women of this community on nutrition.\n\n",
+    "By":  "USAID, Helen Keller Foundation",
     "type":  "Radio Drama",
     "starring": [
-      "Chioma Akpotha, Daddy Showkey, Ummi Baba Ahmed, Miriam ‘Shytalker’ Peters, Habiba Shehu Zocksock."
+      "Chioma Akpotha, Daddy Showkey, Ummi Baba Ahmed, Miriam ‘Shytalker’ Peters, Habiba Shehu Zocksock"
     ],
     "producers": "INNICROSS, Boxonia Blueprint.",
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734019/Group_3914_xisxve.png",
