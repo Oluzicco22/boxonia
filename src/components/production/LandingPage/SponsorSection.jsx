@@ -15,7 +15,9 @@ const SponsorSection = () => {
 
                 <div className="overflow-hidden w-full flex-1">
                     <div className="flex gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite]">
-                        {[...imagesLink, ...imagesLink].map((src, i) => (
+                        {[...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink,
+                            ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink, ...imagesLink,
+                            ...imagesLink, ...imagesLink].map((src, i) => (
                             <img
                                 src={src}
                                 alt={`img-${i}`}
