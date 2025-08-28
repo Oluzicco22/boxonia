@@ -5,7 +5,7 @@ const FeaturedTalentCard = ({images}) => {
         <div className="flex justify-between w-fit gap-3">
             {images.map((image, i) => (
                 <Link to="#" key={i}>
-                    <img src={image} alt={`img-${i}`} className="w-full md:w-[19.5rem] hover:scale-105"></img>
+                    <img src={image} alt={`img-${i}`} className="w-full h-[40vh] hover:scale-105"></img>
                 </Link>
             ))}
         </div>
