@@ -48,7 +48,7 @@ const TalentPage = () => {
             </div>
 
             <div className="flex justify-center items-center mt-10">
-                <Link to="#" className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia Talents</Link>
+                <a href="/talents/contact" className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia Talents</a>
             </div>
             <Footer />
         </div>
