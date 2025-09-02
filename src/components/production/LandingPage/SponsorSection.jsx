@@ -2,7 +2,7 @@ const SponsorSection = () => {
     const imagesLink = [
         'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/ax_2_ajqckf.png',
         'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/Layer_1_2x-2_222_unmqfl.png',
-        'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/gap_tooth_2_e0pptr.png',
+        'https://res.cloudinary.com/dybmufexj/image/upload/v1756713938/gap_tooth_2_e0pptr.png',
         'https://res.cloudinary.com/dybmufexj/image/upload/v1756120824/Innicorss_2_vgy9jw.png',
         'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/tech_2_222_d0imaq.png',
         'https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/usaid_22_tkzr61.png'
