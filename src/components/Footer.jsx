@@ -19,9 +19,9 @@ const Footer = () => {
                 <nav className="flex gap-3 text-3xl">
                     <a href="#" className="hover:text-yellow-300"><FaInstagram /></a>
                     <a href="#" className="hover:text-yellow-300"><FaXTwitter /></a>
-                    <a href="#"><FaLinkedinIn className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
-                    <a href="#"><FaFacebookF className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
-                    <a href="#"><FaYoutube className="text-transparent stroke-white stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaLinkedinIn className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaFacebookF className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400" /></a>
+                    <a href="#"><FaYoutube className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400" /></a>
                 </nav>
 
             </div>

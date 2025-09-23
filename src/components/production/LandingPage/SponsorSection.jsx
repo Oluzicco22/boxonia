@@ -1,5 +1,6 @@
 const SponsorSection = () => {
-    const sponsors = [
+
+  const sponsors = [
         {
             name: "AX Media",
             src: "https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/ax_2_ajqckf.png",
@@ -25,6 +26,7 @@ const SponsorSection = () => {
             src: "https://res.cloudinary.com/dybmufexj/image/upload/v1756120823/usaid_22_tkzr61.png",
         },
     ];
+
     return (
         <section aria-labelledby="sponsor-heading" className="bg-white py-6 md:py-6">
             <div className="flex items-center gap-4">
