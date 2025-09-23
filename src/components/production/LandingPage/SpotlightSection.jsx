@@ -9,7 +9,7 @@ const SpotlightSection = ({ len = 2 }) => {
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full">
                 {spotlights.filter((spotlight, idx) => idx < len).map(({image, info}, i) => (
                     <div key={i} className="flex flex-col gap-2">
-                        <div className="px-2 py-3 md:p-0 rounded-2xl md:rounded-none bg-[#69696980] md:bg-none ">
+                        <div className="px-2 py-3 md:p-0 rounded-2xl md:rounded-none">
                             <img
                                 src={image}
                                 alt={info || `Spotlight image ${i + 1}`}
@@ -17,12 +17,12 @@ const SpotlightSection = ({ len = 2 }) => {
                                 loading="lazy"
                             />
                         </div>
-                        <div className="flex gap-4 font-normal text-lg text-white">
+                        <div className="flex justify-center md:justify-start gap-4 font-normal text-lg text-white">
                             <h3 className="text-white text-lg font-semibold">{info}</h3>
                             <img
                                 src={CArrowIcon}
                                 alt=""
-                                className="w-20"
+                                className="w-20 hidden md:flex"
                             />
                         </div>
                     </div>

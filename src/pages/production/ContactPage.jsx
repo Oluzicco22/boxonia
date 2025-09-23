@@ -74,14 +74,13 @@ const ContactPage = () => {
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Address:</h2>
                     <address className="not-italic text-white text-lg font-medium leading-relaxed">
-                        213a Igbosere Road<br />
-                        Lagos, Nigeria
+                        213a Igbosere Road Lagos, Nigeria
                     </address>
                 </div>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Phone:</h2>
                     <div className="not-italic text-white text-lg font-medium leading-relaxed">
-                        <a href='tel:+2349033071442' className="hover:underline">+2349033071442</a><br />
+                        <a href='tel:+2349033071442' className="hover:underline">+2349033071442</a>,
                         <a href='tel:+2348184468748' className="hover:underline">+2348184468748</a>
                     </div>
                 </div>
@@ -108,8 +107,8 @@ const ContactPage = () => {
             {/*<!----- Contact Page -->*/}
             <section className="flex flex-col items-center text-center my-12 gap-4 text-black">
                 <ArticleHeader title="get in touch" />
-                <p className="text-green-600">{message}</p>
-                <form onSubmit={submitForm} className="w-4/6 md:w-2/5 flex flex-col gap-4">
+                {message && <p className="text-green-600">{message}</p>}
+                <form onSubmit={submitForm} className="w-[90%] md:w-2/5 flex flex-col gap-4">
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="name" className="text-gray-400 text-base font-medium">Name:</label>
                         <input

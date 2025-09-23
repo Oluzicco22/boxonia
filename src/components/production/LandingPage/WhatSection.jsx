@@ -1,6 +1,6 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import InSectionLink from "../InSectionLink.jsx";
-import boxoniaPillars from "../../../data/our-work.json";
+import pillars from "../../../data/our-work.json";
 
 const WhatSection = () => {
     return (
@@ -14,26 +14,37 @@ const WhatSection = () => {
                     aria-labelledby="what-we-do"
                     className="flex flex-col md:flex-row gap-12 w-full text-white"
                 >
-                    {boxoniaPillars.slice(0, 3).map((pillar, i) => (
-                        <article key={i} className="flex gap-2 flex-col w-full md:w-1/3 text-center md:text-left">
-                            <h3 className="text-[#f6b62b] md:text-xl font-semibold uppercase">{pillar.title}</h3>
-                            <div className="text-white text-lg font-extralight overflow-hidden text-ellipsis line-clamp-8 whitespace-pre-line">
-                                {pillar.description}
-                                {pillar.children && pillar.children.map((child, j) => (
-                                    <div key={j} className="whitespace-pre-line">
-                                        <h4 className="font-normal">{child.title}:</h4>
-                                        <p>{child.description}</p>
-                                    </div>
-                                ))}
+                    {pillars.slice(0, 3).map((pillar, i) => (
+                        <div key={i} className="flex flex-col gap-6 md:gap-4">
+                            <article className="flex flex-col justify-center border-gray-500 gap-4 md:gap-2 border-3 min-h-60 w-full md:border-none rounded-3xl text-center md:text-left">
+                                <h3 className="text-[#f6b62b] text-2xl md:text-xl font-semibold uppercase">{pillar.title}</h3>
+                                <div className="text-white w-4/5 mx-auto md:w-full text-xl md:text-lg font-extralight overflow-hidden text-ellipsis line-clamp-3 md:line-clamp-7 whitespace-pre-line">
+                                    {pillar.description}
+                                    {pillar.children && pillar.children.map((child, j) => (
+                                        <div key={j} className="whitespace-pre-line">
+                                            <h4 className="font-normal">{child.title}:</h4>
+                                            <p>{child.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </article>
+                            <div className="flex md:hidden justify-center">
+                                <InSectionLink
+                                    name="read more"
+                                    path="/production/about"
+                                    ariaLabel="Learn more about Boxonia’s productions and services"
+                                />
                             </div>
-                        </article>
+                        </div>
                     ))}
                 </div>
-                <InSectionLink
-                    name="read more"
-                    path="/production/about"
-                    ariaLabel="Learn more about Boxonia’s productions and services"
-                />
+                <div className="hidden md:block">
+                    <InSectionLink
+                        name="read more"
+                        path="/production/about"
+                        ariaLabel="Learn more about Boxonia’s productions and services"
+                    />
+                </div>
             </div>
         </section>
     );

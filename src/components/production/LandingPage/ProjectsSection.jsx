@@ -29,6 +29,8 @@ const ProjectsSection = () => {
             <CarouselComponent
                 collections={projects}
                 navButon={false}
+                length={projects.length}
+                showIndicator={true}
             />
             <InSectionLink
                 ariaLabel="Browse more Boxonia film, TV, and creative projects"

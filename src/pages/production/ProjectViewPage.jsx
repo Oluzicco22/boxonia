@@ -49,8 +49,8 @@ const ProjectViewPage = () => {
             </div>
             <section
                 className="relative grid grid-cols-1 md:grid-cols-[2fr_5fr] my-10 gap-5 md:gap-10 w-[93%] mx-auto">
-                <div className="md:absolute md:-top-3/5 flex flex-col gap-5 items-center w-1/3">
-                        <div className="hidden md:block w-4/6 h-full z-10">
+                <div className="absolute -top-44 md:-top-3/5 flex flex-col gap-5 items-center w-full md:w-1/3">
+                        <div className="block w-1/2 md:w-4/6 h-full z-10">
                             <img
                                 src={project.cover_image}
                                 alt={`Cover image for ${project.title}`}
@@ -58,11 +58,11 @@ const ProjectViewPage = () => {
                             />
                         </div>
                         <button
-                            className="w-full md:w-fit cursor-pointer py-2 px-8 border border-white rounded-sm text-white hover:text-black hover:bg-white capitalize font-bold text-xl">
+                            className="w-fit cursor-pointer py-2 px-8 border border-white rounded-lg md:rounded-sm text-white hover:text-black hover:bg-white capitalize font-bold text-xl">
                             watch trailer
                         </button>
                     </div>
-                <div className="hidden md:block"></div>
+                <div className="block min-h-72"></div>
                 <ProjectCard props={project} />
 
             </section>

@@ -8,13 +8,13 @@ const Footer = () => {
         }}>
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
                 <p className="text-[#F6B62B] font-bold text-3xl md:text-xl">Contact Us</p>
-                <div>
-                    <a className="hover:text-yellow-400" href="mailto:boxonialblueprint@gmail.com" target="_blank">boxonialblueprint@gmail.com</a>
-                    <p>+234 903 307 1442</p>
-                    <p>+234 818 446 8748</p>
-                </div>
+                        <div>
+                            <a className="hover:text-yellow-400" href="mailto:boxonialblueprint@gmail.com" target="_blank">boxonialblueprint@gmail.com</a>
+                            <p>+234 903 307 1442</p>
+                            <p>+234 818 446 8748</p>
+                        </div>
 
-                <p>Lagos, Nigeria</p>
+                        <p>Lagos, Nigeria</p>
 
                 <nav className="flex gap-3 text-3xl">
                     <a href="#" className="hover:text-yellow-300"><FaInstagram /></a>
