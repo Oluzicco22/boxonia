@@ -1,17 +1,17 @@
 import {useEffect, useState} from "react";
 import {FaGreaterThan, FaLessThan} from "react-icons/fa";
 
-const CarouselComponent = ({images, navButon}) => {
+const CarouselComponent = ({collections, navButon}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
         setCurrentIndex(prev => {
-            if(prev % images.length < images.length -1) {
-                images.push(images[prev])
+            if(prev % collections.length < collections.length -1) {
+                collections.push(collections[prev])
                 return prev + 1
             }
             return (
-                prev + 1 - images.length
+                prev + 1 - collections.length
             )
         });
     };
@@ -34,11 +34,12 @@ const CarouselComponent = ({images, navButon}) => {
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-                {images.map((img, i) => (
+                {collections.map((collection, i) => (
                     <img
                         key={i}
-                        src={img}
-                        alt={`carousel-${i}`}
+                        src={collection.img}
+                        alt={collection.description}
+                        title={collection.title}
                         className="w-full flex-shrink-0 object-cover md:h-[500px]"
                         loading="lazy"
                     />

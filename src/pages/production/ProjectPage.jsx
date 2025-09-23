@@ -16,6 +16,11 @@ const ProjectPage = () => {
                     style={{
                         backgroundImage: `url(${project.image})`,
                     }}>
+                    <img
+                        src={project.image}
+                        alt={`Preview of project ${project.title}`}
+                        className="hidden"
+                    />
                     <div className="w-4/5 flex gap-3 text-white flex-col mb-8">
                             <a href={`/production/projects/${project.id}`} className="text-right font-medium text-lg hover:text-[#f6b62b]">{`see more --->`}</a>
                     </div>

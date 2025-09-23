@@ -2,7 +2,7 @@ import {Outlet} from "react-router-dom";
 
 const ParentPage = () => {
     return (
-        <main className="text-white min-w-sm">
+        <main id="main-content" role="main" className="text-white min-w-sm">
             <Outlet />
         </main>
     )

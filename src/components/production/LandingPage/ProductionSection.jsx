@@ -2,28 +2,71 @@ import ArticleHeader from "../ArticleHeader.jsx";
 import CarouselComponent from "../../CarouselComponent.jsx";
 
 const ProductionSection = () => {
-    const images = [
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_0_oopczf.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986124/BTS_1_kgvjot.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_2_ostr8h.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_3_yinydv.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986207/BTS_4_ahhodz.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986192/BTS_5_s4pkjc.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_6_wxci8r.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986126/BTS_7_oquwkh.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986127/BTS_8_zzluki.png",
-        "https://res.cloudinary.com/dybmufexj/image/upload/v1753986131/BTS_9_thszod.png",
+    const products = [
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_0_oopczf.png",
+            title: "Camera crew on set",
+            description: "Boxonia production crew operating cameras for a live film project.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986124/BTS_1_kgvjot.png",
+            title: "Drone filming session",
+            description: "Behind the scenes aerial drone filming for cinematic visuals.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_2_ostr8h.png",
+            title: "Director and crew",
+            description: "Director and crew coordinating a film sequence on set.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_3_yinydv.png",
+            title: "Cinematographer at work",
+            description: "Boxonia cinematographer adjusting RED camera for precision shots.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986207/BTS_4_ahhodz.png",
+            title: "Lighting preparation",
+            description: "Film crew setting up professional lighting equipment on location.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986192/BTS_5_s4pkjc.png",
+            title: "Drone cinematography",
+            description: "Aerial drone capturing wide-angle footage for Boxonia projects.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_6_wxci8r.png",
+            title: "Actors and crew",
+            description: "Actors and production crew working together during filming.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986126/BTS_7_oquwkh.png",
+            title: "Cinematic setup",
+            description: "Boxonia crew preparing cinematic shots with advanced equipment.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986127/BTS_8_zzluki.png",
+            title: "On-set directing",
+            description: "Director overseeing behind-the-scenes production workflow.",
+        },
+        {
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986131/BTS_9_thszod.png",
+            title: "Professional filming gear",
+            description: "Boxonia team using RED camera and pro filming gear for shoots.",
+        },
     ];
 
     return (
-        <section className="flex flex-col py-0 gap-10 items-center relative">
+        <section aria-labelledby="production-heading" className="flex flex-col py-0 gap-10 items-center relative">
             <div className="w-full flex items-center flex-col gap-10">
-                <ArticleHeader title="behind the scenes" />
+                <ArticleHeader title="Behind the Scenes" id="production-heading" />
                 <p className="w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center">
-                    First-class footage in the best quality is our priority, which is why our team has the latest professional video equipment. We are as well able to provide aerial footage from drones. In case you need footage in the highest quality we will arrange filming with a RED film camera.
+                    First-class footage in the best quality is our priority, which is why our team
+                    has the latest professional video equipment. We are as well able to provide
+                    aerial footage from drones. In case you need footage in the highest quality
+                    we will arrange filming with a RED film camera.
                 </p>
             </div>
-            <CarouselComponent images={images} navButon={true} />
+            <CarouselComponent collections={products} navButon={true} />
         </section>
     );
 };

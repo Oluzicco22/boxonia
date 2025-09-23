@@ -32,28 +32,47 @@ const ProjectCard = ({ props }) => {
     return (
         <article className="flex flex-col justify-end gap-4">
             <h2 className="capitalize font-bold text-5xl">{props?.title}</h2>
-            {keys.map((key, i) => (
-                key === 'logline' ?
-                    <div key={i} className="flex flex-col itim-font">
-                        <h3 className="text-yellow-500 font-semibold text-xl capitalize">{key}</h3>
-                        <p className="font-normal text-lg capitalize">{checkKey(key)}</p>
-                    </div>
-                    :
-                    key === 'starring' ?
+
+            {keys.map((key, i) => {
+                const value = checkKey(key);
+                const label = key.split("_").join(" ");
+
+                // logline block
+                if (key === "logline") {
+                    return (
+                        <div key={i} className="flex flex-col itim-font">
+                            <h3 className="text-yellow-500 font-semibold text-xl capitalize">
+                                {label}
+                            </h3>
+                            <p className="font-normal text-lg capitalize">{value}</p>
+                        </div>
+                    );
+                }
+
+                // starring block (inline with colon)
+                if (key === "starring") {
+                    return (
                         <div key={i} className="flex gap-2 itim-font">
                             <p className="font-normal text-lg capitalize">
-                                <span className="text-yellow-500 font-semibold text-xl capitalize">
-                                {`${key.split("_").join(" ")}: `}
-                                </span>
-                                {checkKey(key)}</p>
-                        </div> :
-                        <div key={i} className="flex gap-2 itim-font">
-                            <h3 className="text-yellow-500 font-semibold text-xl capitalize">
-                                {`${key.split("_").join(" ")}:`}
-                            </h3>
-                            <p className="font-normal text-lg capitalize">{checkKey(key)}</p>
+            <span className="text-yellow-500 font-semibold text-xl capitalize">
+              {label}:{" "}
+            </span>
+                                {value}
+                            </p>
                         </div>
-            ))}
+                    );
+                }
+
+                // default block
+                return (
+                    <div key={i} className="flex gap-2 itim-font">
+                        <h3 className="text-yellow-500 font-semibold text-xl capitalize">
+                            {label}:
+                        </h3>
+                        <p className="font-normal text-lg capitalize">{value}</p>
+                    </div>
+                );
+            })}
         </article>
     );
 };

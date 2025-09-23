@@ -17,20 +17,23 @@ const WhatSection = () => {
                     {boxoniaPillars.slice(0, 3).map((pillar, i) => (
                         <article key={i} className="flex gap-2 flex-col w-full md:w-1/3 text-center md:text-left">
                             <h3 className="text-[#f6b62b] md:text-xl font-semibold uppercase">{pillar.title}</h3>
-                            <p className="text-white text-lg font-extralight overflow-hidden text-ellipsis line-clamp-8 whitespace-pre-line">
+                            <div className="text-white text-lg font-extralight overflow-hidden text-ellipsis line-clamp-8 whitespace-pre-line">
                                 {pillar.description}
                                 {pillar.children && pillar.children.map((child, j) => (
-                                    <span key={j} className="whitespace-pre-line">
-                                        {" "}
-                                        <span className="font-normal">{child.title}:</span>{" "}<br />
-                                        {child.description}
-                                </span>
+                                    <div key={j} className="whitespace-pre-line">
+                                        <h4 className="font-normal">{child.title}:</h4>
+                                        <p>{child.description}</p>
+                                    </div>
                                 ))}
-                            </p>
+                            </div>
                         </article>
                     ))}
                 </div>
-                <InSectionLink name="read more" path="/production/about" />
+                <InSectionLink
+                    name="read more"
+                    path="/production/about"
+                    ariaLabel="Learn more about Boxonia’s productions and services"
+                />
             </div>
         </section>
     );
