@@ -1,19 +1,53 @@
 import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
-import TalentData from "../../data/talents.json";
 import TalentCatalogue from "../../components/talents/TalentCatalogue.jsx";
 import SpotlightSection from "../../components/production/LandingPage/SpotlightSection.jsx";
 import InSectionLink from "../../components/production/InSectionLink.jsx";
 import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
+import Server from "../../services/indexApi.js"
+
+const server = new Server();
+
+const TalentSkeleton = () => (
+    <div className="flex flex-col items-center space-y-3 w-full">
+        <div className="w-full h-72 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-3xl animate-pulse"></div>
+        <div className="h-4 w-3/4 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+        <div className="h-4 w-1/2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+    </div>
+)
+
 
 const TalentPage = () => {
+    const [talents, setTalents] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    const fetchTalents = async () => {
+        setLoading(true);
+        try{
+            const res = await server.readTalents();
+            setTalents(res.data);
+        }catch(_){
+            setError("Failed to load talents.");
+        }finally {
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        fetchTalents();
+    }, []);
+
     return (
         <div className="grid gap-16 mt-20 md:mt-40">
             <Header />
             <div className="w-full flex justify-center">
                 <ArticleHeader title="boxonia talents" />
             </div>
+            {error && <p className="text-red-500 text-center">{error}</p>}
+
 
             <p className="w-[90%] md:w-3/5 mx-auto">
                 At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the careers of industry professionals.
@@ -22,24 +56,43 @@ const TalentPage = () => {
             </p>
 
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-16 items-start">
-                {TalentData.map((talent, i) => (
-                    <TalentCatalogue key={i} props={talent} />
-                ))}
+                {loading ?
+                    [...Array(3)].map((_, index) => (
+                        <TalentSkeleton key={index} />
+                    ))
+                    : talents.map((talent, i) => (
+                        <TalentCatalogue key={i} props={talent} />
+                    ))
+                }
             </section>
 
             <section className="flex flex-col items-center gap-16 mt-6">
                 <ArticleHeader title="selected works" />
-                <div className="relative w-full overflow-x-scroll" style={{ scrollbarWidth: "none"}}>
-                    <div className="flex gap-2 animate-[marquee_8s_linear_infinite]">
-                        {[...TalentData, ...TalentData].map((talent, i) =>
+                <div className="relative w-full overflow-x-scroll" style={{ scrollbarWidth: "none" }}>
+                    <div className={`flex gap-2 ${!loading && "animate-[marquee_8s_linear_infinite]"}`}>
+                        {loading ? (
+                            <div className="w-[90%] mx-auto space-x-1 flex justify-center">
+                                {[...Array(6)].map((_, index) => (
+                                    <div
+                                        key={index}
+                                        className="w-[calc(100%/6)] h-[10rem] bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-lg animate-pulse flex-shrink-0"
+                                    ></div>
+                                ))}
+                            </div>
+                        ) : talents && [...talents, ...talents].map((talent, i) =>
                             talent.relatedProjects.map((tal, idx) => (
                                 <Link to="#" key={`${i}-${idx}`} className="flex-shrink-0">
-                                    <img src={tal} alt={`img-${i}-${idx}`} className="w-[15rem]" />
+                                    <img
+                                        src={tal}
+                                        alt={`img-${i}-${idx}`}
+                                        className="w-[15rem] h-[10rem] object-cover rounded-lg"
+                                    />
                                 </Link>
                             ))
                         )}
                     </div>
                 </div>
+
             </section>
 
             <div className="flex flex-col items-center gap-16">

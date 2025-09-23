@@ -11,6 +11,19 @@ const TalentBookingModal = ({onClose, name}) => {
         payment: ''
     });
 
+    const handleSubmit = () => {
+        const bookingData = { type, platform, ...form };
+        console.log("Booking Data:", bookingData);
+        // TODO: send bookingData to API
+        onClose();
+    };
+
+    const isDisabled =
+        !type ||
+        !platform ||
+        !form.synopsis.trim() ||
+        !form.duration.trim() ||
+        !form.payment.trim();
 
     return (
         <div className="w-[95%] md:w-4/5 bg-neutral-700 rounded-2xl px-10 py-9 flex flex-col gap-14">
@@ -25,13 +38,15 @@ const TalentBookingModal = ({onClose, name}) => {
 
             </div>
             <div className="flex flex-col gap-10">
-                <div className="w-full h-72 sm:h-44 lg:h-30 flex justify-center items-center border border-white relative">
+                <div className="w-full min-h-30 flex justify-center items-center border border-white relative py-6">
                     <p className="text-white text-xl font-bold absolute bg-black px-3 -top-7 left-1/2 -translate-x-1/2 w-52 flex justify-center py-3">
                             Project type:
-                        </p>
-                    <div className="flex justify-evenly flex-wrap lg:flex-nowrap w-full items-center gap-3">
+                    </p>
+                    <div className="flex justify-evenly flex-wrap w-full items-center gap-3">
                         {['feature film', 'short film', 'ad commercial', 'music video', 'brand influencing', 'others'].map((item, i) =>
-                            <p
+                            <button
+                                type="button"
+                                aria-pressed={type === item}
                                 onClick={() => {type === item ? setType(null) : setType(item)}}
                                 role="button"
                                 tabIndex={0}
@@ -41,27 +56,28 @@ const TalentBookingModal = ({onClose, name}) => {
                                 ${type !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
                                 key={i}>
                                 {item}
-                            </p>
+                            </button>
                         )}
                     </div>
                 </div>
 
-                <div className="w-11/12 md:w-8/12 mx-auto h-40 sm:h-44 lg:h-30 flex justify-center items-center border border-white relative">
+                <div className="w-11/12 md:w-8/12 mx-auto min-h-30 flex justify-center items-center border border-white relative py-6">
                     <p className="text-white text-xl font-bold absolute bg-black px-3 -top-7 left-1/2 -translate-x-1/2 w-52 flex justify-center py-3">
                         Platform</p>
                     <div className="flex flex-wrap md:flex-nowrap justify-evenly md:justify-between w-full md:w-10/11">
                         {['cinema', 'netflix', 'amazon', 'youtube'].map((item, i) =>
-                            <p
+                            <button
+                                type="button"
+                                aria-pressed={platform === item}
                                 onClick={() => {platform === item ? setPlatform(null) : setPlatform(item)}}
                                 role="button"
                                 tabIndex={0}
-                                className={`
-                                ${platform === item ? 'bg-black rounded-xl ' : ' '}
+                                className={`${platform === item ? 'bg-black rounded-xl ' : ' '}
                                 text-white whitespace-nowrap capitalize font-medium cursor-pointer text-base md:text-lg 
                                 ${platform !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
                                 key={i}>
                                 {item}
-                            </p>
+                            </button>
                         )}
                     </div>
                 </div>
@@ -69,19 +85,40 @@ const TalentBookingModal = ({onClose, name}) => {
                 <div className="w-10/12 mx-auto flex gap-7 flex-col items-center">
                     <div className="w-full flex flex-col gap-1 bg-white text-black rounded-md p-4">
                         <label className="text-lg font-medium">Project Synopsis/Information:</label>
-                        <textarea rows="3" className="w-full rounded-md focus-visible:outline-none resize-none"></textarea>
+                        <textarea
+                            rows="3"
+                            value={form.synopsis}
+                            onChange={(e) => setForm({ ...form, synopsis: e.target.value })}
+                            className="w-full rounded-md focus-visible:outline-none resize-none"></textarea>
                     </div>
 
                     <div className="w-full flex gap-1 bg-white text-black rounded-md p-4">
                         <label className="text-lg font-medium whitespace-nowrap">Project Duration:</label>
-                        <input type="text" className="w-full rounded-md focus-visible:outline-none" />
+                        <input
+                            value={form.duration}
+                            onChange={(e) => setForm({ ...form, duration: e.target.value })}
+                            type="text" className="w-full rounded-md focus-visible:outline-none" />
                     </div>
 
                     <div className="w-full flex gap-1 bg-white text-black rounded-md p-4">
                         <label className="text-lg font-medium whitespace-nowrap">Payment Offer:</label>
-                        <input type="text" className="w-full rounded-md focus-visible:outline-none" />
+                        <input
+                            type="text"
+                            value={form.payment}
+                            onChange={(e) => setForm({ ...form, payment: e.target.value })}
+                            className="w-full rounded-md focus-visible:outline-none" />
                     </div>
-                    <button className="text-white my-6 hover:text-black hover:bg-white rounded-md py-2 px-20 bg-transparent border border-white w-fit">{`book ${name}`}</button>
+
+                    <button
+                        onClick={handleSubmit}
+                        disabled={isDisabled}
+                        className={`text-white my-6 rounded-md py-2 px-20 w-fit border ${isDisabled
+                            ? "bg-gray-500 border-gray-500 cursor-not-allowed"
+                            : "bg-transparent border-white hover:text-black hover:bg-white cursor-pointer"
+                        }`}
+                    >
+                        {`Book ${name}`}
+                    </button>
                 </div>
             </div>
         </div>

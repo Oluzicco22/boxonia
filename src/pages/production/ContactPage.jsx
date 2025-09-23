@@ -4,17 +4,66 @@ import Footer from "../../components/Footer.jsx";
 import {Link} from "react-router-dom";
 import {FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
 import {FaXTwitter, FaYoutube} from "react-icons/fa6";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import FAQSection from "../../components/production/ContactComponent/FAQSection.jsx";
+import Service from "../../services/indexApi.js";
 
 const ContactPage = () => {
+    const service = new Service();
+    const [error, setError] = useState(null);
+    const [message, setMessage] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const [formValues, setFormValues] = useState({
         name: "",
         email: "",
         subject: "",
         message: ""
-    })
+    });
+
+    const submitForm = async (e) => {
+        e.preventDefault()
+        setLoading(true);
+        try {
+            const res = await service.contactMail(formValues)
+            setMessage(res.message)
+        }catch (err) {
+            const errorsArray = err?.response?.data?.errors || [];
+
+            const normalizedErrors = errorsArray.reduce((acc, msg) => {
+                if (msg.toLowerCase().includes("name")) acc.name = msg;
+                if (msg.toLowerCase().includes("email")) acc.email = msg;
+                if (msg.toLowerCase().includes("subject")) acc.subject = msg;
+                if (msg.toLowerCase().includes("message")) acc.message = msg;
+                return acc;
+            }, {});
+            setError(normalizedErrors);
+        }finally {
+            setLoading(false);
+        }
+    }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormValues((prev) => ({ ...prev, [name]: value }));
+        setError((prev) => ({ ...prev, [name]: undefined }));
+    };
+
+    useEffect(() => {
+        if (!message) return;
+
+        const timer = setTimeout(() => {
+            setMessage(null);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }, [message]);
+
+
+
+
+
     return (
         <>
             <Header />
@@ -56,45 +105,67 @@ const ContactPage = () => {
 
             </section>
 
+            {/*<!----- Contact Page -->*/}
             <section className="flex flex-col items-center text-center my-12 gap-4 text-black">
                 <ArticleHeader title="get in touch" />
-                <form onSubmit={() => {}} className="w-4/6 md:w-2/5 flex flex-col gap-4">
+                <p className="text-green-600">{message}</p>
+                <form onSubmit={submitForm} className="w-4/6 md:w-2/5 flex flex-col gap-4">
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="name" className="text-gray-400 text-base font-medium">Name:</label>
                         <input
                             type="text"
                             value={formValues.name}
-                            onChange={(e) => setFormValues({...formValues, name: e.target.value})}
-                            id="name"
                             className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 focus:outline-0"
+                            onChange={handleChange}
+                            name="name"
+                            id="name"
                         />
+
+                        {error?.name && <span className="text-red-600 text-sm capitalize">{error.name}</span>}
                     </div>
 
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="email" className="text-gray-400 text-base font-medium">Email:</label>
                         <input
                             value={formValues.email}
-                            onChange={(e) => setFormValues({...formValues, email: e.target.value})}
-                            type="email" id="email" className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 focus:outline-0" />
+                            onChange={handleChange}
+                            type="email"
+                            name="email"
+                            id="email"
+                            className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 focus:outline-0" />
+                        {error?.email && <span className="text-red-600 text-sm capitalize">{error.email}</span>}
                     </div>
 
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="subject" className="text-gray-400 text-base font-medium">Subject:</label>
                         <input
                             value={formValues.subject}
-                            onChange={(e) => setFormValues({...formValues, subject: e.target.value})}
-                            type="text" id="subject" className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 focus:outline-0" />
+                            onChange={handleChange}
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 focus:outline-0" />
+                        {error?.subject && <span className="text-red-600 text-sm capitalize">{error.subject}</span>}
                     </div>
 
                     <div className="flex flex-col gap-1 text-left w-full">
                         <label htmlFor="name" className="text-gray-400 text-base font-medium">Your Message: (optional)</label>
                         <textarea
                             value={formValues.message}
-                            onChange={(e) => setFormValues({...formValues, message: e.target.value})}
-                            rows="3" id="name" className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 resize-none focus:outline-0" />
+                            onChange={handleChange}
+                            name="message"
+                            rows="3"
+                            id="name"
+                            className="text-lg font-medium bg-white w-full rounded-md px-2 py-1 resize-none focus:outline-0" />
+                        {error?.message && <span className="text-red-600 text-sm capitalize">{error.message}</span>}
+                    </div>
+                    <div>
+                        <button
+                            disabled={loading}
+                            type="submit"
+                            className={`py-2 sm:px-12 w-full sm:w-fit text-[#989898] border-2 rounded-md disabled:opacity-25 border-[#989898] hover:bg-white hover:text-black`}>send message</button>
                     </div>
                 </form>
-                <button className="hidden md:inline-block py-2 px-12 mt-4 mb-24 text-[#989898] border-2 rounded-md border-[#989898] hover:bg-white hover:text-black">send message</button>
             </section>
 
             <FAQSection />

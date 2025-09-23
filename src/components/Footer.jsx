@@ -3,7 +3,7 @@ import { FaXTwitter,FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col py-12 md:py-12 mt-32 w-[95%] md:w-[93%] mx-auto gap-6 md:gap-12 items-center bg-black/50 bg-blend-darken" style={{
+        <footer role="contentinfo" className="flex flex-col py-12 md:py-12 mt-32 w-[95%] md:w-[93%] mx-auto gap-6 md:gap-12 items-center bg-black/50 bg-blend-darken" style={{
             backgroundImage: "url(https://res.cloudinary.com/dybmufexj/image/upload/v1755730598/view-3d-film-reel_1_vhfwry.png)"
         }}>
             <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between text-gray-400 w-full md:w-3/4">
