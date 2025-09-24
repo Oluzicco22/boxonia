@@ -55,7 +55,7 @@ const TalentPage = () => {
                 Through collaboration, strategy, and tailored career growth, we cultivate long-term relationships that drive both personal and industry-wide innovation.
             </p>
 
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-16 items-start">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-8 md:gap-16 items-start">
                 {loading ?
                     [...Array(3)].map((_, index) => (
                         <TalentSkeleton key={index} />

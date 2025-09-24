@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {FaGreaterThan, FaLessThan} from "react-icons/fa";
 
-const CarouselComponent = ({collections, navButon}) => {
+const CarouselComponent = ({collections, navButon, showIndicator = false, length}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
@@ -29,7 +29,7 @@ const CarouselComponent = ({collections, navButon}) => {
     }, []);
 
     return (
-        <div className="w-full overflow-hidden relative h-full">
+        <div className="w-full overflow-hidden relative h-full space-y-6">
             <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -45,6 +45,13 @@ const CarouselComponent = ({collections, navButon}) => {
                     />
                 ))}
             </div>
+            {showIndicator &&
+                <div className="md:hidden flex justify-center space-x-10">
+                    {[...Array(length)].map((_, i) => (
+                        <span key={i} className={`w-2.5 h-2.5 ${i === currentIndex % length ? 'bg-yellow-400' : 'bg-white'} rounded-full`}></span>
+                    ))}
+                </div>
+            }
 
             {navButon &&
                 <>

@@ -66,7 +66,12 @@ const ProductionSection = () => {
                     we will arrange filming with a RED film camera.
                 </p>
             </div>
-            <CarouselComponent collections={products} navButon={true} />
+            <CarouselComponent
+                collections={products}
+                navButon={false}
+                length={products.length}
+                showIndicator={true}
+            />
         </section>
     );
 };

@@ -20,11 +20,13 @@ const LandingPage = () => {
                 <section className="flex flex-col items-center justify-center gap-6">
                     <SpotlightSection />
                     <InSectionLink name="see more" path="/production/news" ariaLabel="boxonia production news" />
-                    <p className="lemon-font text-black md:text-[#F6B62B] bg-[#F6B62BB0] md:bg-transparent text-xl sm:text-2xl
-                     lg:text-4xl rounded-md md:rounded-none py-3 md:py-0 px-3 md:px-5 leading-10 md:leading-22 font-normal md:border-y-2
-                    border-[#4D4D4D] w-fit text-center md:text-nowrap mt-10 md:mt-20">
-                        Audacious, Authentic & Exportable Art forms
-                    </p>
+                    <div className="bg-red-400 h-64 md:h-auto flex justify-center items-center mt-10 md:mt-20">
+                        <p className="lemon-font text-black md:text-[#F6B62B] bg-[#F6B62B] md:bg-transparent text-xl sm:text-2xl
+                        lg:text-4xl rounded-md md:rounded-none py-3 md:py-0 px-3 md:px-5 leading-10 md:leading-22 font-normal md:border-y-2
+                        border-[#4D4D4D] w-2/3 md:w-fit text-center md:text-nowrap">
+                            Audacious, Authentic & Exportable Art forms
+                        </p>
+                    </div>
                 </section>
                 <ProductionSection />
             </div>

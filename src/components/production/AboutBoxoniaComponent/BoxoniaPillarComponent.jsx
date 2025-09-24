@@ -21,7 +21,7 @@ const BoxoniaPillarComponent = () => {
                          }}
                          >
                         <div className="w-11/12 md:w-4/5 lg:w-3/4 flex gap-4 text-white flex-col">
-                            <h3 className="text-2xl md:text-3xl font-semibold text-center text-[#f6b62b] uppercase">{pillar.title}</h3>
+                            <h3 className="text-2xl md:text-3xl font-semibold md:text-center text-[#f6b62b] uppercase">{pillar.title}</h3>
                             <p className="text-base md:text-lg lg:text-xl font-light text-justify leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{__html: pillar.description}}></p>
                             <div className="flex flex-col gap-8">
                                 {pillar.children && pillar.children.map((child, i) => (

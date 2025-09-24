@@ -3,7 +3,7 @@ import ArticleHeader from "../ArticleHeader.jsx";
 const ValuesComponent = () => {
         const values = [
                 {
-                        title: "Ambitious",
+                        title: "Ambition",
                         desc: "We want to achieve great feats in the creative space and intend to redefine film standard practices in Africa and become one of the best production houses to ever exist."
                 },
                 {
@@ -28,11 +28,11 @@ const ValuesComponent = () => {
         return (
             <section className="flex flex-col px-3 md:px-0 w-full mx-auto items-center gap-16">
                     <ArticleHeader title="our values" />
-                    <div className="grid w-full md:w-3/5 px-3 mx-auto gap-8 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+                    <div className="grid w-full md:w-3/5 px-3 mx-auto gap-20 md:gap-8 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
                             {values.map(({ title, desc }, i) => (
                                 <article
                                     key={i}
-                                    className="flex flex-col gap-2 bg-[#131313] rounded-3xl px-6 py-8 text-lg"
+                                    className="flex flex-col gap-2 bg-[#131313] rounded-[40px] px-8 md:px-6 py-8 text-lg"
                                 >
                                         <h3 className="text-[#F6B62B] font-bold">{title}</h3>
                                         <p className="text-[#B7B7B7] leading-9 font-normal">{desc}</p>

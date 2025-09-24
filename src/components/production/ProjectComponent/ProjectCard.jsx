@@ -31,7 +31,7 @@ const ProjectCard = ({ props }) => {
 
     return (
         <article className="flex flex-col justify-end gap-4">
-            <h2 className="capitalize font-bold text-5xl">{props?.title}</h2>
+            <h2 className="capitalize font-bold text-3xl md:text-5xl text-center md:text-left">{props?.title}</h2>
 
             {keys.map((key, i) => {
                 const value = checkKey(key);

@@ -11,20 +11,31 @@ const ProjectPage = () => {
                 <ArticleHeader title="our projects" />
             </div>
             {projects.map((project, i) => (
-                <article key={i}
-                    className="my-10 flex justify-center items-end h-[25vh] md:h-[50vh] w-full relative bg-black/10 bg-blend-darken bg-center bg-cover bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${project.image})`,
-                    }}>
-                    <img
-                        src={project.image}
-                        alt={`Preview of project ${project.title}`}
-                        className="hidden"
-                    />
-                    <div className="w-4/5 flex gap-3 text-white flex-col mb-8">
+                <div>
+                    <article key={i}
+                             className="my-10 flex justify-center items-end h-[25vh] md:h-[50vh] w-full relative bg-black/10 bg-blend-darken bg-center bg-cover bg-no-repeat"
+                             style={{
+                                 backgroundImage: `url(${project.image})`,
+                             }}>
+                        <img
+                            src={project.image}
+                            alt={`Preview of project ${project.title}`}
+                            className="hidden"
+                        />
+                        <div className="w-4/5 hidden md:flex gap-3 text-white flex-col mb-8">
                             <a href={`/production/projects/${project.id}`} className="text-right font-medium text-lg hover:text-[#f6b62b]">{`see more --->`}</a>
+                        </div>
+
+                    </article>
+                    <div className="flex md:hidden justify-center">
+                        <a
+                            href={`/production/projects/${project.id}`}
+                            className="text-center text-nowrap text-sm border-1 font-normal hover:bg-white hover:text-black border-[#989898] text-[#989898] px-20 py-3 rounded-lg">
+                            see more
+                        </a>
                     </div>
-                </article>
+
+                </div>
             ))}
             <Footer />
         </>
