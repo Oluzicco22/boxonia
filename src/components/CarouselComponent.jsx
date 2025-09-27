@@ -46,9 +46,9 @@ const CarouselComponent = ({collections, navButon, showIndicator = false, length
                 ))}
             </div>
             {showIndicator &&
-                <div className="md:hidden flex justify-center space-x-10">
+                <div className="md:hidden flex justify-center space-x-5 md:space-x-10">
                     {[...Array(length)].map((_, i) => (
-                        <span key={i} className={`w-2.5 h-2.5 ${i === currentIndex % length ? 'bg-yellow-400' : 'bg-white'} rounded-full`}></span>
+                        <span key={i} className={`w-1.5 h-1.5 ${i === currentIndex % length ? 'bg-yellow-400' : 'bg-white'} rounded-full`}></span>
                     ))}
                 </div>
             }
