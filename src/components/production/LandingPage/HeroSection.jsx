@@ -26,7 +26,7 @@ const HeroSection = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full max-h-[77vh] object-cover"
+                    className="w-full min-h-[40vh] md:max-h-[77vh] object-cover"
                 >
                     <source
                         src="https://res.cloudinary.com/dybmufexj/video/upload/v1754281184/home_video_1_pcrddi.mp4"
