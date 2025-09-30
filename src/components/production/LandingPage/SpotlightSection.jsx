@@ -18,11 +18,11 @@ const SpotlightSection = ({ len = 2 }) => {
                             />
                         </div>
                         <div className="flex justify-center md:justify-start gap-4 font-normal text-lg text-white">
-                            <h3 className="text-white text-lg font-semibold">{info}</h3>
+                            <h3 className="text-white text-lg font-semibold hover:text-yellow-400 cursor-pointer">{info}</h3>
                             <img
                                 src={CArrowIcon}
                                 alt=""
-                                className="w-20 hidden md:flex"
+                                className="w-20 hidden md:flex cursor-pointer"
                             />
                         </div>
                     </div>
