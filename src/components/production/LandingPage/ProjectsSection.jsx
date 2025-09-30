@@ -19,6 +19,11 @@ const ProjectsSection = () => {
             img: "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
             description: "An experimental project merging art, film, and innovation.",
         },
+        {
+            title: "Group 3803",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
+            description: "An experimental project merging art, film, and innovation.",
+        },
     ];
 
     return (

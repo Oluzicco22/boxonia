@@ -17,8 +17,8 @@ const WhatSection = () => {
                     {pillars.slice(0, 3).map((pillar, i) => (
                         <div key={i} className="flex flex-col gap-6 md:gap-4">
                             <article className="flex flex-col justify-center border-gray-500 gap-4 md:gap-2 border-3 min-h-60 w-full md:border-none rounded-3xl text-center md:text-left">
-                                <h3 className="text-[#f6b62b] text-2xl md:text-xl font-semibold uppercase">{pillar.title}</h3>
-                                <div className="text-white w-4/5 mx-auto md:w-full text-xl md:text-lg font-extralight overflow-hidden text-ellipsis line-clamp-3 md:line-clamp-7 whitespace-pre-line">
+                                <h3 className="text-[#f6b62b] text-base md:text-xl font-semibold uppercase">{pillar.title}</h3>
+                                <div className="text-white w-4/5 mx-auto md:w-full text-sm md:text-lg font-light overflow-hidden leading-6 text-ellipsis line-clamp-3 md:line-clamp-7 whitespace-pre-line">
                                     {pillar.description}
                                     {pillar.children && pillar.children.map((child, j) => (
                                         <div key={j} className="whitespace-pre-line">
@@ -29,11 +29,11 @@ const WhatSection = () => {
                                 </div>
                             </article>
                             <div className="flex md:hidden justify-center">
-                                <InSectionLink
-                                    name="read more"
-                                    path="/production/about"
-                                    ariaLabel="Learn more about Boxonia’s productions and services"
-                                />
+                                    <InSectionLink
+                                        name="read more"
+                                        path="/production/about"
+                                        ariaLabel="Learn more about Boxonia’s productions and services"
+                                    />
                             </div>
                         </div>
                     ))}

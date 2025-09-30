@@ -30,11 +30,11 @@ const SponsorSection = () => {
     return (
         <section aria-labelledby="sponsor-heading" className="bg-white py-6 md:py-6">
             <div className="flex items-center gap-4">
-                <h2 id="sponsor-heading" className="text-black font-bold text-lg md:text-xl shrink-0 px-6 md:px-12">
+                <h2 id="sponsor-heading" className="text-black font-bold text-sm md:text-xl shrink-0 px-4 md:px-12">
                     Trusted By:
                 </h2>
                 <div className="overflow-hidden w-full flex-1">
-                    <div className="flex gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite] hover:[animation-play-state:paused]">
+                    <div className="flex gap-4 md:gap-16 whitespace-nowrap animate-[marquee_5s_linear_infinite] hover:[animation-play-state:paused]">
                         {Array(10)
                             .fill(sponsors)
                             .flat()
