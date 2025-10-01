@@ -21,10 +21,10 @@ const TalentCard = ({ talent: { firstName, lastName, info, relatedProjects, soci
             </button>
             <FeaturedTalentCard images={relatedProjects} />
             <div className="flex gap-10 text-5xl">
-                <a href={socials?.imdb} target="_blank" aria-label={`${firstName} ${lastName} on IMDB`}><FaImdb /></a>
-                <a href={socials?.instagram} target="_blank" aria-label={`${firstName} ${lastName} on Instagram`}><FaInstagram /></a>
-                {socials.twitter && (
-                    <a href={socials?.twitter} target="_blank" aria-label={`${firstName} ${lastName} on Instagram`}><FaXTwitter /></a>
+                <a className="hover:text-[#F6B62B]" href={socials?.imdb} target="_blank" aria-label={`${firstName} ${lastName} on IMDB`}><FaImdb /></a>
+                <a className="hover:text-[#F6B62B]" href={socials?.instagram} target="_blank" aria-label={`${firstName} ${lastName} on Instagram`}><FaInstagram /></a>
+                    {socials.twitter && (
+                    <a className="hover:text-[#F6B62B]" href={socials?.twitter} target="_blank" aria-label={`${firstName} ${lastName} on Instagram`}><FaXTwitter /></a>
                 )}
             </div>
             <div className="bg-[#181717] rounded-xl py-8 px-3 md:px-20">
