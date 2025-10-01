@@ -7,7 +7,7 @@ const SpotlightSection = ({ len = 2 }) => {
         <section className="flex flex-col py-4 md:py-0 w-[85%] mx-auto gap-16 items-center relative">
             <ArticleHeader title="in the spotlight" />
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full">
-                {spotlights.filter((spotlight, idx) => idx < len).map(({image, info}, i) => (
+                {spotlights.filter((spotlight, idx) => idx < len).map(({image, info, link}, i) => (
                     <div key={i} className="flex flex-col gap-2">
                         <div className="px-2 py-3 md:p-0 rounded-2xl md:rounded-none">
                             <img
@@ -18,7 +18,7 @@ const SpotlightSection = ({ len = 2 }) => {
                             />
                         </div>
                         <div className="flex justify-center md:justify-start gap-4 font-normal text-lg text-white">
-                            <h3 className="text-white text-lg font-semibold hover:text-yellow-400 cursor-pointer">{info}</h3>
+                            <a href={link} className="text-white text-lg font-semibold hover:text-yellow-400 cursor-pointer">{info}</a>
                             <img
                                 src={CArrowIcon}
                                 alt=""

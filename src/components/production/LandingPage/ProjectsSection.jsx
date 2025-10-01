@@ -15,13 +15,8 @@ const ProjectsSection = () => {
             description: "A cultural exploration film showcasing African heritage.",
         },
         {
-            title: "Group 3803",
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
-            description: "An experimental project merging art, film, and innovation.",
-        },
-        {
-            title: "Group 3803",
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
+            title: "Beta Food, Beta Life",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1755734539/BFBL_big_cover_towzge.png",
             description: "An experimental project merging art, film, and innovation.",
         },
     ];

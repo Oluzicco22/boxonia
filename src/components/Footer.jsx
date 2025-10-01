@@ -22,7 +22,7 @@ const Footer = () => {
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                 </nav>
 
-                <div className="leading-loose md:leading-0">
+                <div className="leading-loose md:leading-8">
                     <a className="hover:text-yellow-400" href="mailto:boxonialblueprint@gmail.com"
                        target="_blank">boxonialblueprint@gmail.com</a>
                     <p>+234 903 307 1442</p>
@@ -33,13 +33,13 @@ const Footer = () => {
 
                 {/*<!---------- Desktop Nav  ----------->*/}
                 <nav className="hidden md:flex gap-3 text-3xl">
-                    <a href="#" className="hover:text-yellow-300"><FaInstagram/></a>
-                    <a href="#" className="hover:text-yellow-300"><FaXTwitter/></a>
-                    <a href="#"><FaLinkedinIn
+                    <a href="http://instagram.com/boxoniablueprint" className="hover:text-yellow-300"><FaInstagram/></a>
+                    <a href="https://x.com/BoxoniaBlue" className="hover:text-yellow-300"><FaXTwitter/></a>
+                    <a href="http://linkedin.com/in/boxonia-blueprint-37a79a327"><FaLinkedinIn
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="#"><FaFacebookF
+                    <a href="http://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr"><FaFacebookF
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="#"><FaYoutube
+                    <a href="http://www.youtube.com/@boxoniablue"><FaYoutube
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                 </nav>
 
