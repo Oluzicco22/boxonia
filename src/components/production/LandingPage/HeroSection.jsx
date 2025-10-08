@@ -26,7 +26,7 @@ const HeroSection = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full min-h-[40vh] md:max-h-[77vh] object-cover"
+                    className="w-full min-h-[60vh] md:max-h-[77vh] object-cover"
                 >
                     <source
                         src="https://res.cloudinary.com/dybmufexj/video/upload/v1754281184/home_video_1_pcrddi.mp4"
@@ -40,8 +40,8 @@ const HeroSection = () => {
                         showVideoText ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                    <h1 className="hero-font text-2xl sm:text-5xl md:text-7xl lg:text-9xl">action</h1>
-                    <h1 className="hero-font text-2xl sm:text-5xl md:text-7xl lg:text-9xl">everywhere</h1>
+                    <h1 className="hero-font text-3xl sm:text-5xl md:text-7xl lg:text-9xl">action</h1>
+                    <h1 className="hero-font text-3xl sm:text-5xl md:text-7xl lg:text-9xl">everywhere</h1>
                 </div>
             </div>
         </section>

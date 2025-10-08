@@ -70,7 +70,7 @@ const ContactPage = () => {
             <div className="w-full flex justify-center mb-10 mt-40">
                 <ArticleHeader title="contact us" />
             </div>
-            <section className="flex flex-col items-center text-center gap-5">
+            <section className="flex flex-col items-center text-center gap-3">
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Address:</h2>
                     <address className="not-italic text-white text-lg font-medium leading-relaxed">
@@ -78,20 +78,20 @@ const ContactPage = () => {
                     </address>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-yellow-500 text-lg font-semibold">Phone:</h2>
-                    <div className="not-italic text-white text-lg font-medium leading-relaxed">
-                        <a href='tel:+2349033071442' className="hover:underline">+2349033071442</a>,
-                        <a href='tel:+2348184468748' className="hover:underline">+2348184468748</a>
-                    </div>
+                    {/*<h2 className="text-yellow-500 text-lg font-semibold">Phone:</h2>*/}
+                    {/*<div className="not-italic text-white text-lg font-medium leading-relaxed">*/}
+                    {/*    <a href='tel:+2349033071442' className="hover:underline">+2349033071442</a>,*/}
+                    {/*    <a href='tel:+2348184468748' className="hover:underline">+2348184468748</a>*/}
+                    {/*</div>*/}
                 </div>
                 <div className="flex flex-col gap-2">
                     <h2 className="text-yellow-500 text-lg font-semibold">Email:</h2>
                     <Link
-                        to="mailto:boxoniablueprint@gmail.com"
+                        to="mailto:HQ@boxonia.com"
                         target="_blank"
                         className="text-white text-lg font-medium leading-relaxed hover:underline"
                     >
-                        boxoniablueprint@gmail.com
+                        HQ@boxonia.com
                     </Link>
                 </div>
                 <nav className="flex gap-3 text-3xl">
