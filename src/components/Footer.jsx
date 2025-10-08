@@ -3,7 +3,7 @@ import {FaXTwitter, FaYoutube} from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer role="contentinfo" className="flex flex-col py-12 md:py-12 mt-32 w-[80%] h-fit md:w-[93%] mx-auto gap-6 md:gap-12
+        <footer role="contentinfo" className="flex flex-col py-12 md:py-12 md:mt-32 w-[80%] h-fit md:w-[93%] mx-auto gap-6 md:gap-12
         items-center bg-black/10 bg-blend-darken bg-[length:100%_90%] md:bg-auto bg-no-repeat bg-bottom" style={{
             backgroundImage: "url(https://res.cloudinary.com/dybmufexj/image/upload/v1755730598/view-3d-film-reel_1_vhfwry.png)"
         }}>
@@ -12,13 +12,14 @@ const Footer = () => {
 
                 {/*<!---------- Mobile Nav  ----------->*/}
                 <nav className="md:hidden flex gap-3 my-5 text-3xl">
-                    <a href="#" className="hover:text-yellow-300"><FaInstagram/></a>
-                    <a href="#" className="hover:text-yellow-300"><FaXTwitter/></a>
-                    <a href="#"><FaLinkedinIn
+                    <a href="https://instagram.com/boxoniablueprint" target="_blank"
+                       className="hover:text-yellow-300"><FaInstagram/></a>
+                    <a href="https://x.com/BoxoniaBlue" target="_blank" className="hover:text-yellow-300"><FaXTwitter/></a>
+                    <a href="https://linkedin.com/in/boxonia-blueprint-37a79a327" target="_blank"><FaLinkedinIn
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="#"><FaFacebookF
+                    <a href="https://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr" target="_blank"><FaFacebookF
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="#"><FaYoutube
+                    <a href="https://www.youtube.com/@boxoniablue" target="_blank"><FaYoutube
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                 </nav>
 
@@ -31,13 +32,14 @@ const Footer = () => {
 
                 {/*<!---------- Desktop Nav  ----------->*/}
                 <nav className="hidden md:flex gap-3 text-3xl">
-                    <a href="http://instagram.com/boxoniablueprint" className="hover:text-yellow-300"><FaInstagram/></a>
-                    <a href="https://x.com/BoxoniaBlue" className="hover:text-yellow-300"><FaXTwitter/></a>
-                    <a href="http://linkedin.com/in/boxonia-blueprint-37a79a327"><FaLinkedinIn
+                    <a href="https://instagram.com/boxoniablueprint" target="_blank"
+                       className="hover:text-yellow-300"><FaInstagram/></a>
+                    <a href="https://x.com/BoxoniaBlue" target="_blank" className="hover:text-yellow-300"><FaXTwitter/></a>
+                    <a href="https://linkedin.com/in/boxonia-blueprint-37a79a327" target="_blank"><FaLinkedinIn
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="http://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr"><FaFacebookF
+                    <a href="https://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr" target="_blank"><FaFacebookF
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
-                    <a href="http://www.youtube.com/@boxoniablue"><FaYoutube
+                    <a href="https://www.youtube.com/@boxoniablue" target="_blank"><FaYoutube
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                 </nav>
 

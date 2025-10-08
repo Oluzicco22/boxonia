@@ -15,21 +15,23 @@ const AboutBoxoniaPage = () => {
 
     return (
         <>
-            <Header />
-            <div className="w-full flex justify-center mb-8 mt-44">
-                <ArticleHeader title="what we do" />
+            <Header/>
+            <div className="w-full md:w-[85%] mx-auto flex justify-center mb-8 mt-44">
+                <ArticleHeader title="what we do"/>
             </div>
-            <BoxoniaPillarComponent />
+            <BoxoniaPillarComponent/>
 
             <section className="flex flex-col gap-10 items-center my-24">
-                <ArticleHeader title="project types we handle" />
-                <div className="flex flex-col items-center gap-9 w-full">
-                    <Marquee items={types} />
-                    <Marquee reverse={true} items={types} />
+                <div className="w-full md:w-[85%] mx-auto">
+                    <ArticleHeader title="project types we handle"/>
                 </div>
-                <InSectionLink name="work with us" path="/production/contact" />
+                <div className="flex flex-col items-center gap-11 md:gap-9 w-full">
+                    <Marquee items={types}/>
+                    <Marquee reverse={true} items={types}/>
+                </div>
+                <InSectionLink name="work with us" path="/production/contact"/>
             </section>
-            <Footer />
+            <Footer/>
         </>
     )
 }

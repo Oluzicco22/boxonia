@@ -6,16 +6,14 @@ import BoxoniaAlumniComponent from "../../components/production/BoxoniaStory/Box
 
 const BoxoniaStoryPage = () => {
     return (
-        <div className="bg-black/60 bg-blend-darken bg-no-repeat bg-[center_right] bg-auto" style={{
-            backgroundImage: `url(https://res.cloudinary.com/dybmufexj/image/upload/v1754222299/reels-img_l7djxx.png)`
-        }}>
-            <Header />
-            <div className="mt-24 md:mt-40 grid gap-[100px]">
-               <WeAreBoxoniaComponent />
-               <ValuesComponent />
-               <BoxoniaAlumniComponent />
-           </div>
-            <Footer />
+        <div className="bg-black/60 bg-blend-darken bg-no-repeat bg-[center_right] bg-auto">
+            <Header/>
+            <div className="mt-24 mb-16 md:mb-0 md:mt-32 grid gap-[100px]">
+                <WeAreBoxoniaComponent/>
+                <ValuesComponent/>
+                <BoxoniaAlumniComponent/>
+            </div>
+            <Footer/>
         </div>
     )
 }

@@ -6,11 +6,11 @@ const NewsPage = () => {
 
     return (
         <>
-            <Header />
-            <div className="mt-40">
-                <SpotlightSection len="7" />
+            <Header/>
+            <div className="mt-20">
+                <SpotlightSection len="7"/>
             </div>
-            <Footer />
+            <Footer/>
         </>
     )
 }

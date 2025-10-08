@@ -25,7 +25,9 @@ const ProjectsSection = () => {
         <section className="flex flex-col gap-10 items-center relative"
                  aria-labelledby="projects-heading"
         >
-            <ArticleHeader title="Our Projects" id="projects-heading" />
+            <div className="md:w-[85%] w-full">
+                <ArticleHeader title="Our Projects" id="projects-heading"/>
+            </div>
             <CarouselComponent
                 collections={projects}
                 navButon={false}

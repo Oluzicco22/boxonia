@@ -4,11 +4,13 @@ import ArticleHeader from "../ArticleHeader.jsx";
 
 const FAQSection = () => {
     return (
-        <section id="faq" className="flex flex-col items-center my-12 justify-between gap-16">
-                <ArticleHeader title="FAQ" />
-                <div className="flex flex-col gap-2 w-[90%] md:w-2/3 mb-24">
-                    <FAQArticle articles={Faqs} />
-                </div>
+        <section id="faq" className="flex flex-col items-center justify-between gap-16">
+            <div className="tracking-[1em] w-full">
+                <ArticleHeader title="FAQ"/>
+            </div>
+            <div className="flex flex-col gap-2 w-[90%] md:w-5/6">
+                <FAQArticle articles={Faqs}/>
+            </div>
 
         </section>
     )

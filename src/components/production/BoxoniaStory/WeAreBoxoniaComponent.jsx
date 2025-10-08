@@ -2,13 +2,16 @@ import ArticleHeader from "../ArticleHeader.jsx";
 
 const WeAreBoxoniaComponent = () => {
     return (
-        <section className="flex flex-col px-3 md:px-0 w-full text-center mx-auto items-center gap-8">
-            <ArticleHeader title="the boxonia story"/>
-            <div className="w-full flex justify-center text-left py-3 md:py-6" style={{
-                backgroundImage:
-                    "url('https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png')",
-            }}>
-                <div className="text-[#B7B7B7] leading-8 text-center md:text-left text-sm md:text-lg md:w-9/15">
+        <section className="flex flex-col px-3 md:px-0 py-12 w-full text-center mx-auto items-center gap-8" style={{
+            backgroundImage:
+                "url('https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png')",
+        }}>
+            <div className="w-full md:w-[85%] mx-auto my-12">
+                <ArticleHeader title="the boxonia story"/>
+            </div>
+            <div className="w-full flex justify-center text-left py-3 md:py-6">
+                <div
+                    className="text-[#B7B7B7] leading-8 text-justify md:text-left text-sm md:text-lg w-[95%] md:w-9/15">
                     <p>
                         In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to
                         tell original stories that authentically represent Nigerian and African realities. This

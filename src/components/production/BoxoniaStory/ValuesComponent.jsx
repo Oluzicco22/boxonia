@@ -26,8 +26,14 @@ const ValuesComponent = () => {
     ]
 
     return (
-        <section className="flex flex-col px-3 md:px-0 w-full mx-auto items-center gap-16">
-            <ArticleHeader title="our values"/>
+        <section className="relative flex flex-col px-3 md:px-0 w-full mx-auto items-center gap-16">
+            <div className="absolute -bottom-24 md:-bottom-11 right-0 w-[20%] md:w-fit">
+                <img src="https://res.cloudinary.com/dybmufexj/image/upload/v1754222299/reels-img_l7djxx.png"
+                     alt="reels" className="w-[100%]" loading="lazy"/>
+            </div>
+            <div className="w-full md:w-[85%] mx-auto">
+                <ArticleHeader title="our values"/>
+            </div>
             <div
                 className="grid w-full md:w-3/5 px-3 mx-auto gap-12 md:gap-8 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
                 {values.map(({title, desc}, i) => (
@@ -35,8 +41,8 @@ const ValuesComponent = () => {
                         key={i}
                         className="flex flex-col gap-2 bg-[#131313] rounded-[40px] px-8 md:px-6 py-8 text-lg"
                     >
-                        <h3 className="text-[#F6B62B] text-sm md:text-normal font-bold">{title}</h3>
-                        <p className="text-[#B7B7B7] leading-loose md:leading-9 text-sm md:text-normal font-normal">{desc}</p>
+                        <h3 className="text-[#F6B62B] text-sm md:text-[20px] font-bold">{title}</h3>
+                        <p className="text-[#B7B7B7] leading-loose md:leading-9 text-sm md:text-[20px] text-justify md:text-left font-normal">{desc}</p>
                     </article>
                 ))}
             </div>

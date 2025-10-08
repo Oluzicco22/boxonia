@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { PiCaretDownBold } from "react-icons/pi";
+import {useState} from "react";
+import {PiCaretDown} from "react-icons/pi";
 
-const FAQArticle = ({ articles }) => {
+const FAQArticle = ({articles}) => {
     const [openId, setOpenId] = useState(null);
 
     const toggleOptions = (id) => {
@@ -19,14 +19,14 @@ const FAQArticle = ({ articles }) => {
                         className="w-full bg-white rounded-2xl shadow text-left overflow-hidden"
                     >
                         <button
-                            className="w-full flex items-center justify-between py-8 px-10 text-black font-semibold text-xl"
+                            className="w-full flex items-center text-left justify-between py-8 px-10 text-black font-semibold text-xl"
                             onClick={() => toggleOptions(index)}
                             aria-expanded={isOpen}
                         >
                             {article.question}
-                            <PiCaretDownBold
+                            <PiCaretDown
                                 className={`transition-transform duration-500 ease-in-out
-                                 w-7 h-7 border-2 border-gray-900 rounded-full 
+                                 w-7 h-7 border border-gray-900 rounded-full 
                                  ${isOpen ? "-rotate-180" : "rotate-0"}
                                  `}
                             />

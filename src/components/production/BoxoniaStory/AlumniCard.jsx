@@ -14,7 +14,7 @@ const AlumniCard = ({name, role, info, img}) => {
                 </div>
             </div>
             <div className="flex flex-col justify-between items-center gap-6">
-                <p className={`text-[#B7B7B7] text-left text-xs sm:text-base leading-relaxed ${active ? '' : 'line-clamp-8'} whitespace-pre-line`}
+                <p className={`text-[#B7B7B7] text-justify md:text-left text-xs sm:text-base leading-relaxed ${active ? '' : 'line-clamp-8'} whitespace-pre-line`}
                    dangerouslySetInnerHTML={{__html: info}}>
 
                 </p>

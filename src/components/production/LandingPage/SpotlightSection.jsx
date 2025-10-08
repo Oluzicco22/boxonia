@@ -1,15 +1,15 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import spotlights from "../../../data/spotlight.json"
-import CArrowIcon from "../../../assets/arrow-icon.svg";
 
-const SpotlightSection = ({ len = 2 }) => {
+const SpotlightSection = ({len = 2}) => {
     return (
-        <section className="flex flex-col py-4 md:py-0 w-[85%] mx-auto gap-16 items-center relative">
-            <ArticleHeader title="in the spotlight" />
+        <section
+            className="flex flex-col py-8 md:py-0 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative bg-transparent">
+            <ArticleHeader title="in the spotlight"/>
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full">
                 {spotlights.filter((spotlight, idx) => idx < len).map(({image, info, link}, i) => (
-                    <div key={i} className="flex flex-col gap-2">
-                        <div className="px-2 py-3 md:p-0 rounded-2xl md:rounded-none">
+                    <div key={i} className="flex flex-col gap-3">
+                        <div className="md:p-0 rounded-2xl md:rounded-none">
                             <img
                                 src={image}
                                 alt={info || `Spotlight image ${i + 1}`}
@@ -17,17 +17,25 @@ const SpotlightSection = ({ len = 2 }) => {
                                 loading="lazy"
                             />
                         </div>
-                        <div className="flex justify-center md:justify-start gap-4 font-normal text-lg text-white">
-                            <a href={link} className="text-white text-lg font-semibold hover:text-yellow-400 cursor-pointer">{info}</a>
-                            <img
-                                src={CArrowIcon}
-                                alt=""
-                                className="w-20 hidden md:flex cursor-pointer"
-                            />
+                        <div
+                            className="flex justify-center md:justify-start gap-4 font-normal text-lg text-white">
+                            <a href={link}
+                               target="_blank"
+                               className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-semibold hover:text-yellow-400 cursor-pointer">
+                                {info}
+                                <svg width="51" height="9" viewBox="0 0 51 9" fill="currentColor"
+                                     className="w-20 text-gray-500 fill-white group-hover:fill-yellow-400"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M50.6358 4.05489C50.831 4.25016 50.831 4.56674 50.6358 4.762L47.4538 7.94398C47.2585 8.13924 46.942 8.13924 46.7467 7.94398C46.5514 7.74872 46.5514 7.43214 46.7467 7.23687L49.5751 4.40845L46.7467 1.58002C46.5514 1.38476 46.5514 1.06818 46.7467 0.872913C46.942 0.677651 47.2585 0.677651 47.4538 0.872913L50.6358 4.05489ZM0.120117 4.40845V3.90845H50.2822V4.40845V4.90845H0.120117V4.40845Z"
+                                    />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 ))}
             </div>
+
         </section>
     )
 }

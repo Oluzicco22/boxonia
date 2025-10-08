@@ -1,4 +1,4 @@
-const ProjectCard = ({ props }) => {
+const ProjectCard = ({props}) => {
     const formatDate = (date) => {
         return new Intl.DateTimeFormat("en-GB", {
             day: "numeric",
@@ -25,54 +25,57 @@ const ProjectCard = ({ props }) => {
         return value;
     };
 
-    const keys = Object.keys({ ...props }).filter(
-        (key) => !["id", "title", "cover_image", "thumbnail", "image"].includes(key)
+    const keys = Object.keys({...props}).filter(
+        (key) => !["id", "title", "cover_image", "thumbnail", "image", "trailer_link"].includes(key)
     );
 
     return (
         <article className="flex flex-col justify-end gap-4">
-            <h2 className="capitalize font-bold text-3xl md:text-5xl text-center md:text-left">{props?.title}</h2>
+            <h2 className="capitalize my-6 md:my-0 font-bold text-3xl md:text-5xl text-center md:text-left">{props?.title}</h2>
 
-            {keys.map((key, i) => {
-                const value = checkKey(key);
-                const label = key.split("_").join(" ");
+            <div className="flex flex-col gap-4 pl-6 md:pl-0">
+                {keys.map((key, i) => {
+                    const value = checkKey(key);
+                    const label = key.split("_").join(" ");
 
-                // logline block
-                if (key === "logline") {
-                    return (
-                        <div key={i} className="flex flex-col itim-font">
-                            <h3 className="text-yellow-500 font-semibold text-xl capitalize">
-                                {label}
-                            </h3>
-                            <p className="font-normal text-lg capitalize">{value}</p>
-                        </div>
-                    );
-                }
+                    // logline block
+                    if (key === "logline") {
+                        return (
+                            <div key={i} className="flex flex-col itim-font space-y-2">
+                                <h3 className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                                    {label}
+                                </h3>
+                                <p className="font-normal text-sm md:text-lg capitalize">{value}</p>
+                            </div>
+                        );
+                    }
 
-                // starring block (inline with colon)
-                if (key === "starring") {
+                    // starring block (inline with colon)
+                    if (key === "starring") {
+                        return (
+                            <div key={i} className="flex gap-2 itim-font">
+                                <p className="font-normal text-sm md:text-lg capitalize">
+                                <span
+                                    className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                                    {label}:{" "}
+                                </span>
+                                    {value}
+                                </p>
+                            </div>
+                        );
+                    }
+
+                    // default block
                     return (
                         <div key={i} className="flex gap-2 itim-font">
-                            <p className="font-normal text-lg capitalize">
-            <span className="text-yellow-500 font-semibold text-xl capitalize">
-              {label}:{" "}
-            </span>
-                                {value}
-                            </p>
+                            <h3 className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                                {label}:
+                            </h3>
+                            <p className="font-normal text-sm md:text-lg capitalize">{value}</p>
                         </div>
                     );
-                }
-
-                // default block
-                return (
-                    <div key={i} className="flex gap-2 itim-font">
-                        <h3 className="text-yellow-500 font-semibold text-xl capitalize">
-                            {label}:
-                        </h3>
-                        <p className="font-normal text-lg capitalize">{value}</p>
-                    </div>
-                );
-            })}
+                })}
+            </div>
         </article>
     );
 };

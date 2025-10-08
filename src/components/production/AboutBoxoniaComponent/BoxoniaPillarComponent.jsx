@@ -12,22 +12,23 @@ const BoxoniaPillarComponent = () => {
     ]
     return (
         <section className="flex flex-col py-5 px-0 w-full mx-auto items-center">
-            <div className="flex flex-col w-full md:gap-20">
+            <div className="flex flex-col w-full gap-12 md:gap-20">
                 {boxoniaPillars.map((pillar, idx) => (
                     <article key={idx}
-                         className="flex justify-center items-center py-16 w-full relative bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-darken"
-                         style={{
-                             backgroundImage: `url(${images[idx]})`,
-                         }}
-                         >
+                             className="flex justify-center items-center py-10 md:py-16 w-full relative bg-cover bg-center bg-no-repeat"
+                             style={{
+                                 backgroundImage: `url(${images[idx]})`,
+                             }}
+                    >
                         <div className="w-11/12 md:w-4/5 lg:w-3/4 flex gap-4 text-white flex-col">
-                            <h3 className="text-2xl md:text-3xl font-semibold md:text-center text-[#f6b62b] uppercase">{pillar.title}</h3>
-                            <p className="text-base md:text-lg lg:text-xl font-light text-justify leading-relaxed whitespace-pre-line" dangerouslySetInnerHTML={{__html: pillar.description}}></p>
+                            <h3 className="text-base md:text-3xl font-semibold md:text-center text-[#f6b62b] uppercase">{pillar.title}</h3>
+                            <p className="text-sm md:text-lg lg:text-xl font-light text-justify leading-relaxed whitespace-pre-line"
+                               dangerouslySetInnerHTML={{__html: pillar.description}}></p>
                             <div className="flex flex-col gap-8">
                                 {pillar.children && pillar.children.map((child, i) => (
                                     <div key={i} className="flex flex-col gap-1">
-                                        <h4 className="font-medium text-lg md:text-xl text-[#f6b62b]">{child.title}</h4>
-                                        <p className="text-base md:text-lg lg:text-xl text-justify font-light">{child.description}</p>
+                                        <h4 className="font-medium text-base md:text-xl text-[#f6b62b]">{child.title}</h4>
+                                        <p className="text-sm md:text-lg lg:text-xl text-justify font-light">{child.description}</p>
                                     </div>
                                 ))}
                             </div>
