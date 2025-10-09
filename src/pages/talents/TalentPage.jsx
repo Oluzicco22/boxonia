@@ -12,29 +12,37 @@ const server = new Server();
 
 const TalentSkeleton = () => (
     <div className="flex flex-col items-center space-y-3 w-full">
-        <div className="w-full h-72 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-3xl animate-pulse"></div>
-        <div className="h-4 w-3/4 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
-        <div className="h-4 w-1/2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+        <div
+            className="w-full h-72 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-3xl animate-pulse"></div>
+        <div
+            className="h-4 w-3/4 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+        <div
+            className="h-4 w-1/2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
     </div>
 )
 
 
 const TalentPage = () => {
     const [talents, setTalents] = useState([]);
+    const [projects, setProjects] = useState([])
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const fetchTalents = async () => {
         setLoading(true);
-        try{
+        try {
             const res = await server.readTalents();
             setTalents(res.data);
-        }catch(_){
+
+            const allProjects = res.data.flatMap(talent => talent.relatedProjects || []);
+            setProjects(allProjects);
+        } catch (_) {
             setError("Failed to load talents.");
-        }finally {
+        } finally {
             setLoading(false);
         }
-    }
+    };
+
 
     useEffect(() => {
         fetchTalents();
@@ -42,34 +50,38 @@ const TalentPage = () => {
 
     return (
         <div className="grid gap-16 mt-20 md:mt-40">
-            <Header />
+            <Header/>
             <div className="w-full flex justify-center">
-                <ArticleHeader title="boxonia talents" />
+                <ArticleHeader title="boxonia talents"/>
             </div>
             {error && <p className="text-red-500 text-center">{error}</p>}
 
 
-            <p className="w-[90%] md:w-3/5 mx-auto">
-                At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the careers of industry professionals.
-                Our approach begins with identifying top-tier talent whose skills and potential align with our values.<br /><br />
-                Through collaboration, strategy, and tailored career growth, we cultivate long-term relationships that drive both personal and industry-wide innovation.
+            <p className="w-[90%] md:w-3/5 mx-auto text-justify md:text-left text-xs md:text-base text-[#b7b7b7]">
+                At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the
+                careers of industry professionals.
+                Our approach begins with identifying top-tier talent whose skills and potential align with our
+                values.<br/><br/>
+                Through collaboration, strategy, and tailored career growth, we cultivate long-term relationships that
+                drive both personal and industry-wide innovation.
             </p>
 
-            <section className="grid grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-8 md:gap-16 items-start">
+            <section
+                className="grid grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[65%] mx-auto gap-y-11 gap-x-6 md:gap-16 items-start">
                 {loading ?
                     [...Array(3)].map((_, index) => (
-                        <TalentSkeleton key={index} />
+                        <TalentSkeleton key={index}/>
                     ))
                     : talents.map((talent, i) => (
-                        <TalentCatalogue key={i} props={talent} />
+                        <TalentCatalogue key={i} props={talent}/>
                     ))
                 }
             </section>
 
             <section className="flex flex-col items-center gap-16 mt-6">
-                <ArticleHeader title="selected works" />
-                <div className="relative w-full overflow-x-scroll" style={{ scrollbarWidth: "none" }}>
-                    <div className={`flex gap-1 ${!loading && "animate-[marquee_8s_linear_infinite]"}`}>
+                <ArticleHeader title="selected works"/>
+                <div className="relative w-full overflow-x-scroll" style={{scrollbarWidth: "none"}}>
+                    <div className="flex gap-1 md:animate-[marquee_15s_linear_infinite]">
                         {loading ? (
                             <div className="w-[90%] mx-auto space-x-1 flex justify-center">
                                 {[...Array(6)].map((_, index) => (
@@ -79,31 +91,32 @@ const TalentPage = () => {
                                     ></div>
                                 ))}
                             </div>
-                        ) : talents && [...talents, ...talents].map((talent, i) =>
-                            talent.relatedProjects.map((tal, idx) => (
-                                <Link to="#" key={`${i}-${idx}`} className="flex-shrink-0">
-                                    <img
-                                        src={tal}
-                                        alt={`img-${i}-${idx}`}
-                                        className="w-[12rem] h-[15rem] object-contain rounded-lg"
-                                    />
-                                </Link>
-                            ))
-                        )}
+                        ) : projects && projects.map((tal, idx) => (
+                            <Link to="#" key={`${idx}`} className="flex-shrink-0">
+                                <img
+                                    src={tal}
+                                    alt={`img-${idx}`}
+                                    className="w-[12rem] h-[15rem] object-contain rounded-lg"
+                                />
+                            </Link>
+                        ))
+                        }
                     </div>
                 </div>
 
             </section>
 
-            <div className="flex flex-col items-center gap-16">
-                <SpotlightSection />
-                <InSectionLink name="see more" path="/production/news" />
+            <div className="flex flex-col items-center md:gap-16 bg-[#131313] md:bg-transparent pb-12 md:pb-0">
+                <SpotlightSection/>
+                <InSectionLink name="see more" path="/production/news"/>
             </div>
 
             <div className="flex justify-center items-center mt-10">
-                <a href="/talents/contact" className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia Talents</a>
+                <a href="/talents/contact"
+                   className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia
+                    Talents</a>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

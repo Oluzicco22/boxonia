@@ -11,6 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Risk-Atoms';
     src: url('./assets/fonts/Risk Atoms.otf') format('opentype');
@@ -21,12 +22,15 @@
 .hero-font {
     font-family: 'Changeling-Neo', sans-serif;
 }
+
 .header-font {
     font-family: 'Risk-Atoms', sans-serif;
 }
+
 .lemon-font {
     font-family: "Lemon", serif;
 }
+
 .itim-font {
     font-family: "Itim", cursive;
 }
@@ -36,11 +40,19 @@ a {
 }
 
 @keyframes marquee {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes marquee-reverse {
-    0%   { transform: translateX(-50%); }
-    100% { transform: translateX(0%); }
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
