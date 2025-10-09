@@ -144,7 +144,7 @@ const ContactPage = () => {
                             <address
                                 className="not-italic text-white md:text-2xl font-normal md:font-light leading-relaxed">
                                 <span className="text-yellow-500 font-bold">Address: </span>
-                                213a Igbosere road Lagos, Nigeria
+                                213a Igbosere road, Lagos, Nigeria
                             </address>
                             <div
                                 className="bg-[#F0F0F0] rounded-[10px] py-4 md:py-6 px-5 md:px-10 w-full flex justify-between items-end">
