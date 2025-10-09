@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {PiCaretDown} from "react-icons/pi";
+import {PlusIcon} from "lucide-react";
 
 const FAQArticle = ({articles}) => {
     const [openId, setOpenId] = useState(null);
@@ -9,44 +9,47 @@ const FAQArticle = ({articles}) => {
     };
 
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-13">
             {articles.map((article, index) => {
                 const isOpen = openId === index;
 
                 return (
                     <div
                         key={index}
-                        className="w-full bg-white rounded-2xl shadow text-left overflow-hidden"
+                        className="w-full rounded-[10px] shadow text-left overflow-hidden border border-[#B7B7B7]"
                     >
                         <button
-                            className="w-full flex items-center text-left justify-between py-8 px-10 text-black font-semibold text-xl"
+                            className="w-full flex items-center text-left justify-between py-9 px-12 text-[#B7B7B7] text-xl"
                             onClick={() => toggleOptions(index)}
                             aria-expanded={isOpen}
                         >
                             {article.question}
-                            <PiCaretDown
-                                className={`transition-transform duration-500 ease-in-out
-                                 w-7 h-7 border border-gray-900 rounded-full 
-                                 ${isOpen ? "-rotate-180" : "rotate-0"}
+                            <PlusIcon
+                                size={30}
+                                className={`transition-transform duration-500 ease-in-out text-[#B7B7B7]
+                                 ${isOpen ? "-rotate-45" : "rotate-0"}
                                  `}
                             />
                         </button>
 
                         <div
                             className={`
-                            transition-all duration-500 ease-in-out 
-                            overflow-hidden border-t border-gray-400 px-10 
-                            ${isOpen ? "max-h-96 py-6" : "max-h-0"}
+                            transition-all duration-500 ease-in-out overflow-hidden px-12
+                            ${isOpen ? "max-h-96 pb-9" : "max-h-0"}
                             `}
                         >
-                            {Array.isArray(article.answer) ? (
-                                <ul className="list-disc space-y-2 pl-5 text-black capitalize">
-                                    {article.answer.map((answer, i) => (
-                                        <li key={i}>{answer}</li>
+                            {(typeof article.answer === "object") ? (
+                                <ul className="list-none space-y-2 text-[#666666]">
+                                    <p>{article.answer.title}</p>
+                                    {article.answer.lists.map((answer, i) => (
+                                        <li className="flex gap-3" key={i}>
+                                            <span>-</span>
+                                            <span>{answer}</span>
+                                        </li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-black">{article.answer}</p>
+                                <p className="text-[#666666] leading-normal w-[85%]">{article.answer}</p>
                             )}
                         </div>
                     </div>
