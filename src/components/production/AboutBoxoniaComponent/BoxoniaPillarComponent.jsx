@@ -11,7 +11,7 @@ const BoxoniaPillarComponent = () => {
         "https://res.cloudinary.com/dybmufexj/image/upload/v1755887390/mgt-image_k0eukl.png"
     ]
     return (
-        <section className="flex flex-col py-5 px-0 w-full mx-auto items-center">
+        <section className="flex flex-col md:py-5 px-0 w-full mx-auto items-center">
             <div className="flex flex-col w-full gap-12 md:gap-20">
                 {boxoniaPillars.map((pillar, idx) => (
                     <article key={idx}

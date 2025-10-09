@@ -2,10 +2,12 @@ import ArticleHeader from "../ArticleHeader.jsx";
 
 const WeAreBoxoniaComponent = () => {
     return (
-        <section className="flex flex-col px-3 md:px-0 py-12 w-full text-center mx-auto items-center gap-8" style={{
-            backgroundImage:
-                "url('https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png')",
-        }}>
+        <section
+            className="flex flex-col px-3 md:px-0 md:py-12 w-full text-center mx-auto items-center gap-1 md:gap-8"
+            style={{
+                backgroundImage:
+                    "url('https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png')",
+            }}>
             <div className="w-full md:w-[85%] mx-auto my-12">
                 <ArticleHeader title="the boxonia story"/>
             </div>
