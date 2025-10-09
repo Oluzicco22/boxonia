@@ -9,7 +9,7 @@ const FAQArticle = ({articles}) => {
     };
 
     return (
-        <div className="flex flex-col gap-13">
+        <div className="flex flex-col gap-5 md:gap-13">
             {articles.map((article, index) => {
                 const isOpen = openId === index;
 
@@ -19,37 +19,35 @@ const FAQArticle = ({articles}) => {
                         className="w-full rounded-[10px] shadow text-left overflow-hidden border border-[#B7B7B7]"
                     >
                         <button
-                            className="w-full flex items-center text-left justify-between py-9 px-12 text-[#B7B7B7] text-xl"
+                            className="w-full flex items-center text-left justify-between py-[15px] md:py-9 px-[14px] md:px-12 text-[#B7B7B7] md:text-xl"
                             onClick={() => toggleOptions(index)}
                             aria-expanded={isOpen}
                         >
                             {article.question}
                             <PlusIcon
-                                size={30}
+                                size={window.innerWidth < 768 ? 20 : 30}
                                 className={`transition-transform duration-500 ease-in-out text-[#B7B7B7]
                                  ${isOpen ? "-rotate-45" : "rotate-0"}
                                  `}
                             />
                         </button>
 
-                        <div
-                            className={`
-                            transition-all duration-500 ease-in-out overflow-hidden px-12
-                            ${isOpen ? "max-h-96 pb-9" : "max-h-0"}
+                        <div className={`
+                            transition-all duration-500 ease-in-out overflow-hidden px-[14px] md:px-12 ${isOpen ? "max-h-96 pb-[15px] md:pb-9" : "max-h-0"}
                             `}
                         >
                             {(typeof article.answer === "object") ? (
                                 <ul className="list-none space-y-2 text-[#666666]">
                                     <p>{article.answer.title}</p>
                                     {article.answer.lists.map((answer, i) => (
-                                        <li className="flex gap-3" key={i}>
+                                        <li className="flex gap-2 md:gap-3" key={i}>
                                             <span>-</span>
                                             <span>{answer}</span>
                                         </li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-[#666666] leading-normal w-[85%]">{article.answer}</p>
+                                <p className="text-[#666666] text-sm md:text-base leading-normal w-full md:w-[85%]">{article.answer}</p>
                             )}
                         </div>
                     </div>
