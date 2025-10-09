@@ -22,7 +22,7 @@ const ProjectsSection = () => {
     ];
 
     return (
-        <section className="flex flex-col gap-10 items-center relative"
+        <section className="flex flex-col mt-8 md:mt-0 gap-10 items-center relative"
                  aria-labelledby="projects-heading"
         >
             <div className="md:w-[85%] w-full">
