@@ -6,7 +6,7 @@ const CarouselComponent = ({collections, navButon, showIndicator = false, length
 
     const goToNext = () => {
         setCurrentIndex(prev => {
-            if(prev % collections.length < collections.length -1) {
+            if (prev % collections.length < collections.length - 1) {
                 collections.push(collections[prev])
                 return prev + 1
             }
@@ -32,7 +32,7 @@ const CarouselComponent = ({collections, navButon, showIndicator = false, length
         <div className="w-full overflow-hidden relative h-full space-y-6">
             <div
                 className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                style={{transform: `translateX(-${currentIndex * 100}%)`}}
             >
                 {collections.map((collection, i) => (
                     <img
@@ -48,18 +48,21 @@ const CarouselComponent = ({collections, navButon, showIndicator = false, length
             {showIndicator &&
                 <div className="md:hidden flex justify-center space-x-5 md:space-x-10">
                     {[...Array(length)].map((_, i) => (
-                        <span key={i} className={`w-1.5 h-1.5 ${i === currentIndex % length ? 'bg-yellow-400' : 'bg-white'} rounded-full`}></span>
+                        <span key={i}
+                              className={`w-1.5 h-1.5 ${i === currentIndex % length ? 'bg-[#f6b62b]' : 'bg-[#525252]'} rounded-full`}></span>
                     ))}
                 </div>
             }
 
             {navButon &&
                 <>
-                    <button onClick={goToPrev} className="absolute left-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
-                        <FaLessThan />
+                    <button onClick={goToPrev}
+                            className="absolute left-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
+                        <FaLessThan/>
                     </button>
-                    <button onClick={goToNext} className="absolute right-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
-                        <FaGreaterThan />
+                    <button onClick={goToNext}
+                            className="absolute right-5 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-10 px-2 rounded opacity-65 hover:opacity-100">
+                        <FaGreaterThan/>
                     </button>
                 </>
             }
