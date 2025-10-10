@@ -22,7 +22,7 @@ const WhatSection = () => {
                                     {pillar.description}
                                     {pillar.children && pillar.children.map((child, j) => (
                                         <div key={j} className="whitespace-pre-line">
-                                            <h4 className="font-normal">{child.title}:</h4>
+                                            <h4 className="font-semibold">{child.title}:</h4>
                                             <p>{child.description}</p>
                                         </div>
                                     ))}

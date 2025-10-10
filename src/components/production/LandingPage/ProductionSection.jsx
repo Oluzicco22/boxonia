@@ -14,7 +14,7 @@ const ProductionSection = () => {
             description: "Behind the scenes aerial drone filming for cinematic visuals.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_2_ostr8h.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110407/BTS_2_ostr8h.png",
             title: "Director and crew",
             description: "Director and crew coordinating a film sequence on set.",
         },
@@ -29,7 +29,7 @@ const ProductionSection = () => {
             description: "Film crew setting up professional lighting equipment on location.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986192/BTS_5_s4pkjc.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110372/BTS_5_s4pkjc.png",
             title: "Drone cinematography",
             description: "Aerial drone capturing wide-angle footage for Boxonia projects.",
         },
@@ -39,19 +39,14 @@ const ProductionSection = () => {
             description: "Actors and production crew working together during filming.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986126/BTS_7_oquwkh.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110267/BTS_7_oquwkh.png",
             title: "Cinematic setup",
             description: "Boxonia crew preparing cinematic shots with advanced equipment.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986127/BTS_8_zzluki.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110307/BTS_8_zzluki.png",
             title: "On-set directing",
             description: "Director overseeing behind-the-scenes production workflow.",
-        },
-        {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986131/BTS_9_thszod.png",
-            title: "Professional filming gear",
-            description: "Boxonia team using RED camera and pro filming gear for shoots.",
         },
     ];
 
@@ -61,7 +56,7 @@ const ProductionSection = () => {
                 <div className="md:w-[85%] w-full">
                     <ArticleHeader title="Behind the Scenes" id="production-heading"/>
                 </div>
-                <p className="hidden md:flex w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center">
+                <p className="hidden md:flex w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center text-[#B7B7B7]">
                     First-class footage in the best quality is our priority, which is why our team
                     has the latest professional video equipment. We are as well able to provide
                     aerial footage from drones. In case you need footage in the highest quality

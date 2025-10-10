@@ -49,7 +49,7 @@ const Footer = () => {
                 <div className="h-[2px] w-full flex-grow bg-white"></div>
                 <img
                     src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png"
-                    alt="footer-boxonia" className="w-72 md:w-auto"/>
+                    alt="footer-boxonia" className="w-50 md:w-auto"/>
             </div>
         </footer>
     )

@@ -17,7 +17,7 @@ const AppearedPage = ({talent}) => {
                 backgroundImage: `url(${talent.thumbnail})`
             }}>
                 <Header/>
-                <h1 className="capitalize font-bold text-5xl sm:text-5xl md:text-[150px] absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                <h1 className="capitalize font-bold text-3xl sm:text-5xl md:text-[150px] absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                     {`${talent.username ?? talent.firstName} ${talent.lastName}`}
                 </h1>
 

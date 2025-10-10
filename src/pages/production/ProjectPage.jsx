@@ -14,7 +14,7 @@ const ProjectPage = () => {
                 {projects.map((project, i) => (
                     <div key={i}>
                         <article
-                            className="md:my-6 flex justify-center items-end h-[25vh] md:h-[50vh] w-[92%] mx-auto md:w-full relative rounded-xl md:rounded-none bg-black/10 bg-blend-darken bg-center bg-cover bg-no-repeat"
+                            className="md:my-6 flex justify-center items-center h-[25vh] md:h-[50vh] w-[92%] mx-auto md:w-full relative rounded-xl md:rounded-none bg-black/10 bg-blend-darken bg-center bg-cover bg-no-repeat"
                             style={{
                                 backgroundImage: `url(${project.image})`,
                             }}>
