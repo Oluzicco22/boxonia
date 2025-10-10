@@ -1,7 +1,8 @@
 import {ChevronDown, XCircle} from "lucide-react";
 import {useState} from "react";
+import instance from "../../server.js";
 
-const TalentBookingModal = ({onClose, name}) => {
+const TalentBookingModal = ({onClose, name, id}) => {
     const [type, setType] = useState({
         title: 'Project Type',
         value: null,
@@ -10,6 +11,9 @@ const TalentBookingModal = ({onClose, name}) => {
         title: 'Platform',
         value: null,
     });
+    const [success, setSuccess] = useState(null);
+    const [errors, setErrors] = useState({});
+    const [errorMessage, setErrorMessage] = useState(null)
 
     const [form, setForm] = useState({
         fullName: '',
@@ -19,15 +23,41 @@ const TalentBookingModal = ({onClose, name}) => {
         payment: '',
     });
 
-    const handleSubmit = () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const bookingData = {
             type: type.value,
             platform: platform.value,
             ...form
         };
-        console.log("Booking Data:", bookingData);
-        // TODO: send bookingData to API
-        // onClose();
+
+        try {
+            const res = await instance.post(`/book-talent/${id}`, bookingData);
+            res.status && setSuccess(res.data.message);
+
+            setTimeout(() => {
+                onClose();
+            }, 3000)
+        } catch (e) {
+            if (e?.response?.data?.errors) {
+                const errs = e.response.data.errors;
+                const fields = ["type", "platform", "email", "fullName", "synopsis", "payment", "duration"];
+                const groupedErrors = fields.reduce((acc, field) => {
+                    acc[field] = errs.filter(err =>
+                        err.toLowerCase().includes(field.toLowerCase())
+                    );
+                    return acc;
+                }, {});
+
+                setErrors(groupedErrors);
+            } else {
+                setErrorMessage(e.message || 'Something went wrong. Please try again later.')
+            }
+            setTimeout(() => {
+                setErrorMessage(null)
+            }, 3000)
+        }
+
     };
 
     const types = ['Feature Film', 'Short Film', 'AD Commercial', 'Music Video', 'Brand Influencing', 'Others']
@@ -35,8 +65,8 @@ const TalentBookingModal = ({onClose, name}) => {
     const platforms = ['Cinema', 'Netflix', 'Amazon', 'Youtube', 'Others']
 
     const isDisabled =
-        !type ||
-        !platform ||
+        !type.value ||
+        !platform.value ||
         !form.synopsis.trim() ||
         !form.duration.trim() ||
         !form.payment.trim() ||
@@ -64,12 +94,14 @@ const TalentBookingModal = ({onClose, name}) => {
                 value: selectedText,
                 title: selectedText,
             }));
+            setErrors({...errors, type: []})
         } else {
             setPlatform(prev => ({
                 ...prev,
                 value: selectedText,
                 title: selectedText,
             }));
+            setErrors({...errors, platform: []})
         }
 
         parent.previousElementSibling.click();
@@ -90,7 +122,10 @@ const TalentBookingModal = ({onClose, name}) => {
 
             <div className="flex flex-col gap-12 pb-12 md:pb-0">
                 {/* Form Fields */}
-                <div className="w-full md:w-10/12 mx-auto flex gap-7 flex-col items-center">
+                <form onSubmit={handleSubmit} className="w-full md:w-10/12 mx-auto flex gap-7 flex-col items-center">
+                    {success && (<p className="text-sm text-green-300">{success}</p>)}
+                    {errorMessage && (<p className="text-sm text-red-300">{errorMessage}</p>)}
+
                     {/* Project Type */}
                     <div className="w-full relative">
                         <button
@@ -110,6 +145,11 @@ const TalentBookingModal = ({onClose, name}) => {
                                    key={index}>{ty}</p>
                             ))}
                         </div>
+                        {errors.type?.length > 0 && (
+                            errors.type.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Platform */}
@@ -131,6 +171,11 @@ const TalentBookingModal = ({onClose, name}) => {
                                    key={index}>{plat}</p>
                             ))}
                         </div>
+                        {errors.platform?.length > 0 && (
+                            errors.platform.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Full Name */}
@@ -142,9 +187,17 @@ const TalentBookingModal = ({onClose, name}) => {
                             name="fullName"
                             id="fullName"
                             value={form.fullName}
-                            onChange={(e) => setForm({...form, fullName: e.target.value})}
+                            onChange={(e) => {
+                                setForm({...form, fullName: e.target.value})
+                                setErrors({...errors, fullName: []})
+                            }}
                             className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
                         />
+                        {errors.fullName?.length > 0 && (
+                            errors.fullName.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Email */}
@@ -156,9 +209,17 @@ const TalentBookingModal = ({onClose, name}) => {
                             name="email"
                             id="email"
                             value={form.email}
-                            onChange={(e) => setForm({...form, email: e.target.value})}
+                            onChange={(e) => {
+                                setForm({...form, email: e.target.value})
+                                setErrors({...errors, email: []})
+                            }}
                             className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
                         />
+                        {errors.email?.length > 0 && (
+                            errors.email.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Synopsis */}
@@ -170,9 +231,17 @@ const TalentBookingModal = ({onClose, name}) => {
                             name="synopsis"
                             id="synopsis"
                             value={form.synopsis}
-                            onChange={(e) => setForm({...form, synopsis: e.target.value})}
+                            onChange={(e) => {
+                                setForm({...form, synopsis: e.target.value})
+                                setErrors({...errors, synopsis: []})
+                            }}
                             className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
                         ></textarea>
+                        {errors.synopsis?.length > 0 && (
+                            errors.synopsis.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Duration */}
@@ -183,30 +252,45 @@ const TalentBookingModal = ({onClose, name}) => {
                             value={form.duration}
                             name="duration"
                             id="duration"
-                            onChange={(e) => setForm({...form, duration: e.target.value})}
+                            onChange={(e) => {
+                                setForm({...form, duration: e.target.value})
+                                setErrors({...errors, duration: []})
+                            }}
                             type="text"
                             className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
                         />
+                        {errors.duration?.length > 0 && (
+                            errors.duration.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Payment */}
                     <div className="w-full space-y-1">
                         <label htmlFor="payment" className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Payment
                             Offer:</label>
-
                         <input
                             type="text"
                             value={form.payment}
                             id="payment"
                             name="payment"
-                            onChange={(e) => setForm({...form, payment: e.target.value})}
+                            onChange={(e) => {
+                                setForm({...form, payment: e.target.value})
+                                setErrors({...errors, payment: []})
+                            }}
                             className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
                         />
+                        {errors.payment?.length > 0 && (
+                            errors.payment.map((err, index) => (
+                                <p key={index} className="text-sm text-red-300">* {err}</p>
+                            ))
+                        )}
                     </div>
 
                     {/* Submit Button */}
                     <button
-                        onClick={handleSubmit}
+                        type="submit"
                         disabled={isDisabled}
                         className={`my-6 rounded-[10px] text-xs md:text-base py-2 px-7 md:px-20 w-fit border ${isDisabled
                             ? "cursor-not-allowed"
@@ -215,7 +299,7 @@ const TalentBookingModal = ({onClose, name}) => {
                     >
                         {`Book ${name}`}
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     );
