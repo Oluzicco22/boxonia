@@ -38,9 +38,9 @@ const FAQArticle = ({articles}) => {
                         >
                             {(typeof article.answer === "object") ? (
                                 <ul className="list-none space-y-2 text-[#666666]">
-                                    <p>{article.answer.title}</p>
+                                    <p className="text-sm md:text-base">{article.answer.title}</p>
                                     {article.answer.lists.map((answer, i) => (
-                                        <li className="flex gap-2 md:gap-3" key={i}>
+                                        <li className="flex text-sm md:text-base gap-2 md:gap-3" key={i}>
                                             <span>-</span>
                                             <span>{answer}</span>
                                         </li>

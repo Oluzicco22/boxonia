@@ -10,7 +10,7 @@ const ProjectPage = () => {
             <div className="w-full flex justify-center mb-10 mt-28 md:mt-40">
                 <ArticleHeader title="our projects"/>
             </div>
-            <div className="flex flex-col gap-12 md:gap-0">
+            <div className="flex flex-col mb-12 md:mb-0 gap-12 md:gap-0">
                 {projects.map((project, i) => (
                     <div key={i}>
                         <article
@@ -24,7 +24,7 @@ const ProjectPage = () => {
                             </div>
 
                         </article>
-                        <div className="flex md:hidden justify-center">
+                        <div className="flex md:hidden justify-center mt-5 md:mt-0">
                             <a
                                 href={`/production/projects/${project.id}`}
                                 className="text-center text-nowrap text-sm border-1 font-normal hover:bg-white hover:text-black border-[#989898] text-[#989898] px-9 py-2 rounded-[10px]">
