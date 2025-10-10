@@ -1,24 +1,38 @@
-import {XCircle} from "lucide-react";
+import {ChevronDown, XCircle} from "lucide-react";
 import {useState} from "react";
 
 const TalentBookingModal = ({onClose, name}) => {
-    const [type, setType] = useState(null);
-    const [platform, setPlatform] = useState(null);
+    const [type, setType] = useState({
+        title: 'Project Type',
+        value: null,
+    });
+    const [platform, setPlatform] = useState({
+        title: 'Platform',
+        value: null,
+    });
 
     const [form, setForm] = useState({
+        fullName: '',
+        email: '',
         synopsis: '',
         duration: '',
         payment: '',
-        fullName: '',
-        email: ''
     });
 
     const handleSubmit = () => {
-        const bookingData = {type, platform, ...form};
+        const bookingData = {
+            type: type.value,
+            platform: platform.value,
+            ...form
+        };
         console.log("Booking Data:", bookingData);
         // TODO: send bookingData to API
-        onClose();
+        // onClose();
     };
+
+    const types = ['Feature Film', 'Short Film', 'AD Commercial', 'Music Video', 'Brand Influencing', 'Others']
+
+    const platforms = ['Cinema', 'Netflix', 'Amazon', 'Youtube', 'Others']
 
     const isDisabled =
         !type ||
@@ -28,6 +42,38 @@ const TalentBookingModal = ({onClose, name}) => {
         !form.payment.trim() ||
         !form.fullName.trim() ||
         !form.email.trim();
+
+    const toggleDropdown = (e) => {
+        const element = e.currentTarget;
+        const nextSibling = element.nextElementSibling;
+
+        if (nextSibling) {
+            element.children[1].classList.toggle('rotate-180');
+            nextSibling.classList.toggle('hidden');
+        }
+    };
+
+    const selectCategory = (e) => {
+        const value = e.target;
+        const parent = value.parentElement;
+        const selectedText = value.innerText;
+
+        if (parent.classList.contains('type')) {
+            setType(prev => ({
+                ...prev,
+                value: selectedText,
+                title: selectedText,
+            }));
+        } else {
+            setPlatform(prev => ({
+                ...prev,
+                value: selectedText,
+                title: selectedText,
+            }));
+        }
+
+        parent.previousElementSibling.click();
+    }
 
     return (
         <div
@@ -43,134 +89,119 @@ const TalentBookingModal = ({onClose, name}) => {
             </div>
 
             <div className="flex flex-col gap-12 pb-12 md:pb-0">
-                {/* Project Type */}
-                <div className="w-full min-h-30 flex justify-center items-center border border-white relative py-6">
-                    <p className="text-white text-xs md:text-xl font-bold absolute bg-black md:px-3 px-4 -top-4 md:-top-7 left-1/2 -translate-x-1/2 md:w-52 flex justify-center py-2 md:py-3">
-                        Project type:
-                    </p>
-                    <div className="flex justify-evenly flex-wrap w-full items-center gap-3">
-                        {['feature film', 'short film', 'ad commercial', 'music video', 'brand influencing', 'others'].map((item, i) =>
-                            <button
-                                type="button"
-                                aria-pressed={type === item}
-                                onClick={() => {
-                                    type === item ? setType(null) : setType(item)
-                                }}
-                                role="button"
-                                tabIndex={0}
-                                className={`
-                                ${type === item ? 'bg-black rounded-xl ' : ' '}
-                                text-white whitespace-nowrap capitalize font-medium cursor-pointer text-xs md:text-lg 
-                                ${type !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
-                                key={i}>
-                                {item}
-                            </button>
-                        )}
-                    </div>
-                </div>
-
-                {/* Platform */}
-                <div
-                    className="w-full md:w-8/12 mx-auto min-h-30 flex justify-center items-center border border-white relative py-6">
-                    <p className="text-white text-xs md:text-xl font-bold absolute bg-black md:px-3 px-4 -top-4 md:-top-7 left-1/2 -translate-x-1/2 md:w-52 flex justify-center py-2 md:py-3">
-                        Platform
-                    </p>
-                    <div className="flex flex-wrap md:flex-nowrap justify-evenly md:justify-between w-full md:w-10/11">
-                        {['cinema', 'netflix', 'amazon', 'youtube'].map((item, i) =>
-                            <button
-                                type="button"
-                                aria-pressed={platform === item}
-                                onClick={() => {
-                                    platform === item ? setPlatform(null) : setPlatform(item)
-                                }}
-                                role="button"
-                                tabIndex={0}
-                                className={`${platform === item ? 'bg-black rounded-xl ' : ' '}
-                                text-white whitespace-nowrap capitalize font-medium cursor-pointer text-xs md:text-lg 
-                                ${platform !== item ? 'hover:text-blue-200 hover:border hover:border-blue-200 hover:rounded-md ' : ' '} px-5 py-2 md:py-1`}
-                                key={i}>
-                                {item}
-                            </button>
-                        )}
-                    </div>
-                </div>
-
                 {/* Form Fields */}
                 <div className="w-full md:w-10/12 mx-auto flex gap-7 flex-col items-center">
+                    {/* Project Type */}
+                    <div className="w-full relative">
+                        <button
+                            onClick={toggleDropdown}
+                            type="button"
+                            className="w-full text-[#7D7D7D] cursor-pointer text-base md:text-lg bg-black rounded-[10px] md:rounded-md p-4 flex items-center justify-between"
+                        >
+                            <span
+                                className={`${type.title !== 'Project Type' ? 'text-[#F6B62B]' : 'text-[#B7B7B7]'}`}>{type.title}</span>
+                            <span className="transform"><ChevronDown/></span>
+                        </button>
+                        <div
+                            className="absolute hidden w-full type bg-black rounded-[10px] px-6 py-4 space-y-6 top-15 md:top-20 z-20">
+                            {types.map((ty, index) => (
+                                <p onClick={selectCategory}
+                                   className={`cursor-pointer hover:text-[#F6B62B] ${ty === type.value ? 'text-[#F6B62B]' : 'text-[#B7B7B7]'}`}
+                                   key={index}>{ty}</p>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Platform */}
+                    <div className="w-full relative">
+                        <button
+                            onClick={toggleDropdown}
+                            type="button"
+                            className="w-full text-[#7D7D7D] cursor-pointer text-base md:text-lg bg-black rounded-[10px] md:rounded-md p-4 flex items-center justify-between"
+                        >
+                            <span
+                                className={`${platform.title !== 'Platform' ? 'text-[#F6B62B]' : 'text-[#B7B7B7]'}`}>{platform.title}</span>
+                            <span className="transform"><ChevronDown/></span>
+                        </button>
+                        <div
+                            className="absolute hidden w-full platform bg-black rounded-[10px] px-6 py-4 space-y-6 top-15 md:top-20 z-10">
+                            {platforms.map((plat, index) => (
+                                <p onClick={selectCategory}
+                                   className={`cursor-pointer hover:text-[#F6B62B] ${plat === platform.value ? 'text-[#F6B62B]' : 'text-[#B7B7B7]'}`}
+                                   key={index}>{plat}</p>
+                            ))}
+                        </div>
+                    </div>
+
                     {/* Full Name */}
                     <div className="w-full space-y-1">
-                        <label className="flex md:hidden text-[#7f7f7f] text-sm whitespace-nowrap">Full Name:</label>
-                        <div className="w-full flex gap-1 bg-white text-black rounded-[10px] md:rounded-md p-4">
-                            <label className="hidden md:flex text-lg font-medium whitespace-nowrap">Full Name:</label>
-                            <input
-                                type="text"
-                                value={form.fullName}
-                                onChange={(e) => setForm({...form, fullName: e.target.value})}
-                                className="w-full rounded-md focus-visible:outline-none"
-                            />
-                        </div>
+                        <label htmlFor="fullName" className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Full
+                            Name:</label>
+                        <input
+                            type="text"
+                            name="fullName"
+                            id="fullName"
+                            value={form.fullName}
+                            onChange={(e) => setForm({...form, fullName: e.target.value})}
+                            className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
+                        />
                     </div>
 
                     {/* Email */}
                     <div className="w-full space-y-1">
-                        <label className="flex md:hidden text-[#7f7f7f] text-sm whitespace-nowrap">Email:</label>
-                        <div className="w-full flex gap-1 bg-white text-black rounded-[10px] md:rounded-md p-4">
-                            <label className="hidden md:flex text-lg font-medium whitespace-nowrap">Email:</label>
-                            <input
-                                type="email"
-                                value={form.email}
-                                onChange={(e) => setForm({...form, email: e.target.value})}
-                                className="w-full rounded-md focus-visible:outline-none"
-                            />
-                        </div>
+                        <label htmlFor="email"
+                               className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            value={form.email}
+                            onChange={(e) => setForm({...form, email: e.target.value})}
+                            className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
+                        />
                     </div>
 
                     {/* Synopsis */}
                     <div className="w-full space-y-1">
-                        <label className="flex md:hidden text-[#7f7f7f] text-sm whitespace-nowrap">Project
+                        <label htmlFor="synopsis" className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Project
                             Synopsis/Information:</label>
-                        <div
-                            className="w-full flex flex-col gap-1 bg-white text-black rounded-[10px] md:rounded-md p-4">
-                            <label className="hidden md:flex text-lg font-medium">Project Synopsis/Information:</label>
-                            <textarea
-                                rows="3"
-                                value={form.synopsis}
-                                onChange={(e) => setForm({...form, synopsis: e.target.value})}
-                                className="w-full rounded-md focus-visible:outline-none resize-none"
-                            ></textarea>
-                        </div>
+                        <textarea
+                            rows="3"
+                            name="synopsis"
+                            id="synopsis"
+                            value={form.synopsis}
+                            onChange={(e) => setForm({...form, synopsis: e.target.value})}
+                            className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
+                        ></textarea>
                     </div>
 
                     {/* Duration */}
                     <div className="w-full space-y-1">
-                        <label className="flex md:hidden text-[#7f7f7f] text-sm whitespace-nowrap">Project
+                        <label htmlFor="duration" className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Project
                             Duration:</label>
-                        <div className="w-full flex gap-1 bg-white text-black rounded-[10px] md:rounded-md p-4">
-                            <label className="hidden md:flex text-lg font-medium whitespace-nowrap">Project
-                                Duration:</label>
-                            <input
-                                value={form.duration}
-                                onChange={(e) => setForm({...form, duration: e.target.value})}
-                                type="text"
-                                className="w-full rounded-md focus-visible:outline-none"
-                            />
-                        </div>
+                        <input
+                            value={form.duration}
+                            name="duration"
+                            id="duration"
+                            onChange={(e) => setForm({...form, duration: e.target.value})}
+                            type="text"
+                            className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
+                        />
                     </div>
 
                     {/* Payment */}
                     <div className="w-full space-y-1">
-                        <label className="flex md:hidden text-[#7f7f7f] text-sm whitespace-nowrap">Payment
+                        <label htmlFor="payment" className="text-[#A0A0A0] text-sm md:text-lg whitespace-nowrap">Payment
                             Offer:</label>
-                        <div className="w-full flex gap-1 bg-white text-black rounded-[10px] md:rounded-md p-4">
-                            <label className="hidden md:flex text-lg font-medium whitespace-nowrap">Payment
-                                Offer:</label>
-                            <input
-                                type="text"
-                                value={form.payment}
-                                onChange={(e) => setForm({...form, payment: e.target.value})}
-                                className="w-full rounded-md focus-visible:outline-none"
-                            />
-                        </div>
+
+                        <input
+                            type="text"
+                            value={form.payment}
+                            id="payment"
+                            name="payment"
+                            onChange={(e) => setForm({...form, payment: e.target.value})}
+                            className="w-full focus-visible:outline-none bg-white text-black rounded-[10px] md:rounded-md p-4"
+                        />
                     </div>
 
                     {/* Submit Button */}
