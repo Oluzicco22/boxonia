@@ -35,7 +35,7 @@ const AppearedPage = ({talent}) => {
                     aria-modal="true"
                     aria-labelledby="booking-title"
                     className="w-full absolute h-full top-0 bg-black/80 bg-blend-darken flex justify-center z-50">
-                    <TalentBookingModal onClose={() => setOpenModal(false)} name={talent.firstName}/>
+                    <TalentBookingModal onClose={() => setOpenModal(false)} name={talent.firstName} id={talent._id}/>
                 </section>
             )}
 
