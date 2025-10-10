@@ -26,7 +26,7 @@ const HeroSection = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full min-h-[60vh] md:max-h-[88vh] object-cover"
+                    className="w-full min-h-[60vh] md:max-h-[100vh] object-cover"
                 >
                     <source
                         src="https://res.cloudinary.com/dybmufexj/video/upload/v1760113845/home_video_1_pcrddi.mp4"
@@ -36,7 +36,7 @@ const HeroSection = () => {
 
                 {/* Hero Text with fade-out */}
                 <div
-                    className={`absolute bottom-8 md:bottom-22 left-10 md:left-28 flex flex-col text-white z-30 transform transition-opacity duration-1000 ease-in ${
+                    className={`absolute bottom-8 md:bottom-30 left-10 md:left-28 flex flex-col text-white z-30 transform transition-opacity duration-1000 ease-in ${
                         showVideoText ? "opacity-100" : "opacity-0"
                     }`}
                 >
