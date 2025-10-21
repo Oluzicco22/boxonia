@@ -7,7 +7,7 @@ const ProjectPage = () => {
     return (
         <>
             <Header/>
-            <div className="w-full flex justify-center mb-10 mt-28 md:mt-40">
+            <div className="w-[85%] mx-auto flex justify-center mb-10 md:mb-14 mt-28 md:mt-43">
                 <ArticleHeader title="our projects"/>
             </div>
             <div className="flex flex-col mb-12 md:mb-0 gap-12 md:gap-0">

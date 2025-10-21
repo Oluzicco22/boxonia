@@ -3,17 +3,19 @@ import ArticleHeader from "../ArticleHeader.jsx";
 const WeAreBoxoniaComponent = () => {
     return (
         <section
-            className="flex flex-col px-3 md:px-0 md:py-12 w-full text-center mx-auto items-center gap-1 md:gap-8"
+            className="flex flex-col px-3 md:px-0 md:pt-20 md:pb-10 w-full text-center mx-auto items-center gap-1 md:gap-8"
             style={{
                 backgroundImage:
                     "url('https://res.cloudinary.com/dybmufexj/image/upload/v1753987268/we-are-boxonia_img_pcmsxm.png')",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
             }}>
-            <div className="w-full md:w-[85%] mx-auto my-12">
+            <div className="w-full md:w-[85%] mx-auto my-1">
                 <ArticleHeader title="the boxonia story"/>
             </div>
             <div className="w-full flex justify-center text-left py-3 md:py-6">
                 <div
-                    className="text-[#B7B7B7] leading-8 text-justify md:text-left text-sm md:text-lg w-[95%] md:w-9/15">
+                    className="text-[#B7B7B7] leading-8 text-justify md:text-left text-sm md:text-xl font-light w-[95%] md:w-5/6">
                     <p>
                         In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to
                         tell original stories that authentically represent Nigerian and African realities. This
@@ -22,13 +24,11 @@ const WeAreBoxoniaComponent = () => {
                     </p>
 
                     <p className="mt-6">
-                        After a brief hiatus to recalibrate strategies, Boxonia reemerged in March 2024, fully
-                        operational and poised to deliver groundbreaking media. In the months since, Boxonia
-                        Blueprint has produced and co-produced across extensive niches, spanning international
-                        collaborations like Son of the Soil and NollyBabes, to dynamic reenactments of classics
-                        such as The Godfather and Inglorious Bastards. The portfolio also includes a radio
-                        drama on nutrition for INNICROSS/USAID and visually compelling video art for global
-                        brands like Unilever and British American Tobacco.
+                        After a brief hiatus to recalibrate strategies, Boxonia reemerged in March 2024, fully operational
+                        and poised to deliver groundbreaking media and a Talent Management Powerhouse. Boxonia Blueprint
+                        has produced and co-produced across extensive niches, spanning international collaborations like
+                        Son of the Soil and NollyBabes, to managing dynamic stars in the Nollywood Ecosystem.
+
                     </p>
                     <p className="mt-6">
                         As a film and video production powerhouse, Boxonia Blueprint is

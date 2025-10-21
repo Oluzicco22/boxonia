@@ -15,14 +15,14 @@ const WhatSection = () => {
                     className="flex flex-col md:flex-row gap-12 w-full text-white"
                 >
                     {pillars.slice(0, 3).map((pillar, i) => (
-                        <div key={i} className="flex flex-col gap-6 md:gap-4">
-                            <article className={`flex flex-col justify-center ${i%2 ? "border-[#463103]" : "border-[#525252]"} gap-4 md:gap-2 border-3 min-h-60 w-full md:border-none rounded-3xl text-center md:text-left`}>
+                        <div key={i} className="flex flex-col gap-6 md:gap-4 mx-auto w-full">
+                            <article className={`flex flex-col justify-center ${i%2 ? "border-[#463103]" : "border-[#525252]"} gap-4 md:gap-3 border-3 min-h-60 w-[87%] md:border-none rounded-3xl text-center md:text-left`}>
                                 <h3 className="text-[#f6b62b] text-sm md:text-xl font-semibold uppercase">{pillar.title}</h3>
-                                <div className="text-[#B7B7B7] w-4/5 mx-auto md:w-full text-[12px] md:text-lg font-light overflow-hidden leading-8 text-ellipsis line-clamp-3 md:line-clamp-7 whitespace-pre-line">
+                                <div className="text-[#B7B7B7] w-4/5 mx-auto md:w-full text-[12px] md:text-lg font-light overflow-hidden leading-normal text-ellipsis line-clamp-3 md:line-clamp-8 whitespace-pre-line">
                                     {pillar.description}
                                     {pillar.children && pillar.children.map((child, j) => (
-                                        <div key={j} className="whitespace-pre-line">
-                                            <h4 className="font-semibold">{child.title}:</h4>
+                                        <div key={j} className="whitespace-pre-line w-full">
+                                            {/*<h4 className="font-semibold">{child.title}:</h4>*/}
                                             <p>{child.description}</p>
                                         </div>
                                     ))}

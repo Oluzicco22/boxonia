@@ -3,7 +3,6 @@ import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
 import TalentCatalogue from "../../components/talents/TalentCatalogue.jsx";
 import SpotlightSection from "../../components/production/LandingPage/SpotlightSection.jsx";
-import InSectionLink from "../../components/production/InSectionLink.jsx";
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Server from "../../services/indexApi.js"
@@ -108,7 +107,6 @@ const TalentPage = () => {
 
             <div className="flex flex-col items-center md:gap-16 bg-[#131313] md:bg-transparent pb-12 md:pb-0">
                 <SpotlightSection/>
-                <InSectionLink name="see more" path="/production/news"/>
             </div>
 
             <div className="flex justify-center items-center mt-10">

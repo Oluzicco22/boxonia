@@ -8,7 +8,7 @@ const AlumniCard = ({name, role, info, img}) => {
             <div className="flex flex-col items-start md:items-center justify-start gap-4 text-lg">
                 <img src={img} alt={`Portrait of ${name}`}
                      className="w-fit h-44 sm:h-auto object-cover sm:object-contain rounded-[20px]"/>
-                <div className="text-sm sm:text-base">
+                <div className="text-sm sm:text-sm text-center">
                     <h3 className="text-yellow-400 font-bold capitalize">{name}</h3>
                     <p className="text-white capitalize">{role}</p>
                 </div>

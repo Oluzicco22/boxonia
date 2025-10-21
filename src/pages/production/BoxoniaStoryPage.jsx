@@ -8,7 +8,7 @@ const BoxoniaStoryPage = () => {
     return (
         <div className="bg-black/60 bg-blend-darken bg-no-repeat bg-[center_right] bg-auto">
             <Header/>
-            <div className="mt-20 mb-16 md:mb-0 md:mt-32 grid gap-[100px]">
+            <div className="mt-20 md:mt-22 mb-16 md:mb-0 grid gap-[100px]">
                 <WeAreBoxoniaComponent/>
                 <ValuesComponent/>
                 <BoxoniaAlumniComponent/>

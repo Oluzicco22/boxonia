@@ -35,14 +35,14 @@ const ValuesComponent = () => {
                 <ArticleHeader title="our values"/>
             </div>
             <div
-                className="grid w-full md:w-3/5 px-3 mx-auto gap-12 md:gap-8 text-white grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+                className="grid w-full md:w-4/5 px-3 mx-auto gap-12 md:gap-x-20 text-white grid-cols-1 md:grid-cols-3">
                 {values.map(({title, desc}, i) => (
                     <article
                         key={i}
                         className="flex flex-col gap-2 bg-[#131313] rounded-[40px] px-8 md:px-6 py-8 text-lg"
                     >
-                        <h3 className="text-[#F6B62B] text-sm md:text-[20px] font-bold">{title}</h3>
-                        <p className="text-[#B7B7B7] leading-loose md:leading-9 text-sm md:text-[20px] text-justify md:text-left font-normal">{desc}</p>
+                        <h3 className="text-[#F6B62B] text-sm md:text-[20px] font-semibold">{title}</h3>
+                        <p className="text-[#B7B7B7] leading-loose md:leading-9 text-sm md:text-[20px] text-justify md:text-left font-light">{desc}</p>
                     </article>
                 ))}
             </div>

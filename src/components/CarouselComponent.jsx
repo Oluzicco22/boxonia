@@ -40,7 +40,7 @@ const CarouselComponent = ({collections, navButon, showIndicator = false, length
                         src={collection.img}
                         alt={collection.description}
                         title={collection.title}
-                        className="w-full flex-shrink-0 object-cover md:h-[500px]"
+                        className="w-full flex-shrink-0 object-cover md:h-[600px]"
                         loading="lazy"
                     />
                 ))}

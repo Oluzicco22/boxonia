@@ -24,7 +24,7 @@ const ProductionSection = () => {
             description: "Boxonia cinematographer adjusting RED camera for precision shots.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986207/BTS_4_ahhodz.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1761064247/BTS_4_ahhodz.png",
             title: "Lighting preparation",
             description: "Film crew setting up professional lighting equipment on location.",
         },
@@ -34,7 +34,7 @@ const ProductionSection = () => {
             description: "Aerial drone capturing wide-angle footage for Boxonia projects.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986125/BTS_6_wxci8r.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1761064260/BTS_6_wxci8r.png",
             title: "Actors and crew",
             description: "Actors and production crew working together during filming.",
         },
@@ -56,12 +56,6 @@ const ProductionSection = () => {
                 <div className="md:w-[85%] w-full">
                     <ArticleHeader title="Behind the Scenes" id="production-heading"/>
                 </div>
-                <p className="hidden md:flex w-[90%] p-3 md:p-0 rounded-2xl md:rounded-none border border-[#98989873] bg-[#2A2929] md:bg-transparent md:border-none md:w-2/3 text-center text-[#B7B7B7]">
-                    First-class footage in the best quality is our priority, which is why our team
-                    has the latest professional video equipment. We are as well able to provide
-                    aerial footage from drones. In case you need footage in the highest quality
-                    we will arrange filming with a RED film camera.
-                </p>
             </div>
             <CarouselComponent
                 collections={products}
