@@ -5,14 +5,14 @@ import CarouselComponent from "../../CarouselComponent.jsx";
 const ProjectsSection = () => {
     const projects = [
         {
-            title: "Nolly Babes",
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986407/Nolly_babes_lnzopy.png",
-            description: "A contemporary Nollywood drama series by Boxonia.",
-        },
-        {
             title: "Son of the Soil",
             img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760115694/son_of_d_soil_vevinh.png",
             description: "A cultural exploration film showcasing African heritage.",
+        },
+        {
+            title: "Nolly Babes",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986407/Nolly_babes_lnzopy.png",
+            description: "A contemporary Nollywood drama series by Boxonia.",
         },
         {
             title: "Beta Food, Beta Life",

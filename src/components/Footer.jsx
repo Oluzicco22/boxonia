@@ -1,5 +1,5 @@
 import {FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
-import {FaXTwitter, FaYoutube} from "react-icons/fa6";
+import {FaXTwitter, FaYoutube, FaTiktok} from "react-icons/fa6";
 
 const Footer = () => {
     return (
@@ -16,6 +16,8 @@ const Footer = () => {
                        className="hover:text-yellow-300"><FaInstagram/></a>
                     <a href="https://x.com/BoxoniaBlue" target="_blank" className="hover:text-yellow-300"><FaXTwitter/></a>
                     <a href="https://linkedin.com/in/boxonia-blueprint-37a79a327" target="_blank"><FaLinkedinIn
+                        className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
+                    <a href="https://www.tiktok.com/@boxonia.blueprint?_t=ZS-90gN8vTgf2H&_r=1" target="_blank"><FaTiktok
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                     <a href="https://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr" target="_blank"><FaFacebookF
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
@@ -37,6 +39,8 @@ const Footer = () => {
                     <a href="https://x.com/BoxoniaBlue" target="_blank" className="hover:text-yellow-300"><FaXTwitter/></a>
                     <a href="https://linkedin.com/in/boxonia-blueprint-37a79a327" target="_blank"><FaLinkedinIn
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
+                    <a href="https://www.tiktok.com/@boxonia.blueprint?_t=ZS-90gN8vTgf2H&_r=1" target="_blank"><FaTiktok
+                        className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                     <a href="https://web.facebook.com/boxoniablueprint/?_rdc=1&_rdr" target="_blank"><FaFacebookF
                         className="text-transparent stroke-gray-400 stroke-[30] hover:stroke-yellow-400"/></a>
                     <a href="https://www.youtube.com/@boxoniablue" target="_blank"><FaYoutube
@@ -45,7 +49,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="flex flex-col md:items-center gap-8 text-gray-400 text-sm w-full md:w-4/6">
+            <div className="flex flex-col md:items-center gap-8 text-gray-400 text-sm w-full md:w-3/4">
                 <div className="h-[2px] w-full flex-grow bg-white"></div>
                 <img
                     src="https://res.cloudinary.com/dybmufexj/image/upload/v1755728729/boxonia_blurprint_1_1_lfdo1w.png"

@@ -7,8 +7,8 @@ const NewsPage = () => {
     return (
         <>
             <Header/>
-            <div className="mt-20">
-                <SpotlightSection len="7"/>
+            <div className="mt-23">
+                <SpotlightSection len="9"/>
             </div>
             <Footer/>
         </>

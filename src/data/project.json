@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "Son of the Soil",
+    "logline": "Follow the story of a former Nigerian soldier Zion Ladejo, tortured by his past and is forced to return to Nigeria as a result of his beloved sister’s untimely death. Determined to find those responsible, he embarks on a quest for vengeance and in the process seeks redemption for his past actions.\n",
+    "genre": "Action Thriller",
+    "type": "Feature Length",
+    "starring": [
+      "Raz Adoti, Patience Ozokwor, Iretiola Doyle, Sunshine Rosman, Taye Arimoro, \nPhilip Asaya, Damilola Ogunsi, Durotimi Okutagidi, Emeka Golden, James ‘BlacQ’ Damilare, and Sharon Rotimi"
+    ],
+    "writer": "Raz Adoti",
+    "director": "Chee Keong Cheung.",
+    "producer": "Andreas Roald, Ioanna Karavela, Chee Keong Cheung, Raz Adoti, and Wingonia Ikpi.",
+    "production_companies": "Sovereign Films, Action Xtreme, Boxonia Blueprint (In Association with)",
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760115694/son_of_d_soil_vevinh.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1760110771/SOTS_big_cover_iy6cao.png",
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760979560/SOTS_trailer_cover_iqgjxn.png",
+    "trailer_link": "https://youtu.be/HKW0g0bNF7k?si=9X5awetBWX24afP1"
+  },
+  {
+    "id": 2,
     "title": "NollyBabes",
     "logline": "after another failed audition, a rising nollywood star and her two best friends try to con a sleazy director to fund their own film.",
     "genre": "Drama/Thriller",
@@ -19,29 +37,26 @@
     "producer_companies": "boxonia bleuprint & gap tooth smile productions.",
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753986407/Nolly_babes_lnzopy.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753987110/nollybabes-big-poster_u7ycfr.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1754226377/real_nolly_babes_poster_kxixpo.png",
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760979705/real_nolly_babes_poster_kxixpo.png",
     "trailer_link": "#"
   },
   {
-    "id": 2,
-    "title": "Son of the Soil",
-    "logline": "Follow the story of a former Nigerian soldier Zion Ladejo, tortured by his past and is forced to return to Nigeria as a result of his beloved sister’s untimely death. Determined to find those responsible, he embarks on a quest for vengeance and in the process seeks redemption for his past actions.\n",
-    "genre": "Action Thriller",
-    "type": "Feature Length",
+    "id": 3,
+    "title": "Beta Food, Beta Life",
+    "logline": "A USAID ambassador, Chioma Akpotha, is invited by a women-leader from a northern community to sensitize the women of this community on nutrition.\n\n",
+    "By": "USAID, Helen Keller Foundation",
+    "type": "Radio Drama",
     "starring": [
-      "Raz Adoti, Patience Ozokwor, Iretiola Doyle, Sunshine Rosman, Taye Arimoro, \nPhilip Asaya, Damilola Ogunsi, Durotimi Okutagidi, Emeka Golden, James ‘BlacQ’ Damilare, and Sharon Rotimi"
+      "Chioma Akpotha, Daddy Showkey, Ummi Baba Ahmed, Miriam ‘Shytalker’ Peters, Habiba Shehu Zocksock"
     ],
-    "writer": "Raz Adoti",
-    "director": "Chee Keong Cheung.",
-    "producer": "Andreas Roald, Ioanna Karavela, Chee Keong Cheung, Raz Adoti, and Wingonia Ikpi.",
-    "production_companies": "Sovereign Films, Action Xtreme, Boxonia Blueprint (In Association with)",
-    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760115694/son_of_d_soil_vevinh.png",
-    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1760110771/SOTS_big_cover_iy6cao.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760110790/SOTS_trailer_cover_iqgjxn.png",
-    "trailer_link": "https://youtu.be/HKW0g0bNF7k?si=9X5awetBWX24afP1"
+    "producers": "INNICROSS, Boxonia Blueprint.",
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760969529/BFBL_big_cover_towzge.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734539/BFBL_big_cover_towzge.png",
+    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1760979791/BFBL_Trailer_cover_ylfsze.png",
+    "trailer_link": "#"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "otana",
     "logline": "Otana centres around Peace, a young lady facing sexual trauma. In a moment of luck, Peace meets a demon escaping hell and they bond over a common ground of pain and vengeance.\n",
     "genre": "Horror",
@@ -55,21 +70,6 @@
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734039/Group_3803_jujazi.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756125103/Otana_big_cover_cyws65.png",
     "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734510/OTANA_trailer_cover_gpryod.png",
-    "trailer_link": "#"
-  },
-  {
-    "id": 4,
-    "title": "Beta Food, Beta Life",
-    "logline": "A USAID ambassador, Chioma Akpotha, is invited by a women-leader from a northern community to sensitize the women of this community on nutrition.\n\n",
-    "By": "USAID, Helen Keller Foundation",
-    "type": "Radio Drama",
-    "starring": [
-      "Chioma Akpotha, Daddy Showkey, Ummi Baba Ahmed, Miriam ‘Shytalker’ Peters, Habiba Shehu Zocksock"
-    ],
-    "producers": "INNICROSS, Boxonia Blueprint.",
-    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734019/Group_3914_xisxve.png",
-    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734539/BFBL_big_cover_towzge.png",
-    "cover_image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755734540/BFBL_Trailer_cover_ylfsze.png",
     "trailer_link": "#"
   }
 ]

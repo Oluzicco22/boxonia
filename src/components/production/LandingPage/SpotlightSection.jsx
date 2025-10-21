@@ -9,7 +9,7 @@ const SpotlightSection = ({ len = 2 }) => {
         <section className="flex flex-col py-8 md:py-20 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative bg-transparent">
             <ArticleHeader title="in the spotlight" />
 
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full mt-8">
                 {spotlights
                     .filter((spotlight, idx) => idx < len)
                     .map(({ image, info, link }, i) => (
@@ -26,7 +26,7 @@ const SpotlightSection = ({ len = 2 }) => {
                                 <a
                                     href={link}
                                     target="_blank"
-                                    className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-semibold hover:text-yellow-400 cursor-pointer"
+                                    className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-normal hover:text-yellow-400 cursor-pointer"
                                 >
                                     {info}
                                     <svg width="51" height="9" viewBox="0 0 51 9" fill="currentColor" className="w-20 text-gray-500 fill-white group-hover:fill-yellow-400" xmlns="http://www.w3.org/2000/svg">

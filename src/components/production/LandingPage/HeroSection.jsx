@@ -29,7 +29,7 @@ const HeroSection = () => {
                     className="w-full min-h-[60vh] md:max-h-[90vh] object-cover"
                 >
                     <source
-                        src="https://res.cloudinary.com/dybmufexj/video/upload/v1760113845/home_video_1_pcrddi.mp4"
+                        src="https://res.cloudinary.com/dybmufexj/video/upload/v1761054847/home_video_1_pcrddi.mp4"
                         type="video/mp4"
                     />
                 </video>

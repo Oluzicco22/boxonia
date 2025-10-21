@@ -19,7 +19,7 @@ const FAQArticle = ({articles}) => {
                         className="w-full rounded-[10px] shadow text-left overflow-hidden border border-[#B7B7B7]"
                     >
                         <button
-                            className="w-full flex items-center text-left justify-between py-[15px] md:py-9 px-[14px] md:px-12 text-[#B7B7B7] md:text-xl"
+                            className="w-full flex items-center text-left justify-between py-[15px] md:py-9 px-[14px] md:px-12 text-[#B7B7B7] md:text-xl font-normal"
                             onClick={() => toggleOptions(index)}
                             aria-expanded={isOpen}
                         >
@@ -37,10 +37,10 @@ const FAQArticle = ({articles}) => {
                             `}
                         >
                             {(typeof article.answer === "object") ? (
-                                <ul className="list-none space-y-2 text-[#666666]">
+                                <ul className="list-none space-y-1 text-[#666666]">
                                     <p className="text-sm md:text-base">{article.answer.title}</p>
                                     {article.answer.lists.map((answer, i) => (
-                                        <li className="flex text-sm md:text-base gap-2 md:gap-3" key={i}>
+                                        <li className="flex text-sm md:text-base gap-2 md:gap-1" key={i}>
                                             <span>-</span>
                                             <span>{answer}</span>
                                         </li>

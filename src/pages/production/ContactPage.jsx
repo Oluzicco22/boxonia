@@ -64,10 +64,10 @@ const ContactPage = () => {
     return (
         <>
             <Header/>
-            <div className="w-full md:w-[85%] flex flex-col gap-20 md:gap-28 mx-auto mb-10 mt-28 md:mt-52">
+            <div className="w-full md:w-[85%] flex flex-col gap-20 md:gap-28 mx-auto mb-10 mt-28 md:mt-43">
 
                 {/*<!----- Contact Page -->*/}
-                <section className="space-y-12 md:space-y-20 text-black">
+                <section className="space-y-12 md:space-y-18 text-black">
                     <ArticleHeader title="get in touch"/>
                     <div
                         className="w-[90%] md:w-full mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 md:gap-47 items-center">
@@ -110,7 +110,7 @@ const ContactPage = () => {
 
                             <div className="flex flex-col gap-1 md:gap-2 text-left w-full">
                                 <label htmlFor="email"
-                                       className="text-[#7F7F7F] text-xs md:text-base font-medium">Email:</label>
+                                       className="text-[#7F7F7F] text-xs md:text-base font-light">Email*</label>
                                 <input
                                     value={formValues.email}
                                     onChange={handleChange}
@@ -123,7 +123,7 @@ const ContactPage = () => {
 
                             <div className="flex flex-col gap-1 md:gap-2 text-left w-full">
                                 <label htmlFor="name"
-                                       className="text-[#7F7F7F] text-xs md:text-base font-medium">Message*</label>
+                                       className="text-[#7F7F7F] text-xs md:text-base font-light">Message*</label>
                                 <textarea
                                     value={formValues.message}
                                     onChange={handleChange}
@@ -144,11 +144,6 @@ const ContactPage = () => {
                         </form>
 
                         <div className="flex flex-col gap-4 md:gap-6 md:items-end">
-                            <address
-                                className="not-italic text-white md:text-2xl font-normal md:font-light leading-relaxed">
-                                <span className="text-yellow-500 font-bold">Address: </span>
-                                213a Igbosere road, Lagos, Nigeria
-                            </address>
                             <div
                                 className="bg-[#F0F0F0] rounded-[10px] py-4 md:py-6 px-5 md:px-10 w-full flex justify-between items-end">
                                 <div className="space-y-5 md:space-y-8">
@@ -161,10 +156,11 @@ const ContactPage = () => {
                                               d="M10.9902 25.4429C11.06 25.3882 11.1283 25.3323 11.1953 25.2752L15.6358 21.4918H25.5902C27.2552 21.4918 28.8519 20.928 30.0292 19.9245C31.2065 18.9209 31.868 17.5598 31.868 16.1405V9.0054H36.0531C36.6081 9.0054 37.1404 9.19333 37.5328 9.52786C37.9252 9.86238 38.1457 10.3161 38.1457 10.7892V25.0594C38.1457 25.5325 37.9252 25.9862 37.5328 26.3207C37.1404 26.6552 36.6081 26.8431 36.0531 26.8431H33.9605V30.4107C33.9604 30.7634 33.8377 31.1082 33.6077 31.4015C33.3778 31.6948 33.051 31.9233 32.6687 32.0583C32.2864 32.1933 31.8657 32.2286 31.4598 32.1598C31.054 32.091 30.6811 31.9212 30.3885 31.6718L24.7239 26.8431H13.0347C12.5577 26.8433 12.095 26.7046 11.7232 26.4499C11.3514 26.1952 11.0928 25.8399 10.9902 25.4429Z"
                                               fill="black"/>
                                     </svg>
-                                    <div>
+                                    <div className="flex flex-col">
                                         <p className="font-bold md:text-2xl">Chat with us</p>
                                         <span
-                                            className="text-base text-[#7F7F7F]">Get in touch over mail.</span>
+                                            className="text-sm text-[#7F7F7F] font-light">Get in touch over mail.
+                                        </span>
                                     </div>
 
                                     <a href="mailto:hq@boxonia.com" target="_blank"

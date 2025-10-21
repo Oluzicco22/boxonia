@@ -36,7 +36,7 @@ const Header = () => {
             path: '/production/projects'
         },
         {
-            name: "News",
+            name: "Spotlight",
             path: '/production/news'
         },
         {
