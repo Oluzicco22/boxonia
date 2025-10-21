@@ -33,7 +33,7 @@ const ProjectCard = ({props}) => {
         <article className="flex flex-col justify-end gap-4">
             <h2 className="capitalize mt-6 mb-6 md:mb-0 md:mt-6 font-bold text-3xl md:text-5xl text-center md:text-left">{props?.title}</h2>
 
-            <div className="flex flex-col gap-4 pl-6 md:pl-0 w-2/3">
+            <div className="flex flex-col gap-4 pl-6 md:pl-0 w-3/4">
                 {keys.map((key, i) => {
                     const value = checkKey(key);
                     const label = key.split("_").join(" ");
@@ -42,7 +42,7 @@ const ProjectCard = ({props}) => {
                     if (key === "logline") {
                         return (
                             <div key={i} className="flex flex-col itim-font space-y-2">
-                                <h3 className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                                <h3 className="text-[#F6B62B] font-normal md:font-semibold text-sm md:text-xl capitalize">
                                     {label}
                                 </h3>
                                 <p className="font-normal text-sm md:text-lg capitalize">{value}</p>
@@ -56,7 +56,7 @@ const ProjectCard = ({props}) => {
                             <div key={i} className="flex gap-2 itim-font">
                                 <p className="font-normal text-sm md:text-lg capitalize">
                                 <span
-                                    className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                                    className="text-[#F6B62B] font-normal md:font-semibold text-sm md:text-xl capitalize">
                                     {label}:{" "}
                                 </span>
                                     {value}
@@ -68,7 +68,7 @@ const ProjectCard = ({props}) => {
                     // default block
                     return (
                         <div key={i} className="flex gap-2 itim-font">
-                            <h3 className="text-yellow-500 font-normal md:font-semibold text-sm md:text-xl capitalize">
+                            <h3 className="text-[#F6B62B] font-normal md:font-semibold text-sm md:text-xl capitalize">
                                 {label}:
                             </h3>
                             <p className="font-normal text-sm md:text-lg capitalize">{value}</p>
