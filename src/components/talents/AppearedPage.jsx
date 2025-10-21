@@ -13,7 +13,7 @@ const AppearedPage = ({talent}) => {
     return (
         <div className="relative">
 
-            <div className="bg-transparent md:pb-1 bg-cover bg-center bg-no-repeat min-h-90 md:h-150 relative" style={{
+            <div className="bg-transparent md:pb-1 bg-cover bg-center bg-no-repeat min-h-90 md:h-190 relative" style={{
                 backgroundImage: `url(${talent.thumbnail})`
             }}>
                 <Header/>

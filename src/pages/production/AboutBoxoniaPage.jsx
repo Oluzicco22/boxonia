@@ -16,7 +16,7 @@ const AboutBoxoniaPage = () => {
     return (
         <>
             <Header/>
-            <div className="w-full md:w-[85%] mx-auto flex justify-center mb-8 mt-28 md:mt-44">
+            <div className="w-full md:w-[85%] mx-auto flex justify-center mb-8 mt-28 md:mt-43">
                 <ArticleHeader title="what we do"/>
             </div>
             <BoxoniaPillarComponent/>

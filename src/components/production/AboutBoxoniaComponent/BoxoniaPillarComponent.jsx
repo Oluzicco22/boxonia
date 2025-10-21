@@ -12,10 +12,10 @@ const BoxoniaPillarComponent = () => {
     ]
     return (
         <section className="flex flex-col md:py-5 px-0 w-full mx-auto items-center">
-            <div className="flex flex-col w-full gap-12 md:gap-20">
+            <div className="flex flex-col w-full gap-12 md:gap-20 mt-0 md:mt-6">
                 {boxoniaPillars.map((pillar, idx) => (
                     <article key={idx}
-                             className="flex justify-center items-center py-10 md:py-6 w-full relative bg-cover bg-center bg-no-repeat bg-blend-darken bg-black/10"
+                             className="flex justify-center items-center py-10 md:py-6 w-full relative bg-cover bg-center bg-no-repeat bg-blend-darken bg-black/30"
                              style={{
                                  backgroundImage: `url(${images[idx]})`,
                                  backgroundSize: "cover"

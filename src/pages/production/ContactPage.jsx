@@ -81,7 +81,7 @@ const ContactPage = () => {
                                     <input
                                         type="text"
                                         value={formValues.firstname}
-                                        className="text-base md:text-lg bg-white text-[#7F7F7F] w-full rounded-[10px] px-3 py-4 focus:outline-0"
+                                        className="text-base md:text-lg bg-white text-[#000000] w-full rounded-[10px] px-3 py-4 focus:outline-0"
                                         onChange={handleChange}
                                         name="firstname"
                                         id="firstname"
@@ -97,7 +97,7 @@ const ContactPage = () => {
                                     <input
                                         type="text"
                                         value={formValues.lastname}
-                                        className="text-base md:text-lg bg-white text-[#7F7F7F] w-full rounded-[10px] px-3 py-4 focus:outline-0"
+                                        className="text-base md:text-lg bg-white text-[#000000] w-full rounded-[10px] px-3 py-4 focus:outline-0"
                                         onChange={handleChange}
                                         name="lastname"
                                         id="lastname"
@@ -117,7 +117,7 @@ const ContactPage = () => {
                                     type="email"
                                     name="email"
                                     id="email"
-                                    className="text-base md:text-lg text-[#7F7F7F] bg-white w-full rounded-[10px] px-3 py-4 focus:outline-0"/>
+                                    className="text-base md:text-lg text-[#000000] bg-white w-full rounded-[10px] px-3 py-4 focus:outline-0"/>
                                 {error?.email && <span className="text-red-600 text-sm capitalize">{error.email}</span>}
                             </div>
 
@@ -130,7 +130,7 @@ const ContactPage = () => {
                                     name="message"
                                     rows="3"
                                     id="name"
-                                    className="text-base md:text-lg text-[#7F7F7F] bg-white w-full rounded-[10px] px-3 py-4 resize-none focus:outline-0"/>
+                                    className="text-base md:text-lg text-[#000000] bg-white w-full rounded-[10px] px-3 py-4 resize-none focus:outline-0"/>
                                 {error?.message &&
                                     <span className="text-red-600 text-sm capitalize">{error.message}</span>}
                             </div>
