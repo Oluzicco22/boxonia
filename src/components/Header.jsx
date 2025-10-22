@@ -1,8 +1,9 @@
-import {useLocation, useParams} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Logo from "../assets/boxonia-logo.svg";
 import BackIcon from "../../src/assets/arrow-icon.svg";
 import {MenuIcon} from "lucide-react";
 import {useState} from "react";
+import { useEffect } from "react";
 import {FaX} from "react-icons/fa6";
 import {FaCaretDown} from "react-icons/fa";
 
@@ -11,9 +12,21 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showOptions, setShowOptions] = useState(null);
     const [activePath, setActivePath] = useState(null);
-    const {castName} = useParams()
+    // const {castName} = useParams()
+    const navigate = useNavigate();
 
-    const navLinks = [
+    const navLinks = pathname.startsWith("/talents")
+        ? [
+            {
+                name: "Spotlight",
+                path: "/talents/spotlight",
+            },
+            {
+                name: "Contact Us",
+                path: "/talents/contact",
+            },
+            ]
+        : [
         {
             name: "Home",
             path: '/'
@@ -59,30 +72,43 @@ const Header = () => {
         return location.pathname === path || location.pathname.startsWith(path + "/");
     };
 
-    useState(() => {
-        const path = pathname.includes('talents') ? '' : 'talents';
-        setActivePath(path);
-    }, []);
+    useEffect(() => {
+        if (pathname.startsWith("/talents")) {
+            setActivePath("production");
+        } else {
+            setActivePath("talents");
+        }
+    }, [pathname]);
 
     return (
         <header role="banner" className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-[1000]">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
-                {pathname === `/talents/${encodeURIComponent(castName)}` ?
-                    <button type="button" onClick={() => history.back()}
-                            className="flex gap-4 font-semibold cursor-pointer hover:opacity-40">
-                        <img src={BackIcon} alt="logo" className="rotate-180"/>
+                {(pathname.startsWith("/talents/spotlight") || pathname.startsWith("/talents/contact")) ? (
+                    <button
+                        type="button"
+                        onClick={() => navigate(-1)}
+                        className="flex gap-4 font-semibold cursor-pointer hover:opacity-40"
+                    >
+                        <img src={BackIcon} alt="back" className="rotate-180"/>
                         Back
-                    </button> :
+                    </button>
+                ) : (
                     <a href="/">
                         <img src={Logo} alt="logo" className="w-20 md:w-auto"/>
                     </a>
-                }
+                )}
+
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
                     <ul className={`flex ${activePath === "talents" ? "justify-between" : "gap-10 justify-end"}`}>
                         {navLinks.filter(lnk => {
-                            return activePath !== "production" ? lnk : ['Contact Us', 'Spotlight'].includes(lnk.name)
-                            return activePath === "talents" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
+                            // When on the Talents section, show only Spotlight and Contact Us
+                            if (pathname.startsWith("/talents")) {
+                                return ["Spotlight", "Contact Us"].includes(lnk.name);
+                            }
+                            // Otherwise, show all links normally
+                            return true;
                         }).map((link, idx) => (
+
                             <li key={idx} className="relative">
                                 {link.children ? (
                                     <button
@@ -119,7 +145,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <a href={`/${activePath}`}
+                <a href={pathname.startsWith("/talents") ? "/" : "/talents"}
                    className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{`${activePath !== 'talents' ? 'production' : 'talents'}`}</a>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -139,8 +165,12 @@ const Header = () => {
                             <nav>
                                 <ul className="flex flex-col gap-9 text-lg font-medium text-gray-700">
                                     {navLinks.filter(lnk => {
-                                        return activePath === "talents" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
+                                        if (pathname.startsWith("/talents")) {
+                                            return ["Spotlight", "Contact Us"].includes(lnk.name);
+                                        }
+                                        return true;
                                     }).map((link, idx) => (
+
                                         <li key={idx}>
                                             {link.children ? (
                                                 <div>
@@ -179,7 +209,8 @@ const Header = () => {
                                 </ul>
                             </nav>
 
-                            <a href={`/${activePath}`}
+                            <a href={pathname.startsWith("/talents") ? "/" : "/talents"}
+
                                className="block md:hidden py-2 px-8 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-white capitalize font-semibold hover:text-black text-center mt-20">
                                 {`${activePath !== 'talents' ? 'production' : 'talents'}`}
                             </a>

@@ -1,10 +1,19 @@
 import ArticleHeader from "../ArticleHeader.jsx";
 import spotlights from "../../../data/spotlight.json";
+import { useLocation } from "react-router-dom";
 
 const SpotlightSection = ({ len = 2 }) => {
-    // const location = useLocation();
-    const hideButton = location.pathname === "/production/news"; // Hide on News page
-    //
+    const location = useLocation();
+
+    // Hide button if we're on the Talent Spotlight page or News page
+    const hideButton =
+        location.pathname === "/news" || location.pathname === "/talents/spotlight";
+
+    // Determine the correct link for "See More" button
+    const seeMoreLink = location.pathname.startsWith("/talents")
+        ? "/talents/spotlight"
+        : "/news";
+
     return (
         <section className="flex flex-col py-8 md:py-20 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative bg-transparent">
             <ArticleHeader title="in the spotlight" />
@@ -29,7 +38,14 @@ const SpotlightSection = ({ len = 2 }) => {
                                     className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-normal hover:text-yellow-400 cursor-pointer"
                                 >
                                     {info}
-                                    <svg width="51" height="9" viewBox="0 0 51 9" fill="currentColor" className="w-20 text-gray-500 fill-white group-hover:fill-yellow-400" xmlns="http://www.w3.org/2000/svg">
+                                    <svg
+                                        width="51"
+                                        height="9"
+                                        viewBox="0 0 51 9"
+                                        fill="currentColor"
+                                        className="w-20 text-gray-500 fill-white group-hover:fill-yellow-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
                                         <path d="M50.6358 4.05489C50.831 4.25016 50.831 4.56674 50.6358 4.762L47.4538 7.94398C47.2585 8.13924 46.942 8.13924 46.7467 7.94398C46.5514 7.74872 46.5514 7.43214 46.7467 7.23687L49.5751 4.40845L46.7467 1.58002C46.5514 1.38476 46.5514 1.06818 46.7467 0.872913C46.942 0.677651 47.2585 0.677651 47.4538 0.872913L50.6358 4.05489ZM0.120117 4.40845V3.90845H50.2822V4.40845V4.90845H0.120117V4.40845Z" />
                                     </svg>
                                 </a>
@@ -41,9 +57,10 @@ const SpotlightSection = ({ len = 2 }) => {
             {/* Conditional "See More" Button */}
             {!hideButton && (
                 <a
-                    href="/production/news"
+                    href={seeMoreLink}
                     className="text-center self-end sm:self-auto text-nowrap text-xs sm:text-sm border-1 font-normal hover:bg-white hover:text-black border-[#989898]
-                text-[#989898] px-7 sm:px-20 py-2 sm:py-3 rounded-lg cursor-pointer">
+                    text-[#989898] px-7 sm:px-20 py-2 sm:py-3 rounded-lg cursor-pointer"
+                >
                     see more
                 </a>
             )}
