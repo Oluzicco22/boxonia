@@ -51,7 +51,7 @@ const ProductionSection = () => {
     ];
 
     return (
-        <section aria-labelledby="production-heading" className="flex flex-col py-0 gap-10 items-center relative">
+        <section aria-labelledby="production-heading" className="flex flex-col mb-6 md:mb-0 py-0 gap-10 items-center relative">
             <div className="w-full flex items-center flex-col gap-10">
                 <div className="md:w-[85%] w-full">
                     <ArticleHeader title="Behind the Scenes" id="production-heading"/>

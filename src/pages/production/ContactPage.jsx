@@ -20,15 +20,24 @@ const ContactPage = () => {
     });
 
     const submitForm = async (e) => {
-        setError(null)
-        e.preventDefault()
+        e.preventDefault();
+        setError(null);
         setLoading(true);
+
         try {
-            const res = await service.contactMail(formValues)
-            setMessage(res.message)
+            const res = await service.contactMail(formValues);
+            setMessage(res.message);
+
+            // Reset the form values
+            setFormValues({
+                firstname: "",
+                lastname: "",
+                email: "",
+                message: ""
+            });
         } catch (err) {
             const errorsArray = err?.response?.data?.errors || [];
-            console.log(errorsArray)
+            console.log(errorsArray);
 
             const normalizedErrors = errorsArray.reduce((acc, msg) => {
                 if (msg.toLowerCase().includes("last name")) acc.lastname = msg;
@@ -41,7 +50,7 @@ const ContactPage = () => {
         } finally {
             setLoading(false);
         }
-    }
+    };
 
     const handleChange = (e) => {
         const {name, value} = e.target;

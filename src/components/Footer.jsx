@@ -11,7 +11,7 @@ const Footer = () => {
                 <p className="text-[#F6B62B] font-bold text-xl">Contact Us</p>
 
                 {/*<!---------- Mobile Nav  ----------->*/}
-                <nav className="md:hidden flex gap-3 my-5 text-3xl">
+                <nav className="md:hidden flex gap-3 my-5 text-3xl justify-between">
                     <a href="https://instagram.com/boxoniablueprint" target="_blank"
                        className="hover:text-yellow-300"><FaInstagram/></a>
                     <a href="https://x.com/BoxoniaBlue" target="_blank" className="hover:text-yellow-300"><FaXTwitter/></a>
