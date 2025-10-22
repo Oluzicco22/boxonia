@@ -35,6 +35,7 @@ const TalentPage = () => {
 
             const allProjects = res.data.flatMap(talent => talent.relatedProjects || []);
             setProjects(allProjects);
+            // eslint-disable-next-line no-unused-vars
         } catch (_) {
             setError("Failed to load talents.");
         } finally {
@@ -49,14 +50,14 @@ const TalentPage = () => {
 
     return (
         <div className="grid gap-16 mt-20 md:mt-40">
-            <Header/>
-            <div className="w-full flex justify-center">
+            <Header showBackButton={false} />
+            <div className="w-[85%] mx-auto flex justify-center">
                 <ArticleHeader title="boxonia talents"/>
             </div>
             {error && <p className="text-red-500 text-center">{error}</p>}
 
 
-            <p className="w-[90%] md:w-3/5 mx-auto text-justify md:text-left text-xs md:text-base text-[#b7b7b7]">
+            <p className="w-[90%] md:w-4/6 mx-auto text-justify md:text-left text-xs md:text-xl font-semibold text-[#B7B7B7]">
                 At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the
                 careers of industry professionals.
                 Our approach begins with identifying top-tier talent whose skills and potential align with our

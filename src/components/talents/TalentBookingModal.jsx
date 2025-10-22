@@ -293,8 +293,8 @@ const TalentBookingModal = ({onClose, name, id}) => {
                         type="submit"
                         disabled={isDisabled}
                         className={`my-6 rounded-[10px] text-xs md:text-base py-2 px-7 md:px-20 w-fit border ${isDisabled
-                            ? "cursor-not-allowed"
-                            : "bg-transparent border-[#989898] hover:text-black hover:bg-white cursor-pointer text-[#989898]"
+                            ? "cursor-not-allowed border-[#989898] text-[#989898]"
+                            : "bg-transparent border-[#FFFFFF] hover:text-black hover:bg-white cursor-pointer text-[#FFFFFF]"
                         }`}
                     >
                         {`Book ${name}`}

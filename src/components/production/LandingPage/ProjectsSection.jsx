@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             title: "Son of the Soil",
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760115694/son_of_d_soil_vevinh.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1761142185/son_of_d_soil_vevinh.png",
             description: "A cultural exploration film showcasing African heritage.",
         },
         {

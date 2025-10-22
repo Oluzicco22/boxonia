@@ -7,13 +7,16 @@ import { useEffect } from "react";
 import {FaX} from "react-icons/fa6";
 import {FaCaretDown} from "react-icons/fa";
 
-const Header = () => {
+const Header = ( ) => {
     const {pathname} = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [showOptions, setShowOptions] = useState(null);
     const [activePath, setActivePath] = useState(null);
-    // const {castName} = useParams()
     const navigate = useNavigate();
+
+    const showBackButton = pathname.startsWith("/talents/spotlight")
+                                    || pathname.startsWith("/talents/contact")
+                                    || pathname.startsWith("/talents/")
 
     const navLinks = pathname.startsWith("/talents")
         ? [
@@ -83,7 +86,8 @@ const Header = () => {
     return (
         <header role="banner" className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-[1000]">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
-                {(pathname.startsWith("/talents/spotlight") || pathname.startsWith("/talents/contact")) ? (
+                {/*{(pathname.includes("/talents/spotlight") || pathname.includes("/talents/contact")) ? (*/}
+                {showBackButton ? (
                     <button
                         type="button"
                         onClick={() => navigate(-1)}

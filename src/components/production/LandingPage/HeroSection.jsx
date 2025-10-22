@@ -7,7 +7,7 @@ const HeroSection = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowVideoText(false);
-        }, 5000);
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -36,7 +36,7 @@ const HeroSection = () => {
 
                 {/* Hero Text with fade-out */}
                 <div
-                    className={`absolute bottom-8 md:bottom-30 left-10 md:left-28 flex flex-col text-white z-30 transform transition-opacity duration-1000 ease-in ${
+                    className={`absolute bottom-8 md:bottom-5 left-10 md:left-28 flex flex-col text-white z-30 transform transition-opacity duration-1000 ease-in ${
                         showVideoText ? "opacity-100" : "opacity-0"
                     }`}
                 >

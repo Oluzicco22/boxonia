@@ -16,8 +16,8 @@ const AppearedPage = ({talent}) => {
             <div className="bg-transparent md:pb-1 bg-cover bg-center bg-no-repeat min-h-90 md:h-190 relative" style={{
                 backgroundImage: `url(${talent.thumbnail})`
             }}>
-                <Header/>
-                <h1 className="capitalize font-bold text-3xl sm:text-5xl md:text-[150px] absolute -bottom-2 md:-bottom-3 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                <Header showBackButton={true} />
+                <h1 className="capitalize font-bold text-3xl sm:text-5xl md:text-[150px] absolute -bottom-2 md:-bottom-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                     {`${talent.username ?? talent.firstName} ${talent.lastName}`}
                 </h1>
 
