@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import LandingPage from "./pages/production/LandingPage.jsx";
 import BoxoniaStoryPage from "./pages/production/BoxoniaStoryPage.jsx";
 import AboutBoxoniaPage from "./pages/production/AboutBoxoniaPage.jsx";
@@ -6,7 +6,6 @@ import ProjectPage from "./pages/production/ProjectPage.jsx";
 import NewsPage from "./pages/production/NewsPage.jsx";
 import ContactPage from "./pages/production/ContactPage.jsx";
 import ProjectViewPage from "./pages/production/ProjectViewPage.jsx";
-import HomePage from "./pages/production/HomePage.jsx";
 import ParentPage from "./pages/ParentPage.jsx";
 import TalentPage from "./pages/talents/TalentPage.jsx";
 import TalentViewPage from "./pages/talents/TalentViewPage.jsx";
@@ -14,64 +13,60 @@ import TalentViewPage from "./pages/talents/TalentViewPage.jsx";
 const routes = createBrowserRouter([
     {
         path: "/",
-        element: <HomePage />,
+        element: <LandingPage/>,
     },
     {
-        path: "production",
-        element: <ParentPage />,
+        path: "/",
+        element: <ParentPage/>,
         children: [
             {
-                path: "",
-                element: <LandingPage />,
-            },
-            {
                 path: "boxonia-story",
-                element: <BoxoniaStoryPage />,
+                element: <BoxoniaStoryPage/>,
             },
             {
                 path: "about",
-                element: <AboutBoxoniaPage />,
+                element: <AboutBoxoniaPage/>,
             },
             {
                 path: "projects",
-                element: <ProjectPage />,
+                element: <ProjectPage/>,
             },
             {
                 path: "projects/:id",
-                element: <ProjectViewPage />,
+                element: <ProjectViewPage/>,
             },
             {
                 path: "news",
-                element: <NewsPage />,
+                element: <NewsPage/>,
             },
             {
                 path: "contact",
-                element: <ContactPage />,
+                element: <ContactPage/>,
             },
         ],
     },
     {
         path: "talents",
-        element: <ParentPage />,
+        element: <ParentPage/>,
         children: [
             {
                 path: "",
-                element: <TalentPage />,
+                element: <TalentPage/>,
             },
             {
                 path: ":castName",
-                element: <TalentViewPage />,
+                element: <TalentViewPage/>,
             },
             {
                 path: "contact",
-                element: <ContactPage />,
+                element: <ContactPage/>,
             },
-        ]
+        ],
     },
 ]);
 
 const App = () => {
-    return <RouterProvider router={routes} />;
+    return <RouterProvider router={routes}/>;
 };
 
 export default App;

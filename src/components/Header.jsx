@@ -16,32 +16,32 @@ const Header = () => {
     const navLinks = [
         {
             name: "Home",
-            path: '/production'
+            path: '/'
         },
         {
             name: "About Us",
             children: [
                 {
                     name: "Boxonia Story",
-                    path: '/production/boxonia-story',
+                    path: '/boxonia-story',
                 },
                 {
                     name: "What We Do",
-                    path: '/production/about',
+                    path: '/about',
                 }
             ]
         },
         {
             name: "Projects",
-            path: '/production/projects'
+            path: '/projects'
         },
         {
             name: "Spotlight",
-            path: '/production/news'
+            path: '/news'
         },
         {
             name: "Contact Us",
-            path: '/production/contact'
+            path: '/contact'
         }
     ];
 
@@ -49,18 +49,10 @@ const Header = () => {
         setShowOptions(prev => prev === name ? null : name);
     };
 
-    const isActive = (path) => {
-        if (path === "/production") {
-            return location.pathname === "/production";
-        }
-        if (path === "/talents") {
-            return location.pathname === "/talents";
-        }
-        return location.pathname === path || location.pathname.startsWith(path + "/");
-    };
+    const isActive = (path) => pathname === path
 
     useState(() => {
-        const path = pathname.includes('production') ? 'talents' : 'production';
+        const path = pathname.includes('talents') ? '' : 'talents';
         setActivePath(path);
     }, []);
 
@@ -77,11 +69,10 @@ const Header = () => {
                         <img src={Logo} alt="logo" className="w-20 md:w-auto"/>
                     </a>
                 }
-
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
-                    <ul className={`flex ${activePath !== "production" ? "justify-between" : "gap-10 justify-end"}`}>
+                    <ul className={`flex ${activePath === "talents" ? "justify-between" : "gap-10 justify-end"}`}>
                         {navLinks.filter(lnk => {
-                            return activePath !== "production" ? lnk : ['Contact Us', 'Spotlight'].includes(lnk.name)
+                            return activePath === "talents" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                         }).map((link, idx) => (
                             <li key={idx} className="relative">
                                 {link.children ? (
@@ -120,10 +111,10 @@ const Header = () => {
                 </nav>
 
                 <a href={`/${activePath}`}
-                   className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{activePath}</a>
+                   className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{`${activePath !== 'talents' ? 'production' : 'talents'}`}</a>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                    <MenuIcon/>
+                    <MenuIcon color="white"/>
                 </button>
 
                 {/* Mobile Nav */}
@@ -139,7 +130,7 @@ const Header = () => {
                             <nav>
                                 <ul className="flex flex-col gap-9 text-lg font-medium text-gray-700">
                                     {navLinks.filter(lnk => {
-                                        return activePath !== "production" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
+                                        return activePath === "talents" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                                     }).map((link, idx) => (
                                         <li key={idx}>
                                             {link.children ? (
@@ -181,7 +172,7 @@ const Header = () => {
 
                             <a href={`/${activePath}`}
                                className="block md:hidden py-2 px-8 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-white capitalize font-semibold hover:text-black text-center mt-20">
-                                {activePath}
+                                {`${activePath !== 'talents' ? 'production' : 'talents'}`}
                             </a>
                         </div>
                     </div>
