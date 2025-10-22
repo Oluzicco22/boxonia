@@ -15,7 +15,7 @@ const SpotlightSection = ({ len = 2 }) => {
         : "/news";
 
     return (
-        <section className="flex flex-col py-8 md:py-20 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative bg-transparent">
+        <section className="flex flex-col py-8 md:py-20 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative md:bg-transparent">
             <ArticleHeader title="in the spotlight" />
 
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full mt-8">
@@ -58,7 +58,7 @@ const SpotlightSection = ({ len = 2 }) => {
             {!hideButton && (
                 <a
                     href={seeMoreLink}
-                    className="text-center self-end sm:self-auto text-nowrap text-xs sm:text-sm border-1 font-normal hover:bg-white hover:text-black border-[#989898]
+                    className="text-center self-center sm:self-auto -mt-3 md:mt-0 text-nowrap text-xs sm:text-sm border-1 font-normal hover:bg-white hover:text-black border-[#989898]
                     text-[#989898] px-7 sm:px-20 py-2 sm:py-3 rounded-lg cursor-pointer"
                 >
                     see more

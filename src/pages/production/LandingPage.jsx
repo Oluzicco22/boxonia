@@ -16,7 +16,7 @@ const LandingPage = () => {
                 <SponsorSection/>
 
                 <ProjectsSection/>
-                <section className="flex flex-col items-center justify-center gap-6">
+                <section className="flex flex-col items-center justify-center gap-6 bg-[#131313] md:bg-transparent">
                     <SpotlightSection/>
                     <div className="md:h-auto flex justify-center items-center mt-12 mb-6 md:mb-6 md:mt-7">
                         <p className="lemon-font text-black md:text-[#F6B62B] bg-[#F6B62B] md:bg-transparent text-sm md:text-2xl
