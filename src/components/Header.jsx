@@ -49,7 +49,15 @@ const Header = () => {
         setShowOptions(prev => prev === name ? null : name);
     };
 
-    const isActive = (path) => pathname === path
+    const isActive = (path) => {
+        if (path === "/production") {
+            return location.pathname === "/production";
+        }
+        if (path === "/talents") {
+            return location.pathname === "/talents";
+        }
+        return location.pathname === path || location.pathname.startsWith(path + "/");
+    };
 
     useState(() => {
         const path = pathname.includes('talents') ? '' : 'talents';
@@ -72,6 +80,7 @@ const Header = () => {
                 <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
                     <ul className={`flex ${activePath === "talents" ? "justify-between" : "gap-10 justify-end"}`}>
                         {navLinks.filter(lnk => {
+                            return activePath !== "production" ? lnk : ['Contact Us', 'Spotlight'].includes(lnk.name)
                             return activePath === "talents" ? lnk : ['Contact Us', 'News'].includes(lnk.name)
                         }).map((link, idx) => (
                             <li key={idx} className="relative">
