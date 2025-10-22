@@ -9,6 +9,8 @@ import ProjectViewPage from "./pages/production/ProjectViewPage.jsx";
 import ParentPage from "./pages/ParentPage.jsx";
 import TalentPage from "./pages/talents/TalentPage.jsx";
 import TalentViewPage from "./pages/talents/TalentViewPage.jsx";
+import TalentSpotlightPage from "./pages/talents/TalentSpotlightPage.jsx";
+import TalentContactPage from "./pages/talents/TalentContactPage.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -47,19 +49,23 @@ const routes = createBrowserRouter([
     },
     {
         path: "talents",
-        element: <ParentPage/>,
+        element: <ParentPage />,
         children: [
             {
                 path: "",
-                element: <TalentPage/>,
+                element: <TalentPage />,
             },
             {
                 path: ":castName",
-                element: <TalentViewPage/>,
+                element: <TalentViewPage />,
+            },
+            {
+                path: "spotlight",
+                element: <TalentSpotlightPage />,
             },
             {
                 path: "contact",
-                element: <ContactPage/>,
+                element: <TalentContactPage />,
             },
         ],
     },
