@@ -31,7 +31,7 @@ const WhatSection = () => {
                             <div className="flex md:hidden justify-center">
                                     <InSectionLink
                                         name="read more"
-                                        path="/production/about"
+                                        path="/about"
                                         ariaLabel="Learn more about Boxonia’s productions and services"
                                     />
                             </div>
@@ -41,7 +41,7 @@ const WhatSection = () => {
                 <div className="hidden md:block">
                     <InSectionLink
                         name="read more"
-                        path="/production/about"
+                        path="/about"
                         ariaLabel="Learn more about Boxonia’s productions and services"
                     />
                 </div>

@@ -37,7 +37,7 @@ const ProjectsSection = () => {
             <InSectionLink
                 ariaLabel="Browse more Boxonia film, TV, and creative projects"
                 name="more of our works"
-                path="/production/projects"
+                path="/projects"
             />
         </section>
     )

@@ -29,7 +29,7 @@ const AboutBoxoniaPage = () => {
                     <Marquee items={types}/>
                     <Marquee reverse={true} items={types}/>
                 </div>
-                <InSectionLink name="work with us" path="/production/contact"/>
+                <InSectionLink name="work with us" path="/contact"/>
             </section>
             <Footer/>
         </>
