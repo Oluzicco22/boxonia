@@ -33,7 +33,7 @@ const ProjectViewPage = () => {
     return (
         <div>
             <div
-                className="bg-black/90 pb-1 bg-[length:265%_85%] sm:bg-cover bg-center bg-no-repeat min-h-100 md:min-h-130"
+                className="bg-black/90 pb-1 bg-[length:255%_100%] sm:bg-cover bg-center bg-no-repeat min-h-100 md:min-h-130"
                 style={{
                     backgroundImage: `url(${project?.thumbnail})`
                 }}
@@ -43,14 +43,14 @@ const ProjectViewPage = () => {
                 <div className="h-52 md:h-72 w-2/6 md:w-2/12 flex justify-center items-center">
                     <Link
                         to="/projects"
-                        className="text-white font-bold hover:opacity-40"
+                        className="text-white font-bold hover:text-[#F6B62B]"
                     >
                         {`<--- Back`}
                     </Link>
                 </div>
             </div>
 
-            <section className="relative grid grid-cols-1 md:grid-cols-[2fr_5fr] mt-10 gap-3 md:gap-27 w-[95%] mx-auto">
+            <section className="relative grid grid-cols-1 md:grid-cols-[2fr_5fr] mt-15 gap-3 md:gap-27 w-[95%] mx-auto">
                 <div
                     className="absolute -top-44 md:-top-1/5 flex flex-col gap-12 md:gap-5 items-center w-full md:w-1/3">
                     <div className="block w-1/2 md:w-4/6 h-full z-10">

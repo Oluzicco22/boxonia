@@ -84,14 +84,14 @@ const Header = ( ) => {
     }, [pathname]);
 
     return (
-        <header role="banner" className="w-full bg-black/80 bg-blend-darken top-0 fixed border-b z-[1000]">
+        <header role="banner" className="w-full bg-black/80 bg-blend-darken top-0 left-0 fixed border-b z-999">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 {/*{(pathname.includes("/talents/spotlight") || pathname.includes("/talents/contact")) ? (*/}
                 {showBackButton ? (
                     <button
                         type="button"
                         onClick={() => navigate(-1)}
-                        className="flex gap-4 font-semibold cursor-pointer hover:opacity-40"
+                        className="flex gap-4 font-semibold cursor-pointer hover:text-[#F6B62B]"
                     >
                         <img src={BackIcon} alt="back" className="rotate-180"/>
                         Back
@@ -102,7 +102,7 @@ const Header = ( ) => {
                     </a>
                 )}
 
-                <nav className="hidden md:block min-w-[50%] gap-4 text-white relative">
+                <nav className="hidden md:block min-w-[50%] gap-4 text-white font-medium relative">
                     <ul className={`flex ${activePath === "talents" ? "justify-between" : "gap-10 justify-end"}`}>
                         {navLinks.filter(lnk => {
                             // When on the Talents section, show only Spotlight and Contact Us
@@ -161,13 +161,13 @@ const Header = ( ) => {
                     <div
                         className="absolute md:hidden w-full bg-black left-0 top-0 transition-all duration-300 ease-in-out h-screen">
                         <div
-                            className="space-y-4 w-[85%] mx-auto py-6">
-                            <div className="flex justify-end">
+                            className="space-y-9 w-[85%] mx-auto py-9">
+                            <div className="flex justify-end -mr-3">
                                 <button className="text-white" onClick={() => setIsOpen(!isOpen)}><FaX size="25"/>
                                 </button>
                             </div>
                             <nav>
-                                <ul className="flex flex-col gap-9 text-lg font-medium text-gray-700">
+                                <ul className="flex flex-col pl-2 gap-9 font-light text-lg text-gray-700">
                                     {navLinks.filter(lnk => {
                                         if (pathname.startsWith("/talents")) {
                                             return ["Spotlight", "Contact Us"].includes(lnk.name);
@@ -191,7 +191,7 @@ const Header = ( ) => {
                                                                 <li key={i}>
                                                                     <a
                                                                         href={child.path}
-                                                                        className={`hover:text-[#f6b62b] ${isActive(child.path) ? 'text-[#f6b62b]' : 'text-white'}`}
+                                                                        className={`text-sm hover:text-[#f6b62b] ${isActive(child.path) ? 'text-[#f6b62b]' : 'text-white'}`}
                                                                     >
                                                                         {child.name}
                                                                     </a>
@@ -215,7 +215,7 @@ const Header = ( ) => {
 
                             <a href={pathname.startsWith("/talents") ? "/" : "/talents"}
 
-                               className="block md:hidden py-2 px-8 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-white capitalize font-semibold hover:text-black text-center mt-20">
+                               className="block md:hidden py-2 px-8 w-fit text-black bg-[#f6b62b] rounded-lg hover:bg-white capitalize font-semibold text-sm hover:text-black text-center mt-20 ml-2">
                                 {`${activePath !== 'talents' ? 'production' : 'talents'}`}
                             </a>
                         </div>

@@ -78,10 +78,27 @@ const TalentPage = () => {
                 }
             </section>
 
-            <section className="flex flex-col items-center gap-16 mt-6">
-                <ArticleHeader title="selected works"/>
-                <div className="relative w-full overflow-x-scroll" style={{scrollbarWidth: "none"}}>
-                    <div className="flex gap-1 md:animate-[marquee_15s_linear_infinite]">
+            <section className="flex flex-col items-center gap-16 mt-6 pb-15">
+                <ArticleHeader title="selected works" />
+
+                {/* Scrollable Container */}
+                <div
+                    className="relative w-full overflow-x-auto scroll-smooth cursor-grab"
+                    style={{
+                        scrollbarWidth: "none", // Hides scrollbar in Firefox
+                        msOverflowStyle: "none", // Hides scrollbar in IE/Edge
+                    }}
+                >
+                    {/* Hide scrollbar in Webkit browsers */}
+                    <style>
+                        {`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}
+                    </style>
+
+                    <div className="flex gap-1 no-scrollbar px-4">
                         {loading ? (
                             <div className="w-[90%] mx-auto space-x-1 flex justify-center">
                                 {[...Array(6)].map((_, index) => (
@@ -91,19 +108,20 @@ const TalentPage = () => {
                                     ></div>
                                 ))}
                             </div>
-                        ) : projects && projects.map((tal, idx) => (
-                            <Link to="#" key={`${idx}`} className="flex-shrink-0">
-                                <img
-                                    src={tal}
-                                    alt={`img-${idx}`}
-                                    className="w-[12rem] h-[15rem] object-contain rounded-lg"
-                                />
-                            </Link>
-                        ))
-                        }
+                        ) : (
+                            projects &&
+                            projects.map((tal, idx) => (
+                                <Link to="#" key={`${idx}`} className="flex-shrink-0">
+                                    <img
+                                        src={tal}
+                                        alt={`img-${idx}`}
+                                        className="w-[12rem] h-[15rem] object-contain rounded-lg cursor-grab"
+                                    />
+                                </Link>
+                            ))
+                        )}
                     </div>
                 </div>
-
             </section>
 
             <div className="flex flex-col items-center md:gap-16 bg-[#131313] md:bg-transparent pb-12 md:pb-0">

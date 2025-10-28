@@ -39,6 +39,12 @@ a {
     font-family: 'Inter', sans-serif;
 }
 
+.marquee-track {
+    display: inline-flex;
+    min-width: max-content;
+    align-items: center;
+    white-space: nowrap;
+}
 @keyframes marquee {
     0% {
         transform: translateX(0%);

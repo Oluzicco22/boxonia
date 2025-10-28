@@ -5,12 +5,12 @@ const AlumniCard = ({name, role, info, img}) => {
 
     return (
         <article className="grid grid-cols-[120px_1fr] sm:grid-cols-[200px_1fr] gap-4 sm:gap-7">
-            <div className="flex flex-col items-start md:items-center justify-start gap-4 text-lg">
+            <div className="flex flex-col items-start md:items-center justify-start gap-1 md:gap-4 text-lg">
                 <img src={img} alt={`Portrait of ${name}`}
                      className="w-fit h-44 sm:h-auto object-cover sm:object-contain rounded-[20px]"/>
-                <div className="text-sm sm:text-sm text-center">
-                    <h3 className="text-yellow-400 font-bold capitalize">{name}</h3>
-                    <p className="text-white capitalize">{role}</p>
+                <div className="text-sm sm:text-sm text-left md:text-center space-y-1">
+                    <h3 className="text-[#F6B62B] font-semibold text-sm capitalize">{name}</h3>
+                    <p className="text-white text-xs md:text-sm font-light capitalize">{role}</p>
                 </div>
             </div>
             <div className="flex flex-col justify-between items-center gap-6">

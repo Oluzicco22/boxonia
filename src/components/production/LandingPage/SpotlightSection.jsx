@@ -35,7 +35,7 @@ const SpotlightSection = ({ len = 2 }) => {
                                 <a
                                     href={link}
                                     target="_blank"
-                                    className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-normal hover:text-yellow-400 cursor-pointer"
+                                    className="text-[#B7B7B7] flex items-center text-[12px] md:text-lg font-normal group md:font-normal hover:text-[#F6B62B] cursor-pointer"
                                 >
                                     {info}
                                     <svg
@@ -43,13 +43,14 @@ const SpotlightSection = ({ len = 2 }) => {
                                         height="9"
                                         viewBox="0 0 51 9"
                                         fill="currentColor"
-                                        className="w-20 text-gray-500 fill-white group-hover:fill-yellow-400"
                                         xmlns="http://www.w3.org/2000/svg"
+                                        className="hidden md:inline-block w-20 text-gray-500 fill-white group-hover:fill-[#F6B62B]"
                                     >
                                         <path d="M50.6358 4.05489C50.831 4.25016 50.831 4.56674 50.6358 4.762L47.4538 7.94398C47.2585 8.13924 46.942 8.13924 46.7467 7.94398C46.5514 7.74872 46.5514 7.43214 46.7467 7.23687L49.5751 4.40845L46.7467 1.58002C46.5514 1.38476 46.5514 1.06818 46.7467 0.872913C46.942 0.677651 47.2585 0.677651 47.4538 0.872913L50.6358 4.05489ZM0.120117 4.40845V3.90845H50.2822V4.40845V4.90845H0.120117V4.40845Z" />
                                     </svg>
                                 </a>
                             </div>
+
                         </div>
                     ))}
             </div>

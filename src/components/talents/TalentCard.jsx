@@ -5,13 +5,13 @@ import SymbolImage from "../../assets/symbol.svg"
 
 const TalentCard = ({talent: {firstName, lastName, info, relatedProjects, socials, perks, username}, onBook}) => {
     return (
-        <section className="w-10/12 md:w-12/16 mx-auto my-15 flex flex-col gap-12 items-center">
+        <section className="w-12/14 md:w-12/16 mx-auto my-15 flex flex-col gap-12 items-center">
             <p className="text-white text-justify md:text-left">
 
-                <span className="capitalize font-semibold text-lg text-[#B7B7B7]">
+                <span className="capitalize font-semibold text-sm text-[#B7B7B7]">
                     {firstName} {lastName}
                 </span>{" "}
-                <span className="font-normal text-justify leading-relaxed whitespace-pre-line text-[#B7B7B7]"
+                <span className="font-normal text-sm text-justify leading-relaxed whitespace-pre-line text-[#B7B7B7]"
                       dangerouslySetInnerHTML={{__html: info}}></span>
             </p>
             <button

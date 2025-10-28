@@ -3,7 +3,7 @@
     "id": 1,
     "firstName": "Taye",
     "lastName": "Arimoro",
-    "info": "Taye Arimoro is a professional actor and model based in Lagos. Taye is known for his strong and commanding voice and for  his ability to bring characters to life through his dynamic use of voice, body, actions, and reactions. \n\nTaye has a robust portfolio of work in TV, film, and stage productions. He has appeared in notable TV shows such as \"Castle & Castle\" on Ebonylife TV, where he played a pathologist.\n\nTaye Arimoro was lead actor in Niyi Akinmolayan's Casa De Novia on Prime Video, The House of Secrets, Clarence Peters \"Inside Life\" on Netflix, Inkblot's latest Nigerian football film \"When Love Strikes\", Anthill's \"Criminal\" streaming on Prime Video, \"Last Year Single\" now streaming on Netflix, Russet TV's \"There's Something Wrong with the Bamideles\", \"Son of the Soil\" a global action thriller directed by Chee Keong and Taye also played  the lead in Biodun Stephen’s series Roses and Ivy on Prime Video (2024).\n\nTaye Arimoro has also been in various television shows including Africa Magic's \"Venge\", James Omokwe's \"Ajoche\" and \"The Decision\" an adaptation of Cinderella. His recent works are Nollybabes produced by Wignonia and directed by Anu Bamidele (Short film) and “Grind” Season Two directed by Orire Nwani and Joshua “Tso-Tso” on Prime Video (2025).\n",
+    "info": "is a professional actor and model based in Lagos. Taye is known for his strong and commanding voice and for  his ability to bring characters to life through his dynamic use of voice, body, actions, and reactions. \n\nTaye has a robust portfolio of work in TV, film, and stage productions. He has appeared in notable TV shows such as \"Castle & Castle\" on Ebonylife TV, where he played a pathologist.\n\nTaye Arimoro was lead actor in Niyi Akinmolayan's Casa De Novia on Prime Video, The House of Secrets, Clarence Peters \"Inside Life\" on Netflix, Inkblot's latest Nigerian football film \"When Love Strikes\", Anthill's \"Criminal\" streaming on Prime Video, \"Last Year Single\" now streaming on Netflix, Russet TV's \"There's Something Wrong with the Bamideles\", \"Son of the Soil\" a global action thriller directed by Chee Keong and Taye also played  the lead in Biodun Stephen’s series Roses and Ivy on Prime Video (2024).\n\nTaye Arimoro has also been in various television shows including Africa Magic's \"Venge\", James Omokwe's \"Ajoche\" and \"The Decision\" an adaptation of Cinderella. His recent works are Nollybabes produced by Wignonia and directed by Anu Bamidele (Short film) and “Grind” Season Two directed by Orire Nwani and Joshua “Tso-Tso” on Prime Video (2025).\n",
     "perks": [
       "professionalism on set",
       "great communication skills",
@@ -16,13 +16,33 @@
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755902025/red_circle_zrwnfn.png",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1753992012/Taye_movie1_zxn1jg.png",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755903967/son_of_d_soil_real_ajjtex.png",
-      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992015/Taye_movie3_zbcnbq.png"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753992015/Taye_movie3_zbcnbq.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1761555086/Taye-movies6_ud5ufy.png"
     ],
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1754049382/taye_personal_lsfnpe.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128744/Arimoro1_bsphfd.png"
   },
   {
     "id": 2,
+    "firstName": "Victory",
+    "lastName": "Eyong",
+    "info": "is a promising young actress steadily making her mark in the film industry. She made her on-screen debut in 2019 with Boxonia’s short film Otana and has since shown unwavering determination to establish herself as a notable talent.\n\nIn 2023, Victory starred in the Nollywood blockbuster Bank Alert, sharing the screen with industry icons like Okey Bakassi, Kanayo O. Kanayo, Kate Henshaw, Taiwo Hassan, and Bolanle Ninolowo. Her passion for acting, coupled with a deep understanding of her craft, positions her as a rising star and a strong contender among her peers.",
+    "perks": [
+      "Professionalism on Set",
+      "Great Communication Skills",
+      "Good Vibes Queen",
+      "Sellability",
+      "Project to Gain Marketing Support from Boxonia Blueprint"
+    ],
+    "relatedProjects": [
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1760997055/Vicky_movie1_vuwyo4.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1760997055/Vicky_movie1_vuwyo4.png"
+    ],
+    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989113/vicky_personal_exil1r.png",
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128744/Eyong_1_zqevog.png"
+  },
+  {
+    "id": 3,
     "firstName": "Durotimi",
     "lastName": "Okutagidi",
     "username": "Durotimi",
@@ -42,26 +62,7 @@
       "https://res.cloudinary.com/dybmufexj/image/upload/v1753991914/Duro_image3_v3yftj.png"
     ],
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/duro_personal_fmwexp.png",
-    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128746/okutagidi_1_z9rzt3.png"
-  },
-  {
-    "id": 3,
-    "firstName": "Victory",
-    "lastName": "Eyong",
-    "info": "is a promising young actress steadily making her mark in the film industry. She made her on-screen debut in 2019 with Boxonia’s short film Otana and has since shown unwavering determination to establish herself as a notable talent.\n\nIn 2023, Victory starred in the Nollywood blockbuster Bank Alert, sharing the screen with industry icons like Okey Bakassi, Kanayo O. Kanayo, Kate Henshaw, Taiwo Hassan, and Bolanle Ninolowo. Her passion for acting, coupled with a deep understanding of her craft, positions her as a rising star and a strong contender among her peers.",
-    "perks": [
-      "Professionalism on Set",
-      "Great Communication Skills",
-      "Good Vibes Queen",
-      "Sellability",
-      "Project to Gain Marketing Support from Boxonia Blueprint"
-    ],
-    "relatedProjects": [
-      "https://res.cloudinary.com/dybmufexj/image/upload/v1760997055/Vicky_movie1_vuwyo4.png",
-      "https://res.cloudinary.com/dybmufexj/image/upload/v1760997055/Vicky_movie1_vuwyo4.png"
-    ],
-    "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989113/vicky_personal_exil1r.png",
-    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128744/Eyong_1_zqevog.png"
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1761556222/Duro_big_photo_oca3k4.png"
   },
   {
     "id": 4,
@@ -81,7 +82,8 @@
       "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/criminal_ngjx93.svg",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755902021/makemation2_1_uh9rve.png",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/masquerade_prruqe.svg",
-      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/love-strikes_mhtizw.svg"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1753986625/love-strikes_mhtizw.svg",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1761555531/chuks_movies6_klxqbq.png"
     ],
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1754050738/chuks_personal_snojgg.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989166/Chuks_big_photo_dwqq2d.png"
@@ -106,7 +108,7 @@
       "https://res.cloudinary.com/dybmufexj/image/upload/v1756130453/ezeani_logos_rfqivq.png"
     ],
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1753989112/ezeani_personal_ovblgw.png",
-    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128747/Ezeani_1_apecxa.png"
+    "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1761556460/Ezeani_big_photo_lcfh97.png"
   },
   {
     "id": 6,
@@ -125,7 +127,8 @@
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755882319/cynthia-movies-2_tg5jjb.png",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755882322/cynthia-movies-3_zvmrib.png",
       "https://res.cloudinary.com/dybmufexj/image/upload/v1755882321/cynthia-movies4_wwxivc.png",
-      "https://res.cloudinary.com/dybmufexj/image/upload/v1755882321/cynthia-movies5_bakoao.png"
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1755882321/cynthia-movies5_bakoao.png",
+      "https://res.cloudinary.com/dybmufexj/image/upload/v1761556071/cynthia-movies6_zmiogd.png"
     ],
     "image": "https://res.cloudinary.com/dybmufexj/image/upload/v1755878440/Cynthia_taleng-img_ehalap.png",
     "thumbnail": "https://res.cloudinary.com/dybmufexj/image/upload/v1756128744/Clarke_1_s8uw55.png"
