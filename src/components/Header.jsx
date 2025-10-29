@@ -167,7 +167,7 @@ const Header = ( ) => {
                                 </button>
                             </div>
                             <nav>
-                                <ul className="flex flex-col pl-2 gap-9 font-light text-lg text-gray-700">
+                                <ul className="flex flex-col pl-2 gap-9 font-normal text-lg text-gray-700">
                                     {navLinks.filter(lnk => {
                                         if (pathname.startsWith("/talents")) {
                                             return ["Spotlight", "Contact Us"].includes(lnk.name);
