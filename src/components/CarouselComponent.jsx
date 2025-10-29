@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaLessThan, FaGreaterThan } from "react-icons/fa";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
 const CarouselComponent = ({ collections = [] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,21 +35,25 @@ const CarouselComponent = ({ collections = [] }) => {
                 ))}
             </div>
 
-            {/* Prev Button */}
-            <button
-                onClick={goToPrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-5 md:h-10 px-2 rounded opacity-100 md:opacity-65 hover:opacity-100"
-            >
-                <FaLessThan className="w-3 md:w-5 h-3 md:h-5" />
-            </button>
+            {/* Left Overlay */}
+            <div className="absolute left-0 top-0 h-full w-12 bg-black/50 flex items-center justify-center pointer-events-none">
+                <button
+                    onClick={goToPrev}
+                    className="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
+                >
+                    <GoChevronLeft className="w-3 h-3 md:w-4 md:h-4 group-hover:text-[#F6B62B] transition-colors" />
+                </button>
+            </div>
 
-            {/* Next Button */}
-            <button
-                onClick={goToNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black text-white cursor-pointer h-5 md:h-10 px-2 rounded opacity-100 md:opacity-65 hover:opacity-100"
-            >
-                <FaGreaterThan className="w-3 md:w-5 h-3 md:h-5" />
-            </button>
+            {/* Right Overlay */}
+            <div className="absolute right-0 top-0 h-full w-12 bg-black/50 flex items-center justify-center pointer-events-none">
+                <button
+                    onClick={goToNext}
+                    className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
+                >
+                    <GoChevronRight className="w-3 h-3 md:w-4 md:h-4 group-hover:text-[#F6B62B] transition-colors" />
+                </button>
+            </div>
 
             {/* Dot Indicators */}
             <div className="absolute bottom-0.5 md:bottom-0.5 left-1/2 -translate-x-1/2 flex gap-3">

@@ -150,7 +150,7 @@ const Header = ( ) => {
                 </nav>
 
                 <a href={pathname.startsWith("/talents") ? "/" : "/talents"}
-                   className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black rounded-lg hover:bg-white hover:text-black capitalize">{`${activePath !== 'talents' ? 'production' : 'talents'}`}</a>
+                   className="hidden md:inline-block py-2 px-12 bg-[#f6b62b] text-black font-semibold rounded-lg hover:bg-white hover:text-black capitalize">{`${activePath !== 'talents' ? 'production' : 'talents'}`}</a>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <MenuIcon color="white"/>
