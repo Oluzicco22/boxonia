@@ -36,20 +36,20 @@ const CarouselComponent = ({ collections = [] }) => {
             </div>
 
             {/* Left Overlay */}
-            <div className="absolute left-0 top-0 h-full w-12 bg-black/50 flex items-center justify-center pointer-events-none">
+            <div className="absolute left-0 top-0 h-full w-8 md:w-12 bg-black/40 flex items-center justify-center pointer-events-none">
                 <button
                     onClick={goToPrev}
-                    className="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
+                    className="pointer-events-auto absolute left-1 md:left-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
                 >
                     <GoChevronLeft className="w-3 h-3 md:w-4 md:h-4 group-hover:text-[#F6B62B] transition-colors" />
                 </button>
             </div>
 
             {/* Right Overlay */}
-            <div className="absolute right-0 top-0 h-full w-12 bg-black/50 flex items-center justify-center pointer-events-none">
+            <div className="absolute right-0 top-0 h-full w-8 md:w-12 bg-black/40 flex items-center justify-center pointer-events-none">
                 <button
                     onClick={goToNext}
-                    className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
+                    className="pointer-events-auto absolute right-1 md:right-3 top-1/2 -translate-y-1/2 border-2 border-white text-white rounded-full p-1 md:p-1.5 flex items-center justify-center group transition-colors hover:border-[#F6B62B]"
                 >
                     <GoChevronRight className="w-3 h-3 md:w-4 md:h-4 group-hover:text-[#F6B62B] transition-colors" />
                 </button>
