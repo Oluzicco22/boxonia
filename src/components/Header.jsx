@@ -84,7 +84,7 @@ const Header = ( ) => {
     }, [pathname]);
 
     return (
-        <header role="banner" className="w-full bg-black/80 bg-blend-darken top-0 left-0 fixed border-b z-999">
+        <header role="banner" className="w-full bg-black/30 bg-blend-darken top-0 left-0 fixed border-b z-999">
             <div className="flex py-5 px-3 md:px-0 w-full md:w-[85%] mx-auto justify-between items-center">
                 {/*{(pathname.includes("/talents/spotlight") || pathname.includes("/talents/contact")) ? (*/}
                 {showBackButton ? (
