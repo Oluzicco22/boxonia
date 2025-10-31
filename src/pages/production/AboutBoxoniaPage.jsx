@@ -7,7 +7,7 @@ import Marquee from "../../components/production/MarqueeComponent.jsx";
 
 const AboutBoxoniaPage = () => {
     const types = [
-        "Film", "Series", "TV Shows", "Documentaries", "Reality TV", "Animation",
+        "Documentaries", "Series", "TV Shows", "Films", "Reality TV", "Animation",
         "Commercials", "Music Videos", "Corporate Videos", "Social Media/Digital Content",
         "Educational Video / Training Content", "Podcasts", "Radio Dramas", "Live Events",
         "Video Games", "Virtual / Hybrid Events",
