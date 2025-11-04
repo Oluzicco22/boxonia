@@ -125,7 +125,7 @@ const TalentPage = () => {
             </section>
 
             <div className="flex flex-col items-center md:gap-16 bg-[#131313] md:bg-transparent pb-12 md:pb-0">
-                <SpotlightSection/>
+                <SpotlightSection len={2}/>
             </div>
 
             <div className="flex justify-center items-center mt-10">
