@@ -8,7 +8,7 @@ const NewsPage = () => {
         <>
             <Header/>
             <div className="mt-23">
-                <SpotlightSection len="9"/>
+                <SpotlightSection />
             </div>
             <Footer/>
         </>

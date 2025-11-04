@@ -2,8 +2,9 @@ import ArticleHeader from "../ArticleHeader.jsx";
 import spotlights from "../../../data/spotlight.json";
 import { useLocation } from "react-router-dom";
 
-const SpotlightSection = ({ len = 2 }) => {
+const SpotlightSection = ({ len }) => {
     const location = useLocation();
+    const length = len ?? spotlights.length;
 
     // Hide button if we're on the Talent Spotlight page or News page
     const hideButton =
@@ -20,7 +21,7 @@ const SpotlightSection = ({ len = 2 }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full mt-8">
                 {spotlights
-                    .filter((spotlight, idx) => idx < len)
+                    .filter((spotlight, idx) => idx < length)
                     .map(({ image, info, link }, i) => (
                         <div key={i} className="flex flex-col gap-3">
                             <div className="md:p-0 rounded-2xl md:rounded-none">

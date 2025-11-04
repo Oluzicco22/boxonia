@@ -34,57 +34,57 @@ const ProductionSection = () => {
             description: "Aerial drone capturing wide-angle footage for Boxonia projects.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110307/BTS_8_zzluki.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110307/BTS_8_zzluki.png", // BTS-6
             title: "Actors and crew",
             description: "Actors and production crew working together during filming.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155631/BTS-7-new_dv6ox7.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155631/BTS-7-new_dv6ox7.png", // BTS-7
             title: "Cinematic setup",
             description: "Boxonia crew preparing cinematic shots with advanced equipment.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155739/BTS-8-new_lpck7z.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155739/BTS-8-new_lpck7z.png", // BTS-8
             title: "On-set directing",
             description: "Director overseeing behind-the-scenes production workflow.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155797/BTS-9-new_bfmgj6.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155797/BTS-9-new_bfmgj6.png", // BTS-9
             title: "Camera crew on set",
             description: "Boxonia production crew operating cameras for a live film project.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155794/BTS-10-new_dhopv3.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155794/BTS-10-new_dhopv3.png", // BTS-10
             title: "Director and crew",
             description: "Director and crew coordinating a film sequence on set.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155791/BTS-11_aqjguw.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155791/BTS-11_aqjguw.png", // BTS-11
             title: "Cinematographer at work",
             description: "Boxonia cinematographer adjusting RED camera for precision shots.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155792/BTS-12_a3fehq.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155792/BTS-12_a3fehq.png", // BTS-12
             title: "Lighting preparation",
             description: "Film crew setting up professional lighting equipment on location.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155794/BTS-13_zyvdmp.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155794/BTS-13_zyvdmp.png", // BTS-13
             title: "Drone cinematography",
             description: "Aerial drone capturing wide-angle footage for Boxonia projects.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110372/BTS_5_s4pkjc.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1760110372/BTS_5_s4pkjc.png", // BTS-14
             title: "Actors and crew",
             description: "Actors and production crew working together during filming.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155796/BTS-15_rgp4f0.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155796/BTS-15_rgp4f0.png", // BTS-15
             title: "Cinematic setup",
             description: "Boxonia crew preparing cinematic shots with advanced equipment.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155822/BTS-16_dbxva7.png",
+            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762155822/BTS-16_dbxva7.png", // BTS-16
             title: "On-set directing",
             description: "Director overseeing behind-the-scenes production workflow.",
         },
