@@ -130,7 +130,7 @@ const TalentPage = () => {
 
             <div className="flex justify-center items-center mt-10">
                 <a href="/talents/contact"
-                   className="hover:bg-white bg-yellow-500 py-2 px-7 w-fit rounded-md text-black">Join Boxonia
+                   className="hover:bg-white bg-[#F6B62B] py-2 px-7 w-fit rounded-md text-black">Join Boxonia
                     Talents</a>
             </div>
             <Footer/>
