@@ -9,11 +9,6 @@ const ProductionSection = () => {
             description: "Boxonia production crew operating cameras for a live film project.",
         },
         {
-            img: "https://res.cloudinary.com/dybmufexj/image/upload/v1762107725/BTS_1_kgvjot.png", // BTS-1
-            title: "Drone filming session",
-            description: "Behind the scenes aerial drone filming for cinematic visuals.",
-        },
-        {
             img: "https://res.cloudinary.com/dybmufexj/image/upload/v1753986123/BTS_3_yinydv.png", // BTS-2
             title: "Director and crew",
             description: "Director and crew coordinating a film sequence on set.",
