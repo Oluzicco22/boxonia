@@ -19,11 +19,11 @@ const SpotlightSection = ({ len }) => {
         <section className="flex flex-col py-8 md:py-20 px-4 md:px-0 md:w-[85%] mx-auto gap-10 items-center relative md:bg-transparent">
             <ArticleHeader title="in the spotlight" />
 
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-center w-full mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-20 items-start w-full mt-8">
                 {spotlights
                     .filter((spotlight, idx) => idx < length)
                     .map(({ image, info, link }, i) => (
-                        <div key={i} className="flex flex-col gap-3">
+                        <div key={i} className="flex flex-col gap-3 h-full">
                             <div className="md:p-0 rounded-2xl md:rounded-none">
                                 <img
                                     src={image}
