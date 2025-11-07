@@ -1,17 +1,16 @@
 import {useEffect, useState} from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import AppearedPage from "../../components/talents/AppearedPage.jsx";
 import Service from "../../services/indexApi.js";
 
 const TalentViewPage = () => {
-    const location = useLocation();
     const navigate = useNavigate();
+    const { castName } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [talent, setTalent] = useState(null);
     const [error, setError] = useState(null);
-    const {talentId} = location.state || {}
 
-    if (!talentId) {
+    if (!castName) {
         navigate('/talents');
     }
 
@@ -21,7 +20,7 @@ const TalentViewPage = () => {
         setIsLoading(true);
 
         try {
-            const res = await service.readTalent(talentId);
+            const res = await service.readTalent(castName);
             setTalent(res.data);
         } catch (e) {
             console.log(e.message);

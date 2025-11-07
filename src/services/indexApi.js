@@ -6,8 +6,8 @@ class Service {
         return data;
     }
 
-    async readTalent(talentId) {
-        const {data} = await instance.get(`talent/${talentId}`);
+    async readTalent(name) {
+        const {data} = await instance.get(`talent/${name}`);
         return data;
     }
 
