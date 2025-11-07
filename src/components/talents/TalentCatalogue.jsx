@@ -10,11 +10,13 @@ const TalentCatalogue = ({props: {firstName, lastName, image, _id: id}}) => {
 
     return (
         <article id={id} className="flex flex-col gap-4 md:gap-6 items-center text-white overflow-hidden shadow-md">
-            <img
-                src={image}
-                alt={`${firstName || "Talent"} ${lastName || ""}`}
-                className="w-full md:w-fit rounded-2xl md:rounded-[44px] h-52 md:h-96 object-fill md:object-cover"
-            />
+            <a href={`/talents/${firstName} ${lastName}`}>
+                <img
+                    src={image}
+                    alt={`${firstName || "Talent"} ${lastName || ""}`}
+                    className="w-full md:w-fit rounded-2xl md:rounded-[44px] h-52 md:h-96 object-fill md:object-cover"
+                />
+            </a>
             <button type="button" onClick={readTalent}
                     className="w-fit px-4 md:px-6 py-2 mx-auto text-center text-xs md:text-base border border-[#989898] font-normal
                     text-[#989898] cursor-pointer hover:text-black hover:bg-white rounded-lg">
