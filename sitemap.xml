@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://www.boxonia.com/</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/boxonia-story</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/about</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/projects</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/news</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/contact</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/talents</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/talents/spotlight</loc>
+    </url>
+
+    <url>
+        <loc>https://www.boxonia.com/talents/contact</loc>
+    </url>
+
+</urlset>

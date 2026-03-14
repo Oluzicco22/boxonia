@@ -17,42 +17,34 @@ const WeAreBoxoniaComponent = () => {
                 <div
                     className="text-[#B7B7B7] leading-8 text-justify md:text-left text-sm md:text-xl font-light w-[95%] md:w-5/6">
                     <p>
-                        In 2019, Wingonia Ikpi identified a gap in the narrative landscape an urgent need to
-                        tell original stories that authentically represent Nigerian and African realities. This
-                        industry-wide need laid the foundation for what would become a transformative force in
-                        African cinema: Boxonia Blueprint.
+                        In 2019, Wingonia Ikpi identified a gap in the  narrative landscape, an urgent need to tell
+                        original stories that authentically represent Nigerian  and African realities.
                     </p>
 
                     <p className="mt-6">
-                        After a brief hiatus to recalibrate strategies, Boxonia reemerged in March 2024, fully operational
-                        and poised to deliver groundbreaking media and a Talent Management Powerhouse. Boxonia Blueprint
-                        has produced and co-produced across extensive niches, spanning international collaborations like
-                        Son of the Soil and NollyBabes, to managing dynamic stars in the Nollywood Ecosystem.
+                        After a brief hiatus to recalibrate strategies, Boxonia  reemerged in March 2024, fully
+                        operational and poised to deliver groundbreaking film solutions,  while positioned as a Talent Management Powerhouse.
 
                     </p>
                     <p className="mt-6">
-                        As a film and video production powerhouse, Boxonia Blueprint is
-                        committed to creating deeply rooted, immersive experiences. The
-                        company’s mission is clear: to craft audacious, authentic, and
-                        exportable African stories through cinema and other forms of media.
+                        As a production and talent management powerhouse, Boxonia Blueprint is committed to creating
+                        deeply rooted, immersive experiences. The company’s mission is clear: to craft audacious,
+                        authentic, and exportable African stories through cinema and other forms of media.
                         With a keen focus on storytelling that resonates across demographics,
-                        Boxonia aspires to achieve both cultural impact and commercial success.
+                        Boxonia aspires to achieve both cultural impact and commercial success
                     </p>
 
                     <p className="mt-6">
-                        Boxonia’s core values—ambition, audacity, creativity, innovation, and
-                        transparency—have propelled it to become one of the fastest-growing
-                        production companies in Africa. Beyond its storytelling expertise, the
-                        company operates as a comprehensive hub for film production, offering
-                        services such as story development, scripting, intellectual property
-                        protection, end-to-end production, marketing, talent management,
-                        licensing, and consultancy.
+                        Boxonia’s core values; ambition, stewardship, creativity, innovation, and transparency, have
+                        propelled it to become one of the fastest-growing production companies in Africa. Beyond its
+                        storytelling expertise, the company operates as a comprehensive hub for film production, offering
+                        services such as story development, scripting, intellectual property protection,
+                        end-to-end production, marketing, talent management, licensing, and consultancy.
                     </p>
 
                     <p className="mt-6">
-                        Whether it’s working with international collaborators or shaping
-                        homegrown narratives, Boxonia Blueprint continues to define itself as a
-                        trailblazer in African cinema.
+                        Whether it’s working with international collaborators or shaping homegrown narratives,
+                        Boxonia Blueprint continues to define itself as a trailblazer in African cinema
                     </p>
                 </div>
             </div>

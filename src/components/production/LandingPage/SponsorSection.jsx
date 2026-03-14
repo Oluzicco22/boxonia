@@ -25,6 +25,9 @@ const SponsorSection = () => {
         {
             name: "TOGIOS", src: "https://res.cloudinary.com/dybmufexj/image/upload/v1761556542/Togios-logo_milj7x.png"
         },
+        {
+            name: "FLYING WHALE", src: "https://res.cloudinary.com/dybmufexj/image/upload/v1768392262/FLYING_WHALE_ANAKLE_LOGO_1_jdycqi.png"
+        },
     ];
 
     const durationTaken = 24; // seconds
