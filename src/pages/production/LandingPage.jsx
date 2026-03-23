@@ -6,10 +6,39 @@ import HeroSection from "../../components/production/LandingPage/HeroSection.jsx
 import Footer from "../../components/Footer.jsx";
 import SpotlightSection from "../../components/production/LandingPage/SpotlightSection.jsx";
 import Header from "../../components/Header.jsx";
+import { Helmet } from "react-helmet-async";
 
 const LandingPage = () => {
     return (
         <>
+            <Helmet>
+                <title>Boxonia | African Stories, Films & Talent Management</title>
+                <meta
+                    name="description"
+                    content="Boxonia is a Nigerian 360° production and talent management company telling audacious, authentic and exportable African stories through film, TV, commercials and more."
+                />
+                <link rel="canonical" href="https://www.boxonia.com/" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Boxonia | African Stories, Films & Talent Management" />
+                <meta
+                    property="og:description"
+                    content="Authentic African stories told through film, TV, commercials and more."
+                />
+                <meta property="og:url" content="https://www.boxonia.com/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Boxonia | African Stories, Films & Talent Management" />
+                <meta
+                    name="twitter:description"
+                    content="Authentic African stories told through film, TV, commercials and more."
+                />
+                <meta name="twitter:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+            </Helmet>
+
             <div className="flex flex-col">
                 <Header/>
                 <div className="flex flex-col gap-16 md:gap-25">
@@ -33,7 +62,6 @@ const LandingPage = () => {
                 </div>
                 <Footer/>
             </div>
-
         </>
     )
 }

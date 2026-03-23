@@ -4,6 +4,7 @@ import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import BoxoniaPillarComponent from "../../components/production/AboutBoxoniaComponent/BoxoniaPillarComponent.jsx";
 import InSectionLink from "../../components/production/InSectionLink.jsx";
 import Marquee from "../../components/production/MarqueeComponent.jsx";
+import { Helmet } from "react-helmet-async";
 
 const AboutBoxoniaPage = () => {
     const types = [
@@ -15,6 +16,34 @@ const AboutBoxoniaPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>About Boxonia | African Film Production & Talent Management</title>
+                <meta
+                    name="description"
+                    content="Learn about Boxonia, a Nigerian production and talent management company creating bold African stories across film, TV, documentaries, commercials, and digital media."
+                />
+                <link rel="canonical" href="https://www.boxonia.com/about" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="About Boxonia | African Film Production & Talent Management" />
+                <meta
+                    property="og:description"
+                    content="Discover Boxonia’s mission, creative pillars, and the wide range of productions we bring to life."
+                />
+                <meta property="og:url" content="https://www.boxonia.com/about" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="About Boxonia | African Film Production & Talent Management" />
+                <meta
+                    name="twitter:description"
+                    content="Discover the story, vision and creative pillars behind Boxonia."
+                />
+                <meta name="twitter:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+            </Helmet>
+
             <Header/>
             <div className="w-full md:w-[85%] mx-auto flex justify-center mb-8 mt-28 md:mt-43">
                 <ArticleHeader title="what we do"/>

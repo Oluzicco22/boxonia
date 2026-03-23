@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async"; // ✅ ADD THIS
 import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
@@ -11,15 +12,11 @@ const server = new Server();
 
 const TalentSkeleton = () => (
     <div className="flex flex-col items-center space-y-3 w-full">
-        <div
-            className="w-full h-72 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-3xl animate-pulse"></div>
-        <div
-            className="h-4 w-3/4 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
-        <div
-            className="h-4 w-1/2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+        <div className="w-full h-72 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-3xl animate-pulse"></div>
+        <div className="h-4 w-3/4 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
+        <div className="h-4 w-1/2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded animate-pulse"></div>
     </div>
 )
-
 
 const TalentPage = () => {
     const [talents, setTalents] = useState([]);
@@ -35,7 +32,6 @@ const TalentPage = () => {
 
             const allProjects = res.data.flatMap(talent => talent.relatedProjects || []);
             setProjects(allProjects);
-            // eslint-disable-next-line no-unused-vars
         } catch (_) {
             setError("Failed to load talents.");
         } finally {
@@ -43,19 +39,33 @@ const TalentPage = () => {
         }
     };
 
-
     useEffect(() => {
         fetchTalents();
     }, []);
 
     return (
         <div className="grid gap-8 md:gap-16 mt-26 md:mt-40">
+
+            {/* ✅ SEO FIX (THIS IS WHAT YOUR CLIENT WANTED) */}
+            <Helmet>
+                <title>Boxonia Talents | Actors & Creative Professionals</title>
+                <meta
+                    name="description"
+                    content="Discover Boxonia’s talented actors and creatives shaping African storytelling in film, TV, and digital media."
+                />
+                <meta
+                    name="keywords"
+                    content="Boxonia talents, Nigerian actors, African actors, film talents, creative professionals"
+                />
+            </Helmet>
+
             <Header showBackButton={false} />
+
             <div className="w-[85%] mx-auto flex justify-center">
                 <ArticleHeader title="boxonia talents"/>
             </div>
-            {error && <p className="text-red-500 text-center">{error}</p>}
 
+            {error && <p className="text-red-500 text-center">{error}</p>}
 
             <p className="w-[90%] md:w-4/6 mx-auto mb-6 md:mb-0 text-justify md:text-left text-xs md:text-xl font-semibold text-[#B7B7B7]">
                 At Boxonia, Talent Management is a comprehensive and dynamic process designed to nurture and advance the
@@ -81,15 +91,13 @@ const TalentPage = () => {
             <section className="flex flex-col items-center gap-16 mt-6 pb-15">
                 <ArticleHeader title="selected works" />
 
-                {/* Scrollable Container */}
                 <div
                     className="relative w-full overflow-x-auto scroll-smooth cursor-grab"
                     style={{
-                        scrollbarWidth: "none", // Hides scrollbar in Firefox
-                        msOverflowStyle: "none", // Hides scrollbar in IE/Edge
+                        scrollbarWidth: "none",
+                        msOverflowStyle: "none",
                     }}
                 >
-                    {/* Hide scrollbar in Webkit browsers */}
                     <style>
                         {`
         .no-scrollbar::-webkit-scrollbar {
@@ -113,7 +121,7 @@ const TalentPage = () => {
                             projects.map((tal, idx) => (
                                 <Link to="#" key={`${idx}`} className="flex-shrink-0">
                                     <img
-                                        src={tal}
+                                        src={typeof tal === "string" ? tal : tal.image} // ✅ SAFE FIX
                                         alt={`img-${idx}`}
                                         className="w-[12rem] h-[15rem] object-contain rounded-lg cursor-grab"
                                     />
@@ -130,9 +138,11 @@ const TalentPage = () => {
 
             <div className="flex justify-center items-center mt-10">
                 <a href="/talents/contact"
-                   className="hover:bg-white bg-[#F6B62B] py-2 px-7 w-fit rounded-md text-black">Join Boxonia
-                    Talents</a>
+                   className="hover:bg-white bg-[#F6B62B] py-2 px-7 w-fit rounded-md text-black">
+                    Join Boxonia Talents
+                </a>
             </div>
+
             <Footer/>
         </div>
     )

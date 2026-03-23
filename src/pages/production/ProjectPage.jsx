@@ -3,10 +3,39 @@ import Header from "../../components/Header.jsx";
 import ArticleHeader from "../../components/production/ArticleHeader.jsx";
 import Footer from "../../components/Footer.jsx";
 import projects from "../../data/project.json";
+import { Helmet } from "react-helmet-async";
 
 const ProjectPage = () => {
     return (
         <>
+            <Helmet>
+                <title>Boxonia Projects | African Films, TV & Productions</title>
+                <meta
+                    name="description"
+                    content="Explore Boxonia's portfolio of films, TV series, commercials and creative productions showcasing authentic African storytelling."
+                />
+                <link rel="canonical" href="https://www.boxonia.com/projects" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Boxonia Projects | African Films, TV & Productions" />
+                <meta
+                    property="og:description"
+                    content="Browse Boxonia’s film and production projects bringing African stories to life."
+                />
+                <meta property="og:url" content="https://www.boxonia.com/projects" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Boxonia Projects | African Films, TV & Productions" />
+                <meta
+                    name="twitter:description"
+                    content="Discover Boxonia’s film, TV and commercial productions."
+                />
+                <meta name="twitter:image" content="https://www.boxonia.com/boxonia-icon.svg" />
+            </Helmet>
+
             <Header />
             <div className="w-[85%] mx-auto flex justify-center mb-10 md:mb-14 mt-28 md:mt-43">
                 <ArticleHeader title="our projects" />
